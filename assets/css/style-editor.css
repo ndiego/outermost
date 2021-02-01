@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+# Editor Alignment Widths
+--------------------------------------------------------------*/
+
+.wp-block,
+.post-featured-image_placeholder {
+	max-width: var(--wp--custom--width--default);
+}
+
+.wp-block[data-align="wide"] {
+	max-width: var(--wp--custom--width--wide);
+}
+
+.wp-block[data-align="full"] {
+	max-width: inherit;
+}
+
+.wp-block[data-align="right"] > *,
+.wp-block[data-align="left"] > * {
+	max-width: 50%;
+}
+
+.post-featured-image_placeholder {
+	max-width: var(--wp--custom--width--default);
+	margin: 0 auto 30px;
+}

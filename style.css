@@ -1,0 +1,98 @@
+/*
+Theme Name: Outermost
+Theme URI: https://github.com/wordpress/theme-experiments/
+Author: Nick Diego
+Author URI: https://www.nickdiego.com/
+Description: Outermost is an experimental block-based theme for WordPress.
+Requires at least: 5.3
+Tested up to: 5.5
+Requires PHP: 5.6
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: outermost
+*/
+
+/*--------------------------------------------------------------
+# Shared Styles
+--------------------------------------------------------------*/
+
+@import "assets/css/blocks.css";
+@import "assets/css/style-shared.css";
+
+
+/*--------------------------------------------------------------
+# Defaults
+--------------------------------------------------------------*/
+
+body, figure {
+	margin: 0;
+}
+
+img {
+	height: auto;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+.wp-site-blocks,
+.wp-block-template-part.alignfull  {
+	padding: 0 var(--wp--custom--spacing--horizontal);
+}
+
+.wp-site-blocks > *:not(.wp-block-post-content),
+.wp-site-blocks .wp-block-post-content > *,
+.wp-site-blocks .wp-block-template-part > *,
+.wp-site-blocks .wp-block-group__inner-container > * {
+	max-width: var(--wp--custom--width--default);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-site-blocks .alignwide {
+	width: var(--wp--custom--width--wide);
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-site-blocks .alignfull {
+	margin: 0 calc(0px - var(--wp--custom--spacing--horizontal));
+	max-width: calc(100% + (2 * var(--wp--custom--spacing--horizontal)));
+	width: calc(100% + (2 * var(--wp--custom--spacing--horizontal)));
+}
+
+.wp-site-blocks .wp-block-group.alignfull > .wp-block-group__inner-container {
+	padding-left: var(--wp--custom--spacing--horizontal);
+ 	padding-right: var(--wp--custom--spacing--horizontal);
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+	.wp-site-blocks .alignleft {
+		float: left;
+		margin-right: 2em;
+		max-width: 100%;
+	}
+
+	.wp-site-blocks .alignright {
+		float: right;
+		margin-left: 2em;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 599px) {
+	.items-justified-right>ul {
+		justify-content: flex-start !important;
+	}
+}

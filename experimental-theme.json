@@ -1,0 +1,203 @@
+{
+	"pageTemplates": {
+		"freeform": {
+			"title": "Freeform",
+			"description": "Template only includes the site header and footer, the rest is up to you!",
+			"postTypes": [
+				"post",
+				"page"
+			]
+		},
+        "landing": {
+            "title": "Landing",
+			"description": "Template is empty, no header, no footer, nothing...",
+            "postTypes": [
+				"post",
+				"page"
+            ]
+        }
+	},
+	"global": {
+		"settings": {
+			"color": {
+				"gradients": [ ],
+				"link": true,
+				"palette": [
+					{
+						"slug": "outermost-primary",
+						"color": "#222222",
+						"name": "Primary"
+					},
+					{
+						"slug": "outermost-secondary",
+						"color": "#8c8c8c",
+						"name": "Secondary"
+					},
+					{
+						"slug": "outermost-tertiary",
+						"color": "#c8ccd0",
+						"name": "Tertiary"
+					},
+					{
+						"slug": "outermost-background",
+						"color": "#f0f1f2",
+						"name": "Background"
+					},
+					{
+						"slug": "outermost-borders",
+						"color": "#dddddd",
+						"name": "Border"
+					}
+				]
+			},
+			"typography": {
+				"customLineHeight": true,
+				"fontFamilies": [
+					{
+						"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+						"slug": "system-font",
+						"name": "System Font"
+					},
+					{
+						"fontFamily": "Roboto, sans-serif",
+						"slug": "roboto",
+						"name": "Roboto (Google Font)"
+					},
+					{
+						"fontFamily": "Helvetica Neue, Helvetica, Arial, sans-serif",
+						"slug": "helvetica-arial",
+						"name": "Helvetica Neue"
+					},
+					{
+						"fontFamily": "Geneva, Tahoma, Verdana, sans-serif",
+						"slug": "geneva-verdana",
+						"name": "Geneva"
+					}
+				],
+				"fontSizes": [
+					{
+						"slug": "extra-small",
+						"size": "12px",
+						"name": "Extra small"
+					},
+					{
+						"slug": "small",
+						"size": "16px",
+						"name": "Small"
+					},
+					{
+						"slug": "normal",
+						"size": "20px",
+						"name": "Normal"
+					},
+					{
+						"slug": "large",
+						"size": "24px",
+						"name": "Large"
+					},
+					{
+						"slug": "extra-large",
+						"size": "36px",
+						"name": "Extra large"
+					},
+					{
+						"slug": "huge",
+						"size": "96px",
+						"name": "Huge"
+					},
+					{
+						"slug": "gigantic",
+						"size": "120px",
+						"name": "Gigantic"
+					}
+				],
+				"fontStyles": [
+					{
+						"slug": "normal",
+						"value": "normal",
+						"name": "Normal"
+					},
+					{
+						"slug": "italic",
+						"value": "italic",
+						"name": "Italic"
+					}
+				],
+				"fontWeights": [
+					{
+						"slug": "light",
+						"value": 300,
+						"name": "Light"
+					},
+					{
+						"slug": "normal",
+						"value": "normal",
+						"name": "Normal"
+					},
+					{
+						"slug": "medium",
+						"value": "500",
+						"name": "Medium"
+					},
+					{
+						"slug": "semibold",
+						"value": 600,
+						"name": "Semibold"
+					},
+					{
+						"slug": "bold",
+						"value": 700,
+						"name": "Bold"
+					}
+				]
+			},
+			"spacing": {
+				"customPadding": true
+			},
+			"custom": {
+				"width": {
+					"default": "736px",
+					"wide": "1120px"
+				},
+				"spacing": {
+					"horizontal": "30px"
+				}
+			}
+		},
+		"styles": {
+			"color": {
+				"text": "var(--wp--preset--color--outermost-primary)",
+				"link": "var(--wp--preset--color--outermost-primary)"
+			},
+			"typography": {
+				"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+				"lineHeight": 1.6,
+				"fontSize": "var(--wp--preset--font-size--normal)"
+			}
+		}
+	},
+	"core/heading/h1": {
+		"styles": {
+			"typography": {
+				"fontSize": "50px",
+				"lineHeight": 1.2
+			}
+		}
+	},
+	"core/heading/h2": {
+		"styles": {
+			"typography": {
+				"fontSize": "var(--wp--preset--font-size--extra-large)",
+				"lineHeight": 1.2
+			}
+		}
+	},
+	"core/post-title/h1": {
+		"styles": {
+			"typography": {
+				"fontSize": "50px",
+				"lineHeight": 1.2
+			}
+		}
+	}
+}

@@ -1,0 +1,419 @@
+/*--------------------------------------------------------------
+# Defaults
+--------------------------------------------------------------*/
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    background: 0 0;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(transparent calc(100% - 2px), var(--wp--preset--color--outermost-primary) 0), linear-gradient(transparent calc(100% - 2px), var(--wp--preset--color--outermost-tertiary) 0);
+    background-size: 0 100%,100% 100%;
+    font-weight: 600;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+a:hover {
+    background-size: 100% 100%,100% 100%;
+}
+
+/* Block specific overrides */
+.wp-block-site-title a,
+.wp-block-social-links a,
+.wp-block-button__link a,
+.wp-block-navigation a,
+.comment-meta a {
+    background: none;
+}
+
+p {
+    margin: 1.5em auto;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+    font-weight: 600;
+}
+
+ol, ul {
+    padding-left: 20px;
+}
+
+ol li {
+    padding: 0 0 .2em .2em;
+}
+
+.wp-block-button__link,
+.is-style-outermost-navigation-button .wp-block-navigation-link__content,
+.wp-block-search button.wp-block-search__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border: 2px solid var(--wp--preset--color--outermost-primary);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--wp--preset--color--outermost-primary);
+    cursor: pointer;
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: .75em 1.25em;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.wp-block-button__link:hover,
+.is-style-outermost-navigation-button .wp-block-navigation-link__content:hover,
+.wp-block-search button.wp-block-search__button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background: var(--wp--preset--color--outermost-primary);
+    color: white;
+}
+
+.wp-block-search button.wp-block-search__button:hover svg {
+    fill: white;
+}
+
+.wp-block-search input.wp-block-search__input,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    border: 1px solid var(--wp--preset--color--outermost-borders);
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+textarea {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-header,
+.site-header.has-background {
+    padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer,
+.site-footer.has-background {
+    padding: 0;
+}
+
+/* Hopefully remove when better responsive controls are availbale */
+@media screen and (max-width: 782px) {
+
+    .site-footer {
+        text-align: center;
+    }
+
+	.site-footer .alignright {
+        text-align: center !important;
+        float: none !important;
+        justify-content: center !important;
+	}
+}
+
+/*--------------------------------------------------------------
+# Entry Header (Post, Page, etc.)
+--------------------------------------------------------------*/
+
+.entry-header.wp-block-group {
+    padding: 50px 0;
+}
+
+.has-post-thumbnail:not(.archive) .entry-header.wp-block-group {
+    padding: 50px 0 100px;
+}
+
+/*--------------------------------------------------------------
+# Entry Content (Post, Page, etc.)
+--------------------------------------------------------------*/
+
+.entry-content > :first-child {
+    margin-top: 0;
+}
+
+.content-sidebar .entry-content,
+.sidebar-content .entry-content {
+    padding: 0;
+}
+
+.has-post-thumbnail .entry-content {
+    padding-top: 0;
+}
+
+/*--------------------------------------------------------------
+# Theme specific pattern styles
+--------------------------------------------------------------*/
+
+.one-three-post-grid .alignright {
+	max-width: 200px;
+}
+
+/*--------------------------------------------------------------
+# Utility Classes (Hopefully can remove in future)
+--------------------------------------------------------------*/
+
+/* Text utility classes */
+
+.text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.font-light	{
+	font-weight: 300;
+}
+
+.font-normal {
+	font-weight: 400;
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+.font-bold {
+	font-weight: 700;
+}
+
+/* Horizontal list utility classes */
+
+.list-horizontal,
+.list-horizontal ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.list-horizontal ul {
+    margin-left: 0; /* Needed to override Editor Normaiization styles */
+    margin-right: 0; /* Needed to override Editor Normaiization styles */
+}
+
+.list-horizontal li {
+    margin-right: 10px;
+}
+
+/* Dropshaow utility classes, plus specific fixes for borders on images. */
+
+.shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+img.shadow-img,
+.shadow-img img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/**
+ * Border radius utility classes, plus specific fixes for borders on images.
+ * This likely can be removed in Gutenberg 9.9 see: https://github.com/WordPress/gutenberg/pull/27667
+ */
+
+.rounded-sm {
+    border-radius: 0.125rem;
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+.rounded-md {
+    border-radius: 0.375rem;
+}
+
+.rounded-lg	{
+    border-radius: 0.5rem;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+img.rounded-img-sm,
+.rounded-img-sm img {
+    border-radius: 0.125rem;
+}
+
+img.rounded-img,
+.rounded-img img {
+    border-radius: 4px;
+}
+
+img.rounded-img-md,
+.rounded-img-md img {
+    border-radius: 0.375rem;
+}
+
+img.rounded-img-lg,
+.rounded-img-lg img {
+    border-radius: 0.5rem;
+}
+
+img.rounded-img-full,
+.rounded-img-full img {
+    border-radius: 9999px;
+}
+
+/* Margin utility classes */
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mt-5 {
+    margin-top: 5px !important;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.mt-40 {
+    margin-top: 40px !important;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mt-60 {
+    margin-top: 60px !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+.mb-60 {
+    margin-bottom: 60px !important;
+}
+
+.-mt-5 {
+    margin-top: -5px !important;
+}
+
+.-mt-10 {
+    margin-top: -10px !important;
+}
+
+.-mt-20 {
+    margin-top: -20px !important;
+}
+
+.-mt-20 {
+    margin-top: -20px !important;
+}
+
+.-mt-30 {
+    margin-top: -30px !important;
+}
+
+.-mt-40 {
+    margin-top: -40px !important;
+}
+
+.-mt-50 {
+    margin-top: -50px !important;
+}
+
+.-mt-60 {
+    margin-top: -60px !important;
+}
+
+.-mb-5 {
+    margin-bottom: -5px !important;
+}
+
+.-mb-10 {
+    margin-bottom: -10px !important;
+}
+
+.-mb-20 {
+    margin-bottom: -20px !important;
+}
+
+.-mb-30 {
+    margin-bottom: -30px !important;
+}
+
+.-mb-40 {
+    margin-bottom: -40px !important;
+}
+
+.-mb-50 {
+    margin-bottom: -50px !important;
+}
+
+.-mb-60 {
+    margin-bottom: -60px !important;
+}

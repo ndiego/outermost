@@ -1,0 +1,412 @@
+
+
+/*--------------------------------------------------------------
+# Buttons (need to add to global styles when available)
+--------------------------------------------------------------*/
+
+.wp-block-button .wp-block-button__link {
+	border: 2px solid var(--wp--preset--color--outermost-primary);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--wp--preset--color--outermost-primary);
+    cursor: pointer;
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: .75em 1.25em;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.wp-block-button .wp-block-button__link:visited {
+    color: inherit;
+}
+
+.wp-block-button .wp-block-button__link:hover,
+.wp-block-button .wp-block-button__link:visited:hover {
+    background: var(--wp--preset--color--outermost-primary);
+    color: white;
+}
+
+.wp-block-button.is-style-outermost-button-primary .wp-block-button__link {
+	background: var(--wp--preset--color--outermost-primary);
+	color: white;
+}
+
+.wp-block-button.is-style-outermost-button-primary .wp-block-button__link:hover
+.wp-block-button.is-style-outermost-button-primary .wp-block-button__link:visited:hover {
+	background: transparent;
+    color: var(--wp--preset--color--outermost-primary);
+}
+
+/* The following is a fix for the editor, not needed on the frontend */
+.wp-block-buttons > .wp-block-button {
+    margin-right: .5em;
+}
+
+.wp-block-buttons.is-content-justification-right>.wp-block-button:first-child {
+	margin-left: 0;
+}
+
+.wp-block-buttons.is-content-justification-right>.wp-block-button {
+	margin-left: .5em;
+	margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+# Columns (provide support for sidebar layout)
+--------------------------------------------------------------*/
+
+/* Set default top/bottom margin to 0 for all columns */
+div.wp-block-columns {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.content-sidebar .wp-block-column .wp-block-post-content > * {
+	max-width: 100%;
+}
+
+@media (min-width: 782px) {
+	.content-sidebar .wp-block-column:not(:first-child) {
+	    margin-left: 6em;
+	}
+
+	.sidebar-content .wp-block-column:not(:first-child) {
+		margin-left: 6em;
+	}
+}
+
+/*--------------------------------------------------------------
+# Comments (Ultimately all needs to be controlled in FSE)
+--------------------------------------------------------------*/
+
+.comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comment-list .children {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comment {
+	border: 1px solid var(--wp--preset--color--outermost-borders);
+    border-bottom-width: 4px;
+    border-radius: 4px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.comment-author {
+	display: flex;
+    align-items: center;
+}
+
+.comment-author cite {
+	font-style: normal;
+}
+
+.comment-author img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-author .says {
+    margin-left: 10px;
+}
+
+.comment-meta a {
+    font-size: var(--wp--preset--font-size--extra-small);
+	font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--wp--preset--color--outermost-primary);
+}
+
+.comment-meta a:hover {
+    color: var(--wp--preset--color--outermost-secondary);
+}
+
+.comment-reply-title {
+    font-size: var(--wp--preset--font-size--extra-large);
+}
+
+.comment-respond .comment-form-author,
+.comment-respond .comment-form-email,
+.comment-respond .comment-form-url {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-respond .comment-form-author label,
+.comment-respond .comment-form-email label,
+.comment-respond .comment-form-url label {
+    min-width: 100px;
+}
+
+.comment-respond .comment-form-author input,
+.comment-respond .comment-form-email input,
+.comment-respond .comment-form-url input {
+    display: inline-block;
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Featured Image
+--------------------------------------------------------------*/
+
+.wp-block-post-featured-image {
+	line-height: 0;
+}
+
+.wp-block-post-featured-image img {
+	width: 100%
+}
+
+/*--------------------------------------------------------------
+# Featured Image
+--------------------------------------------------------------*/
+
+/* Remove the padding that is automatically added when background color is applied. */
+.wp-block-group.has-background {
+	padding: inherit;
+    margin: inherit;
+}
+
+/*--------------------------------------------------------------
+# Medis & Text
+--------------------------------------------------------------*/
+
+.wp-block-media-text:not(.has-media-on-the-right) .wp-block-media-text__content {
+	padding: 0 0 0 16%;
+}
+
+.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+	padding: 0 16% 0 0;
+}
+
+@media (max-width: 600px) {
+	.wp-block-media-text .wp-block-media-text__content,
+	.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+		margin-top: 1em;
+		padding: 0 !important;
+	}
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.wp-block-navigation a {
+	font-weight: normal;
+	transition: none;
+}
+
+.wp-block-navigation a:hover {
+	color: var(--wp--preset--color--outermost-secondary);
+}
+
+.wp-block-navigation .current-menu-item a {
+	font-weight: 600;
+}
+
+.wp-block-navigation .has-child .wp-block-navigation__container {
+    font-size: .9em;
+    min-width: 150px;
+	border: none;
+    border-radius: 4px;
+    flex-direction: column;
+	-webkit-box-shadow: 2px 2px 12px 0 rgba(0,0,0,.3);
+    box-shadow: 2px 2px 12px 0 rgba(0,0,0,.3);
+}
+
+/*
+@media (min-width: 782px) {
+	.wp-block-navigation .has-child .wp-block-navigation__container .wp-block-navigation__container {
+	    left: 105%;
+	    top: 0;
+	}
+}
+*/
+
+.wp-block-navigation .wp-block-navigation-link__label {
+	white-space: nowrap !important;
+}
+
+/* Specific styling for the navigation button block style */
+.wp-block-navigation li.is-style-outermost-navigation-button {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.wp-block-navigation li.is-style-outermost-navigation-button:last-child {
+	padding-right: 0;
+	padding-left: 1em;
+}
+
+.wp-block-navigation.is-vertical li.is-style-outermost-navigation-button {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.wp-block-navigation li.is-style-outermost-navigation-button a {
+	padding: .5em 1em;
+}
+
+/*--------------------------------------------------------------
+# Paragraph
+--------------------------------------------------------------*/
+
+p.is-style-outermost-paragraph-intro {
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: bold;
+	margin-bottom: 2em;
+}
+
+/*--------------------------------------------------------------
+# Post Categories & Post Tags
+--------------------------------------------------------------*/
+
+/* Hack to hide the category seperator since there is currently no way to remove this */
+.is-style-outermost-pill-link {
+	color: transparent;
+}
+
+.is-style-outermost-pill-link a,
+a.is-style-outermost-pill-link {
+	background: none;
+	background-color: var(--wp--preset--color--outermost-background);
+	border-bottom: 0;
+	border-radius: 4px;
+	box-shadow: none;
+	color: var(--wp--preset--color--outermost-secondary);
+	display: inline-block;
+	letter-spacing: .1em;
+	margin-bottom: .75em;
+	padding: .3em .7em;;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.is-style-outermost-pill-link a:hover,
+a.is-style-outermost-pill-link:hover {
+	color: var(--wp--preset--color--outermost-primary);
+	background-color: var(--wp--preset--color--outermost-tertiary);
+}
+
+/*--------------------------------------------------------------
+# Query block
+--------------------------------------------------------------*/
+
+@media (min-width: 600px) {
+	.wp-site-blocks .wp-block-query-loop .alignright,
+	.wp-site-blocks .wp-block-query-loop .alignleft,
+	.wp-block-query-loop .wp-block[data-align="right"] > *,
+	.wp-block-query-loop .wp-block[data-align="left"] > * {
+		max-width: 45%;
+	}
+}
+
+/*--------------------------------------------------------------
+# Query Pagination
+--------------------------------------------------------------*/
+
+/**
+ * A TON of work is still needed on the Query Pagination block, so just align
+ *  align for now since most of the markup will change in the future.
+ */
+.pagination-container {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Search
+--------------------------------------------------------------*/
+
+.wp-block-search .wp-block-search__label {
+	font-weight: 600;
+}
+
+.wp-block-search button.wp-block-search__button {
+	padding: .375em .625em;
+}
+
+/* A random <p> tag appears in the search markup, this fixes that */
+.wp-block-search p {
+	display: none;
+}
+
+.wp-block-search input {
+	font-size: 16px;
+}
+
+/*--------------------------------------------------------------
+# Separator
+--------------------------------------------------------------*/
+
+.wp-block-separator {
+	clear: both;
+	opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Social Links
+--------------------------------------------------------------*/
+
+.wp-block-social-links {
+	margin-top: 0;
+}
+
+@media (max-width: 599px) {
+	.wp-block-social-links.alignright {
+		justify-content: flex-start !important;
+	}
+}
+
+.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link {
+	background: none !important;
+}
+
+.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link a,
+.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link button {
+	color: var(--wp--preset--color--outermost-secondary);
+	padding: 0;
+}
+
+.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link a:hover,
+.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link button:hover {
+	color: var(--wp--preset--color--outermost-primary);
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Template Part
+--------------------------------------------------------------*/
+
+/* Remove the padding that is automatically added when background color is applied. */
+.wp-block-template-part.has-background {
+    padding: inherit;
+    margin: inherit;
+}
+
+/*--------------------------------------------------------------
+# Block Patterns
+--------------------------------------------------------------*/
+
+.is-style-outermost-testimonial .wp-block-group__inner-container {
+	display: grid;
+    grid-template-columns: fit-content(200px) auto;
+    align-items: center;
+}
+
+.is-style-outermost-testimonial .wp-block-image {
+	grid-column: 1;
+	grid-row: 1/3;
+	line-height: 0;
+	margin: 0 20px 0 0 !important;
+}
