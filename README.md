@@ -13,3 +13,13 @@ Feel free to test the theme out yourself, but remember, this is all experimental
 * [Trailwind](https://tailwindcss.com/)-like utility classes to easily manage top and bottom margin until this functionality is added to all Core blocks in Gutenberg.
 * A handful of block patterns and styles (more to come).
 * Includes the Roboto Google font.
+
+## To-Dos & Issues
+
+Given that FSE is still very much in development, there are a number of issues with this theme that hopefully will be addressed as time progresses. The notable issues are detailed below.
+
+* The Navigation block does not have mobile styling yet, so it is a bit rough. I would like to see a mobile option that adds a "hamburger" icon on mobile in the future, or something similar.
+* The spacing (margin & padding) control on Core blocks is desperately needed and is currently managed using the utility classes noted in the Features section above. This is not ideal and hopefully we will get full spacing control in all Core blocks. This will allow for "true" FSE.
+* There is currently no easy way to edit custom post types in the Site Editor. This should change relatively soon, but just an FYI.
+* This theme experiments with sidebar layouts, but there are many ways of approaching this, and the implementation is not ideal. Being able to add columns are the post/page level is great, but there is also need for a more dynamic sidebar on all post/pages as you would find with Widget Areas and standard WordPress.
+* There currently is not an Archive Title or Archive Description block. This is desperately needed, as there is no way to create a dynamic archive page with a category/tag specific title/description. You have to manual do it for each one in the Site Editor, or resort to a more generic title like "Archive". Same is true for Search Archives. This begs the question of whether template should actually be .html files or .php files, follow along here: https://github.com/WordPress/gutenberg/issues/27144. 
