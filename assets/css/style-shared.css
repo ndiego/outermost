@@ -48,6 +48,19 @@ ol li {
     padding: 0 0 .2em .2em;
 }
 
+code, kbd, tt, var {
+    font-size: .85em;
+    padding: 4px 8px;
+    background-color: var(--wp--preset--color--outermost-background);
+    border-radius: 4px;
+}
+
+pre {
+	background-color: var(--wp--preset--color--outermost-background);
+    max-width: 100%;
+    overflow: auto;
+}
+
 .wp-block-button__link,
 .is-style-outermost-navigation-button .wp-block-navigation-link__content,
 .wp-block-search button.wp-block-search__button,
