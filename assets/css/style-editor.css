@@ -4,11 +4,11 @@
 
 .wp-block,
 .post-featured-image_placeholder {
-	max-width: var(--wp--custom--width--default);
+	max-width: var(--wp--custom--responsive--aligndefault-width);
 }
 
 .wp-block[data-align="wide"] {
-	max-width: var(--wp--custom--width--wide);
+	max-width: var(--wp--custom--responsive--alignwide-width);
 }
 
 .wp-block[data-align="full"] {
@@ -17,10 +17,10 @@
 
 .wp-block[data-align="right"] > *,
 .wp-block[data-align="left"] > * {
-	max-width: 50%;
+	max-width: 100%;
 }
 
 .post-featured-image_placeholder {
-	max-width: var(--wp--custom--width--default);
+	max-width: var(--wp--custom--responsive--aligndefault-width);
 	margin: 0 auto 30px;
 }

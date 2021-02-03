@@ -155,9 +155,9 @@
 				"customPadding": true
 			},
 			"custom": {
-				"width": {
-					"default": "736px",
-					"wide": "1120px"
+				"responsive": {
+					"aligndefault-width": "736px",
+					"alignwide-width": "1120px"
 				},
 				"spacing": {
 					"horizontal": "30px"
