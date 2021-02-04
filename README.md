@@ -27,3 +27,18 @@ Given that FSE is still very much in development, there are a number of issues w
 * There is currently no easy way to edit custom post types in the Site Editor. This should change relatively soon, but just an FYI.
 * This theme experiments with sidebar layouts, but there are many ways of approaching this, and the implementation is not ideal. Being able to add columns at the post/page level is great, but there is also a need for a more dynamic sidebar on all post/pages as you would find with Widget Areas in standard WordPress.
 * There currently is not an Archive Title or Archive Description block. This is desperately needed, as there is no way to create a dynamic archive page with a category/tag specific title/description. You have to manually create create an archive template for each one in the Site Editor, or resort to a more generic title like "Archive". Same is true for Search Archives. This begs the question of whether template should actually be .html files or .php files, follow along here: https://github.com/WordPress/gutenberg/issues/27144.
+
+## Installation
+
+This theme currently integrates with the [GitHub Updater](https://github.com/afragen/github-updater) plugin to provide automatic updates with each official release. Ultimately, this theme may be made available on WordPress.org, but it is still **way** too experimental and buggy for general distribution.
+
+#### Outermost
+
+1. Download the [latest release](https://github.com/ndiego/outermost/releases/latest).
+2. Go to the **Appearance → Themes → Add New** screen and click the **Upload Theme** button.
+3. Upload the zipped release directly.
+4. Go to the Themes screen and click **Activate**.
+
+#### GitHub Updater
+1. Install and activate the GitHub Updater plugin using the [installation instructions](https://github.com/afragen/github-updater/wiki/Installation#upload).
+2. Follow the [General Usage](https://github.com/afragen/github-updater/wiki/General-Usage) instructions to add a personal access token (optional).
