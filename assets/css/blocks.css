@@ -41,16 +41,21 @@
 
 /* The following is a fix for the editor, not needed on the frontend */
 .wp-block-buttons > .wp-block-button {
-    margin-right: .5em;
+	margin-left: 0;
 }
 
-.wp-block-buttons.is-content-justification-right>.wp-block-button:first-child {
-	margin-left: 0;
+/* The following is a fix for the editor, not needed on the frontend */
+.wp-block-buttons > .wp-block-button {
+    margin-right: .5em;
 }
 
 .wp-block-buttons.is-content-justification-right>.wp-block-button {
 	margin-left: .5em;
 	margin-right: 0;
+}
+
+.wp-block-buttons.is-content-justification-right>.wp-block-button:first-child {
+	margin-left: 0;
 }
 
 /*--------------------------------------------------------------
@@ -357,10 +362,6 @@ a.is-style-outermost-pill-link:hover {
 /*--------------------------------------------------------------
 # Social Links
 --------------------------------------------------------------*/
-
-.wp-block-social-links {
-	margin-top: 0;
-}
 
 @media (max-width: 599px) {
 	.wp-block-social-links.alignright {
