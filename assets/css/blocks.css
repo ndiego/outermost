@@ -39,7 +39,7 @@
     color: var(--wp--preset--color--outermost-primary);
 }
 
-/* The following is a fix for the editor, not needed on the frontend */
+/* The following is a fix for the frontend, not needed on the editor */
 .wp-block-buttons > .wp-block-button {
 	margin-left: 0;
 }
