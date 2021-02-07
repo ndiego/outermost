@@ -5,10 +5,10 @@
 --------------------------------------------------------------*/
 
 .wp-block-button .wp-block-button__link {
-	border: 2px solid var(--wp--preset--color--outermost-primary);
+	border: 2px solid var(--wp--preset--color--primary);
     border-radius: 4px;
     background: transparent;
-    color: var(--wp--preset--color--outermost-primary);
+    color: var(--wp--preset--color--primary);
     cursor: pointer;
     font-size: var(--wp--preset--font-size--small);
     font-weight: 600;
@@ -24,19 +24,19 @@
 
 .wp-block-button .wp-block-button__link:hover,
 .wp-block-button .wp-block-button__link:visited:hover {
-    background: var(--wp--preset--color--outermost-primary);
+    background: var(--wp--preset--color--primary);
     color: white;
 }
 
-.wp-block-button.is-style-outermost-button-primary .wp-block-button__link {
-	background: var(--wp--preset--color--outermost-primary);
+.wp-block-button.is-style-button-primary .wp-block-button__link {
+	background: var(--wp--preset--color--primary);
 	color: white;
 }
 
-.wp-block-button.is-style-outermost-button-primary .wp-block-button__link:hover
-.wp-block-button.is-style-outermost-button-primary .wp-block-button__link:visited:hover {
+.wp-block-button.is-style-button-primary .wp-block-button__link:hover
+.wp-block-button.is-style-button-primary .wp-block-button__link:visited:hover {
 	background: transparent;
-    color: var(--wp--preset--color--outermost-primary);
+    color: var(--wp--preset--color--primary);
 }
 
 /* The following is a fix for the frontend, not needed on the editor */
@@ -99,7 +99,7 @@ div.wp-block-columns {
 }
 
 .comment {
-	border: 1px solid var(--wp--preset--color--outermost-borders);
+	border: 1px solid var(--wp--preset--color--border);
     border-bottom-width: 4px;
     border-radius: 4px;
     margin-top: 30px;
@@ -111,17 +111,22 @@ div.wp-block-columns {
     align-items: center;
 }
 
-.comment-author cite {
+/* Need to add 'div' to override some default styles, need to fix in future */
+div.comment-author cite {
 	font-style: normal;
+	margin-left: 0;
+	margin-right: 0;
 }
 
-.comment-author img {
+div.comment-author img {
     border-radius: 50%;
+	margin-left: 0;
     margin-right: 10px;
 }
 
-.comment-author .says {
+div.comment-author .says {
     margin-left: 10px;
+	margin-right: 0;
 }
 
 .comment-meta a {
@@ -129,11 +134,11 @@ div.wp-block-columns {
 	font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--wp--preset--color--outermost-primary);
+    color: var(--wp--preset--color--primary);
 }
 
 .comment-meta a:hover {
-    color: var(--wp--preset--color--outermost-secondary);
+    color: var(--wp--preset--color--secondary);
 }
 
 .comment-reply-title {
@@ -213,7 +218,7 @@ div.wp-block-columns {
 }
 
 .wp-block-navigation a:hover {
-	color: var(--wp--preset--color--outermost-secondary);
+	color: var(--wp--preset--color--secondary);
 }
 
 .wp-block-navigation .current-menu-item a {
@@ -244,22 +249,22 @@ div.wp-block-columns {
 }
 
 /* Specific styling for the navigation button block style */
-.wp-block-navigation li.is-style-outermost-navigation-button {
+.wp-block-navigation li.is-style-navigation-button {
 	padding-right: 1em;
 	padding-left: 1em;
 }
 
-.wp-block-navigation li.is-style-outermost-navigation-button:last-child {
+.wp-block-navigation li.is-style-navigation-button:last-child {
 	padding-right: 0;
 	padding-left: 1em;
 }
 
-.wp-block-navigation.is-vertical li.is-style-outermost-navigation-button {
+.wp-block-navigation.is-vertical li.is-style-navigation-button {
 	padding-top: .5em;
 	padding-bottom: .5em;
 }
 
-.wp-block-navigation li.is-style-outermost-navigation-button a {
+.wp-block-navigation li.is-style-navigation-button a {
 	padding: .5em 1em;
 }
 
@@ -267,7 +272,7 @@ div.wp-block-columns {
 # Paragraph
 --------------------------------------------------------------*/
 
-p.is-style-outermost-paragraph-intro {
+p.is-style-paragraph-intro {
 	font-size: var(--wp--preset--font-size--large);
 	font-weight: bold;
 	margin-bottom: 2em;
@@ -278,18 +283,18 @@ p.is-style-outermost-paragraph-intro {
 --------------------------------------------------------------*/
 
 /* Hack to hide the category seperator since there is currently no way to remove this */
-.is-style-outermost-pill-link {
+.is-style-pill-link {
 	color: transparent;
 }
 
-.is-style-outermost-pill-link a,
-a.is-style-outermost-pill-link {
+.is-style-pill-link a,
+a.is-style-pill-link {
 	background: none;
-	background-color: var(--wp--preset--color--outermost-background);
+	background-color: var(--wp--preset--color--background);
 	border-bottom: 0;
 	border-radius: 4px;
 	box-shadow: none;
-	color: var(--wp--preset--color--outermost-secondary);
+	color: var(--wp--preset--color--secondary);
 	display: inline-block;
 	letter-spacing: .1em;
 	margin-bottom: .75em;
@@ -298,22 +303,23 @@ a.is-style-outermost-pill-link {
 	text-transform: uppercase;
 }
 
-.is-style-outermost-pill-link a:hover,
-a.is-style-outermost-pill-link:hover {
-	color: var(--wp--preset--color--outermost-primary);
-	background-color: var(--wp--preset--color--outermost-tertiary);
+.is-style-pill-link a:hover,
+a.is-style-pill-link:hover {
+	color: var(--wp--preset--color--primary);
+	background-color: var(--wp--preset--color--tertiary);
 }
 
 /*--------------------------------------------------------------
 # Query block
 --------------------------------------------------------------*/
 
+/* !important needed temporarily until the Block Editor is rendered in an iframe */
 @media (min-width: 600px) {
 	.wp-site-blocks .wp-block-query-loop .alignright,
 	.wp-site-blocks .wp-block-query-loop .alignleft,
 	.wp-block-query-loop .wp-block[data-align="right"] > *,
 	.wp-block-query-loop .wp-block[data-align="left"] > * {
-		max-width: 45%;
+		max-width: 45% !important;
 	}
 }
 
@@ -369,19 +375,19 @@ a.is-style-outermost-pill-link:hover {
 	}
 }
 
-.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link {
+.wp-block-social-links.is-style-social-icons-simple .wp-social-link {
 	background: none !important;
 }
 
-.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link a,
-.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link button {
-	color: var(--wp--preset--color--outermost-secondary);
+.wp-block-social-links.is-style-social-icons-simple .wp-social-link a,
+.wp-block-social-links.is-style-social-icons-simple .wp-social-link button {
+	color: var(--wp--preset--color--secondary);
 	padding: 0;
 }
 
-.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link a:hover,
-.wp-block-social-links.is-style-outermost-social-icons-simple .wp-social-link button:hover {
-	color: var(--wp--preset--color--outermost-primary);
+.wp-block-social-links.is-style-social-icons-simple .wp-social-link a:hover,
+.wp-block-social-links.is-style-social-icons-simple .wp-social-link button:hover {
+	color: var(--wp--preset--color--primary);
 	padding: 0;
 }
 

@@ -1,17 +1,21 @@
 <?php
 
-function outermost_support()  {
+function outermost_setup() {
 
-	// Adding support for featured images.
+	// Make theme available for translation.
+	load_theme_textdomain( 'outermost', get_template_directory() . '/languages' );
+
+	// Add support for featured images (post thumbnails).
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 1472, 9999 );
 
-	// Adding support for alignwide and alignfull classes in the block editor.
-	add_theme_support( 'align-wide' );
-
-	// Adding support for core block visual styles.
+	// Add support for core block visual styles.
 	add_theme_support( 'wp-block-styles' );
 
-	// Adding support for responsive embedded content.
+	// Add support for alignwide and alignfull classes in the block editor.
+	add_theme_support( 'align-wide' );
+
+	// Add support for responsive embedded content.
 	add_theme_support( 'responsive-embeds' );
 
 	// Add support for editor styles.
@@ -21,25 +25,16 @@ function outermost_support()  {
 	add_editor_style( array(
 		'./assets/css/blocks.css',
 		'./assets/css/style-shared.css',
-		'./assets/css/style-editor.css',
+		'./assets/css/style-editor.css'
+		//'./style.css'
 	) );
-
-	add_theme_support( 'custom-templates' );
-
-	// Add support for experimental link color control.
-	add_theme_support( 'experimental-link-color' );
-
-	// Add support for custom units.
-	add_theme_support( 'custom-units' );
-
-	// Enqueue editor styles.
-	add_editor_style( 'style.css' );
-
 }
-add_action( 'after_setup_theme', 'outermost_support' );
+add_action( 'after_setup_theme', 'outermost_setup' );
 
 /**
  * Enqueue scripts and styles.
+ *
+ * @since 0.1.0
  */
 function outermost_fonts() {
 
@@ -51,6 +46,8 @@ add_action( 'enqueue_block_editor_assets', 'outermost_fonts' );
 
 /**
  * Enqueue scripts and styles.
+ *
+ * @since 0.1.0
  */
 function outermost_frontend_scripts() {
 
@@ -65,7 +62,8 @@ add_action( 'wp_enqueue_scripts', 'outermost_frontend_scripts' );
  * The use of Roboto by default is localized. For languages that use characters
  * not supported by the font, the font can be disabled.
  *
- * Returns the font stylesheet URL or empty string if disabled.
+ * @since 0.1.0
+ * @return string $font_url Returns the font stylesheet URL or empty string if disabled.
  */
 function outermost_roboto_font_url() {
 	$font_url = '';
@@ -81,11 +79,17 @@ function outermost_roboto_font_url() {
 }
 
 /**
- * Conditionally add a class indicating whether the page/post has a featured image.
+ * Conditionally add a class indicating whether the page has a featured image.
+ * Only add this class to singular pages/post/etc.
+ *
+ * @since 0.1.0
+ *
+ * @param string $classes  The current blody classes.
+ * @return string $classes The updated blody classes.
  */
 function outermost_body_classes( $classes ) {
 
-	if ( has_post_thumbnail() ) {
+	if ( is_singular() && has_post_thumbnail() ) {
 		$classes[] = 'has-post-thumbnail';
 	}
 

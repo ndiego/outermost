@@ -20,35 +20,35 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/button',
 			array(
-				'name'  => 'outermost-button-primary',
+				'name'  => 'button-primary',
 				'label' => esc_html__( 'Primary', 'outermost' ),
 			)
 		);
 		register_block_style(
 			'core/navigation-link',
 			array(
-				'name'  => 'outermost-navigation-button',
+				'name'  => 'navigation-button',
 				'label' => esc_html__( 'Button', 'outermost' ),
 			)
 		);
 		register_block_style(
 			'core/paragraph',
 			array(
-				'name'  => 'outermost-paragraph-intro',
+				'name'  => 'paragraph-intro',
 				'label' => esc_html__( 'Intro', 'outermost' ),
 			)
 		);
 		register_block_style(
 			'core/post-hierarchical-terms',
 			array(
-				'name'  => 'outermost-pill-link',
+				'name'  => 'pill-link',
 				'label' => esc_html__( 'Pill Shaped Links', 'outermost' ),
 			)
 		);
 		register_block_style(
 			'core/post-tags',
 			array(
-				'name'  => 'outermost-pill-link',
+				'name'  => 'pill-link',
 				'label' => esc_html__( 'Pill Shaped Links', 'outermost' ),
 			)
 		);
@@ -56,7 +56,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/social-links',
 			array(
-				'name'  => 'outermost-social-icons-simple',
+				'name'  => 'social-icons-simple',
 				'label' => esc_html__( 'Simplified', 'outermost' ),
 			)
 		);

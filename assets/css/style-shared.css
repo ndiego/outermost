@@ -12,7 +12,7 @@ a {
     text-decoration: none;
     background: 0 0;
     background-repeat: no-repeat;
-    background-image: linear-gradient(transparent calc(100% - 2px), var(--wp--preset--color--outermost-primary) 0), linear-gradient(transparent calc(100% - 2px), var(--wp--preset--color--outermost-tertiary) 0);
+    background-image: linear-gradient(transparent calc(100% - 2px), var(--wp--preset--color--primary) 0), linear-gradient(transparent calc(100% - 2px), var(--wp--preset--color--tertiary) 0);
     background-size: 0 100%,100% 100%;
     font-weight: 600;
     -webkit-transition: all .3s;
@@ -51,26 +51,26 @@ ol li {
 code, kbd, tt, var {
     font-size: .85em;
     padding: 4px 8px;
-    background-color: var(--wp--preset--color--outermost-background);
+    background-color: var(--wp--preset--color--background);
     border-radius: 4px;
 }
 
 pre {
-	background-color: var(--wp--preset--color--outermost-background);
+	background-color: var(--wp--preset--color--background);
     max-width: 100%;
     overflow: auto;
 }
 
 .wp-block-button__link,
-.is-style-outermost-navigation-button .wp-block-navigation-link__content,
+.is-style-navigation-button .wp-block-navigation-link__content,
 .wp-block-search button.wp-block-search__button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    border: 2px solid var(--wp--preset--color--outermost-primary);
+    border: 2px solid var(--wp--preset--color--primary);
     border-radius: 4px;
     background: transparent;
-    color: var(--wp--preset--color--outermost-primary);
+    color: var(--wp--preset--color--primary);
     cursor: pointer;
     font-size: var(--wp--preset--font-size--small);
     font-weight: 600;
@@ -81,12 +81,12 @@ input[type="submit"] {
 }
 
 .wp-block-button__link:hover,
-.is-style-outermost-navigation-button .wp-block-navigation-link__content:hover,
+.is-style-navigation-button .wp-block-navigation-link__content:hover,
 .wp-block-search button.wp-block-search__button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    background: var(--wp--preset--color--outermost-primary);
+    background: var(--wp--preset--color--primary);
     color: white;
 }
 
@@ -111,9 +111,9 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-    border: 1px solid var(--wp--preset--color--outermost-borders);
+    border: 1px solid var(--wp--preset--color--border);
     border-radius: 4px;
-	color: var(--wp--preset--color--outermost-primary);
+	color: var(--wp--preset--color--primary);
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 	font-size: 18px;
 	padding: 10px;
