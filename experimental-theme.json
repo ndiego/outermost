@@ -100,6 +100,11 @@
 						"fontFamily": "Geneva, Tahoma, Verdana, sans-serif",
 						"slug": "geneva-verdana",
 						"name": "Geneva"
+					},
+					{
+						"fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+						"slug": "monospace-code",
+						"name": "Monospace (Code)"
 					}
 				],
 				"fontSizes": [

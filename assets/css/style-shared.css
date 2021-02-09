@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-family: var(--wp--preset--font-family--system-font);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
@@ -48,17 +48,47 @@ ol li {
     padding: 0 0 .2em .2em;
 }
 
-code, kbd, tt, var {
-    font-size: .85em;
-    padding: 4px 8px;
-    background-color: var(--wp--preset--color--background);
-    border-radius: 4px;
+code, pre {
+	background-color: var(--wp--preset--color--background);
+	border: none;
+	border-radius: 4px;
+	color: var(--wp--preset--color--primary);
+    text-shadow: 0 1px #fff;
+    font-family: var(--wp--preset--font-family--monospace-code);
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
 pre {
-	background-color: var(--wp--preset--color--background);
     max-width: 100%;
     overflow: auto;
+}
+
+pre > code {
+	line-height: 1.5em;
+}
+
+:not(pre)>code, code {
+	display: inline-block;
+	font-size: .85em;
+    font-style: normal;
+	line-height: 1.2;
+	padding: 4px 8px;
+}
+
+:not(pre)>code {
+	white-space: normal;
 }
 
 .is-style-navigation-button .wp-block-navigation-link__content,
@@ -112,7 +142,7 @@ textarea {
     border: 1px solid var(--wp--preset--color--border);
     border-radius: 4px;
 	color: var(--wp--preset--color--primary);
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-family: var(--wp--preset--font-family--system-font);
 	font-size: 18px;
 	padding: 10px;
 }
