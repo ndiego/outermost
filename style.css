@@ -19,7 +19,8 @@ Primary Branch: main
 # Shared Styles
 --------------------------------------------------------------*/
 
-@import "assets/css/blocks.css";
+@import "assets/css/core-blocks.css";
+@import "assets/css/third-party-blocks.css";
 @import "assets/css/style-shared.css";
 
 /*--------------------------------------------------------------

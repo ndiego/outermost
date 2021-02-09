@@ -1,0 +1,12 @@
+/*--------------------------------------------------------------
+# Code (Altered with the Syntax-highlighting Code Block plugin)
+# @link https://wordpress.org/plugins/syntax-highlighting-code-block/
+--------------------------------------------------------------*/
+
+.wp-block-code .hljs {
+    padding: 1em;
+}
+
+.wp-block-code .hljs.shcb-line-numbers .shcb-loc::before {
+    border-right-color: #777;
+}

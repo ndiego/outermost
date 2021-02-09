@@ -23,7 +23,8 @@ function outermost_setup() {
 
 	// Enqueue editor styles.
 	add_editor_style( array(
-		'./assets/css/blocks.css',
+		'./assets/css/core-blocks.css',
+		'./assets/css/third-party-blocks.css',
 		'./assets/css/style-shared.css',
 		'./assets/css/style-editor.css'
 	) );

@@ -53,8 +53,8 @@ code, pre {
 	border: none;
 	border-radius: 4px;
 	color: var(--wp--preset--color--primary);
-    text-shadow: 0 1px #fff;
     font-family: var(--wp--preset--font-family--monospace-code);
+	font-size: 18px;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -75,20 +75,19 @@ pre {
     overflow: auto;
 }
 
-pre > code {
-	line-height: 1.5em;
-}
-
 :not(pre)>code, code {
 	display: inline-block;
-	font-size: .85em;
     font-style: normal;
 	line-height: 1.2;
-	padding: 4px 8px;
+	padding: 4px 8px 2px;
 }
 
 :not(pre)>code {
 	white-space: normal;
+}
+
+pre code {
+	line-height: 1.5em;
 }
 
 .is-style-navigation-button .wp-block-navigation-link__content,

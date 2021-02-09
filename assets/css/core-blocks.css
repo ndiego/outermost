@@ -1,5 +1,3 @@
-
-
 /*--------------------------------------------------------------
 # Buttons (need to add to global styles when available)
 --------------------------------------------------------------*/
@@ -207,6 +205,14 @@ div.comment-author .says {
 .comment-respond .comment-form-url input {
     display: inline-block;
     width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Editor Post Title
+--------------------------------------------------------------*/
+
+.editor-post-title .editor-post-title__input {
+	font-weight: 600;
 }
 
 /*--------------------------------------------------------------
