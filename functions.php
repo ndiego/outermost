@@ -39,7 +39,7 @@ add_action( 'after_setup_theme', 'outermost_setup' );
  */
 function outermost_editor_assets() {
 
-	wp_enqueue_script( 'outermost-register-block-styles', get_theme_file_uri( '/assets/js/register-block-styles.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'outermost-editor-assets', get_theme_file_uri( '/assets/js/register-block-styles.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'outermost_editor_assets' );
 
@@ -111,9 +111,6 @@ add_filter( 'body_class','outermost_body_classes' );
 
 // Register the Documentation post type.
 include_once dirname( __FILE__ ) . '/inc/documentation.php';
-
-// Block Styles.
-require get_template_directory() . '/inc/block-styles.php';
 
 // Block Patterns.
 require get_template_directory() . '/inc/block-patterns.php';
