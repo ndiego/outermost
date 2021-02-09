@@ -61,7 +61,6 @@ pre {
     overflow: auto;
 }
 
-.wp-block-button__link,
 .is-style-navigation-button .wp-block-navigation-link__content,
 .wp-block-search button.wp-block-search__button,
 input[type="button"],
@@ -80,7 +79,6 @@ input[type="submit"] {
     transition: all 0.2s ease-in-out;
 }
 
-.wp-block-button__link:hover,
 .is-style-navigation-button .wp-block-navigation-link__content:hover,
 .wp-block-search button.wp-block-search__button:hover,
 input[type="button"]:hover,

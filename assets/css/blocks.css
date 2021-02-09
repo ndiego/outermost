@@ -5,10 +5,9 @@
 --------------------------------------------------------------*/
 
 .wp-block-button .wp-block-button__link {
-	border: 2px solid var(--wp--preset--color--primary);
-    border-radius: 4px;
-    background: transparent;
-    color: var(--wp--preset--color--primary);
+	background: transparent;
+	border: 2px solid;
+	border-radius: 4px;
     cursor: pointer;
     font-size: var(--wp--preset--font-size--small);
     font-weight: 600;
@@ -22,21 +21,57 @@
     color: inherit;
 }
 
-.wp-block-button .wp-block-button__link:hover,
-.wp-block-button .wp-block-button__link:visited:hover {
-    background: var(--wp--preset--color--primary);
+/* Outlined Black button style */
+.wp-block-button.is-style-outlined-black .wp-block-button__link {
+	background: transparent;
+	border-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--primary);
+}
+
+.wp-block-button.is-style-outlined-black .wp-block-button__link:hover,
+.wp-block-button.is-style-outlined-black .wp-block-button__link:visited:hover {
+	background: var(--wp--preset--color--primary);
     color: white;
 }
 
-.wp-block-button.is-style-button-primary .wp-block-button__link {
-	background: var(--wp--preset--color--primary);
+/* Outlined White button style */
+.wp-block-button.is-style-outlined-white .wp-block-button__link {
+	background: transparent;
+	border-color: white;
 	color: white;
 }
 
-.wp-block-button.is-style-button-primary .wp-block-button__link:hover
-.wp-block-button.is-style-button-primary .wp-block-button__link:visited:hover {
+.wp-block-button.is-style-outlined-white .wp-block-button__link:hover,
+.wp-block-button.is-style-outlined-white .wp-block-button__link:visited:hover {
+	background: white;
+    color: var(--wp--preset--color--primary);
+}
+
+/* Filled Black button style */
+.wp-block-button.is-style-filled-black .wp-block-button__link {
+	background: var(--wp--preset--color--primary);
+	border-color: var(--wp--preset--color--primary);
+	color: white;
+}
+
+.wp-block-button.is-style-filled-black .wp-block-button__link:hover,
+.wp-block-button.is-style-filled-black .wp-block-button__link:visited:hover {
 	background: transparent;
     color: var(--wp--preset--color--primary);
+}
+
+/* Filled White button style */
+.wp-block-button.is-style-filled-white .wp-block-button__link {
+	background: white;
+	border-color: white;
+	color: var(--wp--preset--color--primary);
+}
+
+.wp-block-button.is-style-filled-white .wp-block-button__link:hover,
+.wp-block-button.is-style-filled-white .wp-block-button__link:visited:hover {
+	background: transparent;
+	border-color: white;
+	color: white;
 }
 
 /* The following is a fix for the frontend, not needed on the editor */
@@ -307,6 +342,21 @@ a.is-style-pill-link {
 a.is-style-pill-link:hover {
 	color: var(--wp--preset--color--primary);
 	background-color: var(--wp--preset--color--tertiary);
+}
+
+/*--------------------------------------------------------------
+# Post Title
+--------------------------------------------------------------*/
+
+.wp-block-post-title a {
+	background: none;
+	-webkit-transition: all .1s;
+	transition: all .1s;
+}
+
+.wp-block-post-title a:hover,
+a.wp-block-post-title:hover {
+	color: var(--wp--preset--color--secondary);
 }
 
 /*--------------------------------------------------------------

@@ -26,13 +26,25 @@ function outermost_setup() {
 		'./assets/css/blocks.css',
 		'./assets/css/style-shared.css',
 		'./assets/css/style-editor.css'
-		//'./style.css'
 	) );
 }
 add_action( 'after_setup_theme', 'outermost_setup' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue block editor assets.
+ *
+ * @since 0.1.3
+ *
+ * @return void
+ */
+function outermost_editor_assets() {
+
+	wp_enqueue_script( 'outermost-register-block-styles', get_theme_file_uri( '/assets/js/register-block-styles.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+}
+add_action( 'enqueue_block_editor_assets', 'outermost_editor_assets' );
+
+/**
+ * Enqueue custom fonts.
  *
  * @since 0.1.0
  */
