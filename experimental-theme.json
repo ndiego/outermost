@@ -30,7 +30,7 @@
 				"palette": [
 					{
 						"slug": "primary",
-						"color": "#222222",
+						"color": "#121212",
 						"name": "Primary"
 					},
 					{
@@ -45,7 +45,7 @@
 					},
 					{
 						"slug": "background",
-						"color": "#f0f1f2",
+						"color": "#f1f1f1",
 						"name": "Background"
 					},
 					{
