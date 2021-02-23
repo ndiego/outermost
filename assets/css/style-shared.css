@@ -25,6 +25,7 @@ a:hover {
 
 /* Block specific overrides */
 .wp-block-site-title a,
+.wp-block-site-logo a,
 .wp-block-social-links a,
 .wp-block-button__link a,
 .wp-block-navigation a,

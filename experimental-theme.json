@@ -1,5 +1,5 @@
 {
-	"pageTemplates": {
+	"customTemplates": {
 		"freeform": {
 			"title": "Freeform",
 			"description": "Template only includes the site header and footer, the rest is up to you!",
