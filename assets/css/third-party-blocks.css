@@ -10,3 +10,12 @@
 .wp-block-code .hljs.shcb-line-numbers .shcb-loc::before {
     border-right-color: #777;
 }
+
+/*--------------------------------------------------------------
+# Easy Plugin Stats (Fix height of dash icons in Block Editor)
+# @link https://wordpress.org/plugins/easy-plugin-stats/
+--------------------------------------------------------------*/
+.eps-star-rating .dashicons,
+.eps-star-rating .dashicons-before:before {
+    line-height: 1.2;
+}

@@ -102,7 +102,7 @@
 						"name": "Geneva"
 					},
 					{
-						"fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+						"fontFamily": "monospace",
 						"slug": "monospace-code",
 						"name": "Monospace (Code)"
 					}

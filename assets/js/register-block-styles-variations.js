@@ -56,4 +56,16 @@ wp.domReady( () => {
         'core/button',
         [ 'default', 'outline', 'squared', 'fill' ]
     );
+
+    wp.blocks.registerBlockVariation(
+        'core/post-hierarchical-terms',
+        {
+            name: 'article-category',
+    		title: 'Article Categories',
+    		icon: 'category',
+    		isDefault: false,
+    		attributes: { term: 'article-category' },
+        },
+    );
+
 } );

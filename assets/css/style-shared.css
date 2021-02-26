@@ -361,6 +361,36 @@ img.rounded-img-full,
 	}
 }
 
+/* Font size utility classes for blocks without typography controls */
+
+.text-extra-small {
+	font-size: var(--wp--preset--font-size--extra-small);
+}
+
+.text-small {
+	font-size: var(--wp--preset--font-size--small);
+}
+
+.text-normal {
+	font-size: var(--wp--preset--font-size--normal);
+}
+
+.text-large {
+	font-size: var(--wp--preset--font-size--large);
+}
+
+.text-extra-large {
+	font-size: var(--wp--preset--font-size--extra-large);
+}
+
+.text-huge {
+	font-size: var(--wp--preset--font-size--huge);
+}
+
+.text-gigantic {
+	font-size: var(--wp--preset--font-size--gigantic);
+}
+
 /* Margin utility classes */
 
 .m-0 {

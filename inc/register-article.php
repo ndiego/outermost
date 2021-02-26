@@ -1,21 +1,19 @@
 <?php
 
-add_action( 'init', 'blox_register_documentation_post_type' );
-
-function blox_register_documentation_post_type() {
+function outermost_register_article_post_type() {
 	$labels = array(
-		'name'               => __( 'Documentation', 'blox' ),
-		'singular_name'      => __( 'Doc', 'blox' ),
+		'name'               => __( 'Articles', 'blox' ),
+		'singular_name'      => __( 'Article', 'blox' ),
 		'add_new'            => __( 'Add New', 'blox' ),
-		'add_new_item'       => __( 'Add New Doc', 'blox' ),
-		'edit_item'          => __( 'Edit Doc', 'blox' ),
-		'new_item'           => __( 'New Doc', 'blox' ),
-		'view_item'          => __( 'View Doc', 'blox' ),
-		'search_items'       => __( 'Search Documentation', 'blox' ),
-		'not_found'          => __( 'No documentation found.', 'blox' ),
-		'not_found_in_trash' => __( 'No documentation found in trash.', 'blox' ),
+		'add_new_item'       => __( 'Add New Article', 'blox' ),
+		'edit_item'          => __( 'Edit Article', 'blox' ),
+		'new_item'           => __( 'New Article', 'blox' ),
+		'view_item'          => __( 'View Article', 'blox' ),
+		'search_items'       => __( 'Search Knowledge Base', 'blox' ),
+		'not_found'          => __( 'No articles found.', 'blox' ),
+		'not_found_in_trash' => __( 'No articles found in trash.', 'blox' ),
 		'parent_item_colon'  => '',
-		'menu_name'          => __( 'Documentation', 'blox' )
+		'menu_name'          => __( 'Knowledge Base', 'blox' )
 	);
 
 	$args = array(
@@ -26,7 +24,7 @@ function blox_register_documentation_post_type() {
 		'show_in_menu'        => true,
 		'query_var'           => true,
 		'show_in_admin_bar'   => true,
-		'rewrite'             => array( 'slug' => 'documentation' ),
+		'rewrite'             => array( 'slug' => 'knowledge-base' ),
 		'menu_position'       => 20,
 		'menu_icon'           => 'dashicons-book-alt',
 		'has_archive'		  => true,
@@ -37,12 +35,12 @@ function blox_register_documentation_post_type() {
 	);
 
 	// Register the easy_docs post type
-	register_post_type( 'documentation', $args );
+	register_post_type( 'article', $args );
 }
+add_action( 'init', 'outermost_register_article_post_type' );
 
-add_action( 'init', 'blox_register_documentation_categories' );
 
-function blox_register_documentation_categories() {
+function outermost_register_article_categories() {
 
 	$labels = array(
 		'name'                       => __( 'Categories' ),
@@ -71,10 +69,11 @@ function blox_register_documentation_categories() {
 		'update_count_callback' => '_update_post_term_count',
 		'query_var'             => true,
 		'has_archive'           => false,
-		'show_in_rest'	      => true,
-		'rewrite'               => array( 'slug' => 'documentation-type' ),
+		'show_in_rest'	        => true,
+		//'rewrite'               => array( 'slug' => 'knowledge-base/category' ),
 	);
 
 	// Register category taxonomy
-	register_taxonomy( 'documentation-type', 'documentation', $args );
+	register_taxonomy( 'article-category', 'article', $args );
 }
+add_action( 'init', 'outermost_register_article_categories' );
