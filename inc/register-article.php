@@ -66,14 +66,12 @@ function outermost_register_article_categories() {
 		'labels'                => $labels,
 		'show_ui'               => true,
 		'show_admin_column'     => true,
-		'update_count_callback' => '_update_post_term_count',
-		'query_var'             => true,
-		'has_archive'           => false,
 		'show_in_rest'	        => true,
+		'update_count_callback' => '_update_post_term_count',
 		//'rewrite'               => array( 'slug' => 'knowledge-base/category' ),
 	);
 
 	// Register category taxonomy
-	register_taxonomy( 'article-category', 'article', $args );
+	register_taxonomy( 'knowledge-base-category', 'article', $args );
 }
 add_action( 'init', 'outermost_register_article_categories' );

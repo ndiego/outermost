@@ -52,6 +52,11 @@ wp.domReady( () => {
         label: 'Simple Icons'
     } );
 
+    wp.blocks.registerBlockStyle( 'core/quote', {
+        name: 'small-quote',
+        label: 'Small Quote'
+    } );
+
     wp.blocks.unregisterBlockStyle(
         'core/button',
         [ 'default', 'outline', 'squared', 'fill' ]
@@ -60,11 +65,11 @@ wp.domReady( () => {
     wp.blocks.registerBlockVariation(
         'core/post-hierarchical-terms',
         {
-            name: 'article-category',
+            name: 'knowledge-base-category',
     		title: 'Article Categories',
     		icon: 'category',
     		isDefault: false,
-    		attributes: { term: 'article-category' },
+    		attributes: { term: 'knowledge-base-category' },
         },
     );
 

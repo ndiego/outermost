@@ -40,7 +40,7 @@ add_action( 'after_setup_theme', 'outermost_setup' );
  */
 function outermost_editor_assets() {
 
-	wp_enqueue_script( 'outermost-editor-assets', get_theme_file_uri( '/assets/js/register-block-styles.js' ), array( 'wp-blocks', 'wp-dom', 'wp-edit-post' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'outermost-editor-assets', get_theme_file_uri( '/assets/js/register-block-styles-variations.js' ), array( 'wp-blocks', 'wp-dom', 'wp-edit-post' ), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'outermost_editor_assets' );
 
@@ -52,6 +52,7 @@ add_action( 'enqueue_block_editor_assets', 'outermost_editor_assets' );
 function outermost_fonts() {
 
 	// Enqueue Google fonts
+	wp_enqueue_style( 'outermost-material-icons', '//fonts.googleapis.com/icon?family=Material+Icons', array(), null );
 	wp_enqueue_style( 'outermost-roboto', outermost_roboto_font_url(), array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'outermost_fonts' );

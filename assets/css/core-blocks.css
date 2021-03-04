@@ -481,3 +481,47 @@ a.wp-block-post-title:hover {
 	line-height: 0;
 	margin: 0 20px 0 0 !important;
 }
+
+
+
+.is-style-small-quote {
+	position: relative;
+	font-size: 16px;
+	border: none;
+	padding: 0;
+}
+
+.is-style-small-quote:before {
+	color: #F5F5F2;
+    content: "“";
+    font-size: 150px;
+    position: absolute;
+    font-weight: 600;
+	top: -100px;
+	left: -37px;
+    font-family: Times, serif;
+    z-index: -1;
+    opacity: .2;
+}
+
+
+
+.link-alt-style-transparent-to-opaque a {
+	background: none;
+	font-weight: inherit;
+	opacity: .6;
+}
+
+.link-alt-style-transparent-to-opaque a:hover {
+	opacity: 1;
+}
+
+.link-alt-style-opaque-to-transparent a {
+	background: none;
+	font-weight: inherit;
+	opacity: 1;
+}
+
+.link-alt-style-opaque-to-transparent a:hover {
+	opacity: .6;
+}
