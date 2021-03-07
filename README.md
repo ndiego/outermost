@@ -42,3 +42,25 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 #### GitHub Updater
 1. Install and activate the GitHub Updater plugin using the [installation instructions](https://github.com/afragen/github-updater/wiki/Installation#upload).
 2. Follow the [General Usage](https://github.com/afragen/github-updater/wiki/General-Usage) instructions to add a personal access token (optional).
+
+## Changelog
+
+### 0.2.0 - 2021-03-07
+
+##### Added
+
+* Support for Material UI icons
+* Added utility classes for Material UI icons
+* Added utility classes for alternative link styles
+* Added utility classes for opacity
+
+##### Changed
+
+* Change article-category to knowledge-base-category
+* Site logo is now restricted to 250px with CSS. Fixes a rendering issue in FSE.
+
+##### Fixed
+
+* Margin styling for sidebars so it does not impact additional columns blocks.
+* Cover blocks were not respecting the rounded utility classes, so fixed that.
+* Fixed error with incorrect file reference for block variations

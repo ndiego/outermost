@@ -344,22 +344,27 @@ img.shadow-img,
 
 .rounded-sm {
     border-radius: 0.125rem;
+	overflow: hidden;
 }
 
 .rounded {
     border-radius: 4px;
+	overflow: hidden;
 }
 
 .rounded-md {
     border-radius: 0.375rem;
+	overflow: hidden;
 }
 
 .rounded-lg	{
     border-radius: 0.5rem;
+	overflow: hidden;
 }
 
 .rounded-full {
     border-radius: 9999px;
+	overflow: hidden;
 }
 
 img.rounded-img-sm,

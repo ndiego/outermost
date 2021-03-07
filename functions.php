@@ -28,6 +28,7 @@ function outermost_setup() {
 		'./assets/css/style-shared.css',
 		'./assets/css/style-editor.css'
 	) );
+
 }
 add_action( 'after_setup_theme', 'outermost_setup' );
 
