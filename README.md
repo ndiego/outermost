@@ -45,7 +45,7 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
-### 0.2.3 - 2021-03-21
+### 0.2.4 - 2021-03-21
 
 ##### Fixed
 
