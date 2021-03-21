@@ -47,6 +47,14 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ### 0.2.3 - 2021-03-21
 
+##### Fixed
+
+* Fixed error in image block styling.
+
+## Changelog
+
+### 0.2.3 - 2021-03-21
+
 ##### Added
 
 * Condensed list block variation.

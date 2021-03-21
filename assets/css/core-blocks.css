@@ -243,7 +243,7 @@ div.comment-author .says {
 # Group Block
 --------------------------------------------------------------*/
 .entry-content .wp-block-image {
-	margin: 2em 0;
+	margin: 2em auto;
 }
 
 /*--------------------------------------------------------------
