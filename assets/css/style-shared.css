@@ -33,7 +33,7 @@ a:hover {
     background: none;
 }
 
-p {
+p, li {
     margin: 1.5em auto;
 }
 
@@ -42,11 +42,25 @@ h1, h2, h3, h4, h5, h6, b, strong {
 }
 
 ol, ul {
-    padding-left: 20px;
+    padding-left: 25px;
+}
+
+li {
+	margin: 1.5em auto;
+	padding-left: .5em;
 }
 
 ol li {
-    padding: 0 0 .2em .2em;
+	padding-left: .75em;
+}
+
+li::marker {
+	font-weight: 600;
+}
+
+ul li::marker {
+	font-size: 1.25rem;
+	font-weight: 600;
 }
 
 code, pre {

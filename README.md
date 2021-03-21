@@ -45,6 +45,12 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.2.1 - 2021-03-21
+
+##### Changed
+
+* Updated list styles.
+
 ### 0.2.0 - 2021-03-07
 
 ##### Added
