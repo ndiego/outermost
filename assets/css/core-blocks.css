@@ -230,7 +230,7 @@ div.comment-author .says {
 }
 
 /*--------------------------------------------------------------
-# Featured Image
+# Group Block
 --------------------------------------------------------------*/
 
 /* Remove the padding that is automatically added when background color is applied. */
@@ -238,6 +238,24 @@ div.comment-author .says {
 	padding: inherit;
     margin: inherit;
 }
+
+/*--------------------------------------------------------------
+# Group Block
+--------------------------------------------------------------*/
+.entry-content .wp-block-image {
+	margin: 2em 0;
+}
+
+/*--------------------------------------------------------------
+# List block
+--------------------------------------------------------------*/
+
+/* Condensed list block variation */
+ol.is-style-condensed-list li,
+ul.is-style-condensed-list li {
+	margin: 0 auto .2em;
+}
+
 
 /*--------------------------------------------------------------
 # Medis & Text

@@ -45,6 +45,20 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.2.3 - 2021-03-21
+
+##### Added
+
+* Condensed list block variation.
+
+##### Changed
+
+* Improved vertical spacing on image blocks in the post/page content area.
+
+##### Fixed
+
+* Paragraph styles for the  EDD Free Downloads modal.
+
 ### 0.2.2 - 2021-03-21
 
 ##### Added
@@ -53,7 +67,7 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ##### Fixed
 
-* Editor styles for un-ordered lists. 
+* Editor styles for un-ordered lists.
 
 ##### Changed
 

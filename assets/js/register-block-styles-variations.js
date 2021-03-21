@@ -57,6 +57,11 @@ wp.domReady( () => {
         label: 'Small Quote'
     } );
 
+    wp.blocks.registerBlockStyle( 'core/list', {
+        name: 'condensed-list',
+        label: 'Condensed List'
+    } );
+
     wp.blocks.unregisterBlockStyle(
         'core/button',
         [ 'default', 'outline', 'squared', 'fill' ]

@@ -33,6 +33,10 @@
     position: relative;
 }
 
+#edd-free-downloads-modal p {
+    margin: 0 auto 1em;
+}
+
 #edd-free-downloads-modal input[type=password],
 #edd-free-downloads-modal input[type=text] {
     width: 100%;
