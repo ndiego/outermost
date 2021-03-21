@@ -45,12 +45,13 @@ ol, ul {
     padding-left: 25px;
 }
 
-li {
+ul li {
 	margin: 1.5em auto;
 	padding-left: .5em;
 }
 
 ol li {
+	margin: 1.5em auto;
 	padding-left: .75em;
 }
 

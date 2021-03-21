@@ -19,3 +19,52 @@
 .eps-star-rating .dashicons-before:before {
     line-height: 1.2;
 }
+
+/*--------------------------------------------------------------
+# Easy Digital Downloads
+--------------------------------------------------------------*/
+#edd-free-downloads-modal {
+    background: #fff;
+    width: 350px;
+    max-width: 95%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 2%;
+    position: relative;
+}
+
+#edd-free-downloads-modal input[type=password],
+#edd-free-downloads-modal input[type=text] {
+    width: 100%;
+    font-size: 16px;
+}
+
+#edd-free-downloads-modal label {
+    font-weight: 500;
+    display: block;
+    position: relative;
+    line-height: 100%;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+#edd-free-downloads-modal a.button,
+#edd-free-downloads-modal button {
+    border: 2px solid var(--wp--preset--color--primary);
+    border-radius: 4px;
+    background: var(--wp--preset--color--primary);
+    color: white;
+    cursor: pointer;
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: .75em 1.25em;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+#edd-free-downloads-modal a.button:hover,
+#edd-free-downloads-modal button:hover {
+    background: transparent;
+    color: var(--wp--preset--color--primary);
+}

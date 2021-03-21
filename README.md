@@ -45,6 +45,20 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.2.2 - 2021-03-21
+
+##### Added
+
+* Custom styling for the EDD Free Downloads modal to be consistent with theme styles.
+
+##### Fixed
+
+* Editor styles for un-ordered lists. 
+
+##### Changed
+
+* Updated list styles.
+
 ### 0.2.1 - 2021-03-21
 
 ##### Changed
