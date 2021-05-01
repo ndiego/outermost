@@ -2,7 +2,7 @@
 
 function outermost_register_article_post_type() {
 	$labels = array(
-		'name'               => __( 'Articles', 'blox' ),
+		'name'               => __( 'Knowledge Base', 'blox' ),
 		'singular_name'      => __( 'Article', 'blox' ),
 		'add_new'            => __( 'Add New', 'blox' ),
 		'add_new_item'       => __( 'Add New Article', 'blox' ),

@@ -27,7 +27,7 @@ Primary Branch: main
 # Defaults
 --------------------------------------------------------------*/
 
-body, figure {
+body {
 	margin: 0;
 }
 
@@ -41,40 +41,6 @@ img {
 
 * {
 	box-sizing: border-box;
-}
-
-.wp-site-blocks,
-.wp-block-template-part.alignfull {
-	padding: 0 var(--wp--custom--spacing--horizontal);
-}
-
-.wp-site-blocks *:not(li) {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.wp-site-blocks *:not(.wp-block-post-content):not(.alignfull):not(.alignwide):not([class$="__inner-container"]):not(.wp-block-column):not(img):not(code):not(span) {
-	max-width: var(--wp--custom--responsive--aligndefault-width);
-}
-
-.wp-site-blocks .alignwide {
-	width: var(--wp--custom--responsive--alignwide-width);
-	max-width: 100%;
-}
-
-.wp-site-blocks .alignfull {
-	margin: 0 calc(0px - var(--wp--custom--spacing--horizontal));
-	max-width: calc(100% + (2 * var(--wp--custom--spacing--horizontal)));
-	width: calc(100% + (2 * var(--wp--custom--spacing--horizontal)));
-}
-
-.wp-site-blocks .alignfull > [class$="__inner-container"] {
-	padding-left: var(--wp--custom--spacing--horizontal);
-	padding-right: var(--wp--custom--spacing--horizontal);
-}
-
-.aligncenter {
-	text-align: center;
 }
 
 /* Stack floated elements on mobile screen sizes */

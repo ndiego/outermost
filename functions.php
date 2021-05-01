@@ -21,12 +21,17 @@ function outermost_setup() {
 	// Add support for editor styles.
 	add_theme_support( 'editor-styles' );
 
+	// Add support for experimental link color control.
+	add_theme_support( 'experimental-link-color' );
+
+	// Add support for custom units.
+	add_theme_support( 'custom-units' );
+
 	// Enqueue editor styles.
 	add_editor_style( array(
 		'./assets/css/core-blocks.css',
 		'./assets/css/third-party-blocks.css',
-		'./assets/css/style-shared.css',
-		'./assets/css/style-editor.css'
+		'./assets/css/style-shared.css'
 	) );
 
 }
@@ -54,6 +59,7 @@ function outermost_fonts() {
 
 	// Enqueue Google fonts
 	wp_enqueue_style( 'outermost-material-icons', '//fonts.googleapis.com/icon?family=Material+Icons', array(), null );
+	wp_enqueue_style( 'outermost-material-icons-outlined', '//fonts.googleapis.com/icon?family=Material+Icons+Outlined', array(), null );
 	wp_enqueue_style( 'outermost-roboto', outermost_roboto_font_url(), array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'outermost_fonts' );
@@ -111,6 +117,36 @@ function outermost_body_classes( $classes ) {
     return $classes;
 }
 add_filter( 'body_class','outermost_body_classes' );
+
+
+/**
+ * Stip the prefix from the archive titles.
+ *
+ * @since 0.1.0
+ *
+ * @param string $prefix The archive prefix.
+ * @return null          Return null.
+ */
+function outermost_remove_archive_title_prefix( $prefix ) {
+	if ( $prefix ) {
+		return null;
+	}
+}
+add_filter( 'get_the_archive_title_prefix', 'outermost_remove_archive_title_prefix' );
+
+
+/**
+ * This function modifies the main WordPress query to include an array of
+ * post types instead of the default 'post' post type.
+ *
+ * @param object $query The main WordPress query.
+ */
+function outermost_include_articles_in_search_results( $query ) {
+    if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
+        $query->set( 'post_type', array( 'post', 'article' ) );
+    }
+}
+add_action( 'pre_get_posts', 'outermost_include_articles_in_search_results' );
 
 // Register the Article post type.
 include_once dirname( __FILE__ ) . '/inc/register-article.php';

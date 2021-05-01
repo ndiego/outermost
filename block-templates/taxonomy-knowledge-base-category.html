@@ -19,47 +19,60 @@
     <!-- wp:column {"verticalAlignment":"top","width":"25%"} -->
     <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:25%">
 
-        <!-- wp:spacer {"height":20} -->
-        <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- wp:spacer {"height":10} -->
+        <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
         <!-- /wp:spacer -->
-
-        <!-- wp:separator {"align":"wide","color":"border","className":"is-style-wide"} -->
-        <hr class="wp-block-separator alignwide has-text-color has-background has-border-background-color has-border-color is-style-wide"/>
-        <!-- /wp:separator -->
 
         <!-- wp:paragraph -->
-        <p><strong>Article Categories</strong></p>
+        <p><strong>Categories</strong></p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:post-hierarchical-terms {"term":"knowledge-base-category","className":"text-extra-small is-style-pill-link","fontSize":"extra-small"} /-->
-
-        <!-- wp:spacer {"height":20} -->
-        <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
-        <!-- /wp:spacer -->
-
-        <!-- wp:separator {"align":"wide","color":"border","className":"is-style-wide"} -->
-        <hr class="wp-block-separator alignwide has-text-color has-background has-border-background-color has-border-color is-style-wide"/>
-        <!-- /wp:separator -->
-
-        <!-- wp:paragraph {"fontSize":"small"} -->
-        <p class="has-small-font-size"><strong>Last Updated</strong></p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:post-date {"fontSize":"small"} /-->
+        <!-- wp:navigation {"orientation":"vertical"} -->
+        <!-- /wp:navigation -->
 
         <!-- wp:spacer {"height":50} -->
         <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
         <!-- /wp:spacer -->
 
+        <!-- wp:separator {"align":"wide","color":"border","className":"is-style-wide"} -->
+        <hr class="wp-block-separator alignwide has-text-color has-background has-border-background-color has-border-color is-style-wide"/>
+        <!-- /wp:separator -->
+
+        <!-- wp:spacer {"height":50} -->
+        <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:search {"showLabel":false,"placeholder":"Search...","buttonUseIcon":true} /-->
+
     </div>
     <!-- /wp:column -->
 
     <!-- wp:column {"verticalAlignment":"top","width":"75%"} -->
-    <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:75%">
+    <div class="wp-block-column is-vertically-aligned-top article-category-query" style="flex-basis:75%">
 
-        <!-- wp:post-title {"level":1,"fontSize":"extra-large"} /-->
+        <!-- wp:query-title {"type":"archive","fontSize":"extra-large"} /-->
 
-        <!-- wp:post-content /-->
+        <!-- wp:term-description /-->
+
+        <!-- wp:spacer {"height":10} -->
+        <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:separator {"color":"border","className":"is-style-wide"} -->
+        <hr class="wp-block-separator has-text-color has-background has-border-background-color has-border-color is-style-wide"/>
+        <!-- /wp:separator -->
+
+        <!-- wp:spacer {"height":5} -->
+        <div style="height:5px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:query {"queryId":1,"query":{"perPage":100,"pages":"1","offset":0,"order":"desc","orderBy":"menu_order","inherit":true}} -->
+        <!-- wp:query-loop -->
+
+        <!-- wp:post-title {"isLink":true,"fontSize":"normal"} /-->
+
+        <!-- /wp:query-loop -->
+        <!-- /wp:query -->
 
     </div>
     <!-- /wp:column -->
@@ -77,5 +90,6 @@
 
 </main>
 <!-- /wp:group -->
+
 
 <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer","layout":{"inherit":true}} /-->

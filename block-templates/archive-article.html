@@ -1,23 +1,46 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header","align":"full","backgroundColor":"background"} /-->
+<!-- wp:group {"align":"full","tagName":"header","className":"site-header","backgroundColor":"background","layout":{"inherit":true}} -->
+<header class="wp-block-group site-header alignfull has-background has-background-background-color">
 
-<!-- wp:group {"align":"full","backgroundColor":"background","className":"entry-header"} -->
-<div class="wp-block-group entry-header alignfull has-background has-background-background-color">
-    <div class="wp-block-group__inner-container">
-        <!-- wp:heading {"level":1,"className":"mt-0 mb-0"} -->
-        <h1 class="mt-0 mb-0">Knowledge Base</h1>
+    <!-- wp:template-part {"slug":"main-navigation","tagName":"div","align":"wide"} /-->
+
+    <!-- wp:group {"align":"full","className":"entry-header","layout":{"inherit":true}} -->
+    <div class="wp-block-group archive-header alignfull">
+        <!-- wp:heading {"level":1,"className":"entry-title","textAlign":"center"} -->
+        <h1 class="entry-title has-text-align-center">Knowledge Base</h1>
         <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":20} -->
+        <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:search {"showLabel":false,"placeholder":"Search...","buttonUseIcon":true} /-->
+
+        <!-- wp:spacer {"height":30} -->
+        <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
     </div>
-</div>
+    <!-- /wp:group -->
+
+</header>
 <!-- /wp:group -->
 
-<!-- wp:spacer {"height":50} -->
-<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
 
-<!-- wp:template-part {"slug":"main","tagName":"main","align":"full","className":"site-main"} /-->
+<!-- wp:group {"tagName":"main","className":"site-content","layout":{"inherit":true}} -->
+<main class="wp-block-group site-content">
 
-<!-- wp:separator {"align":"wide","color":"border","className":"is-style-wide"} -->
-<hr class="wp-block-separator alignwide has-text-color has-background has-border-background-color has-border-color is-style-wide"/>
-<!-- /wp:separator -->
+    <!-- wp:spacer {"height":50} -->
+    <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer","align":"wide"} /-->
+    <!-- wp:spacer {"height":100} -->
+    <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+
+    <!-- wp:separator {"align":"wide","color":"border","className":"is-style-wide"} -->
+    <hr class="wp-block-separator alignwide has-text-color has-background has-border-background-color has-border-color is-style-wide"/>
+    <!-- /wp:separator -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer","layout":{"inherit":true}} /-->

@@ -9,6 +9,19 @@ body {
 }
 
 a {
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all ease-in-out 0.1s;
+	border-bottom: 1px solid var(--wp--preset--color--border);
+}
+
+a:hover {
+	color: var(--wp--preset--color--link);
+}
+
+/*
+a {
     text-decoration: none;
     background: 0 0;
     background-repeat: no-repeat;
@@ -23,7 +36,7 @@ a:hover {
     background-size: 100% 100%,100% 100%;
 }
 
-/* Block specific overrides */
+/* Block specific overrides
 .wp-block-site-title a,
 .wp-block-site-logo a,
 .wp-block-social-links a,
@@ -32,27 +45,13 @@ a:hover {
 .comment-meta a {
     background: none;
 }
-
-p, li {
-    margin: 1.5em auto;
-}
-
+*/
 h1, h2, h3, h4, h5, h6, b, strong {
     font-weight: 600;
 }
 
 ol, ul {
     padding-left: 25px;
-}
-
-ul li {
-	margin: 1.5em auto;
-	padding-left: .5em;
-}
-
-ol li {
-	margin: 1.5em auto;
-	padding-left: .75em;
 }
 
 li::marker {
@@ -106,8 +105,23 @@ pre code {
 	line-height: 1.5em;
 }
 
+input,
+textarea {
+    border: 1px solid var(--wp--preset--color--border);
+    border-radius: 4px;
+	color: var(--wp--preset--color--primary);
+	font-family: var(--wp--preset--font-family--system-font);
+	font-size: 18px;
+	padding: 10px;
+}
+
+textarea {
+	box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+}
+
 .is-style-navigation-button .wp-block-navigation-link__content,
-.wp-block-search button.wp-block-search__button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -125,7 +139,6 @@ input[type="submit"] {
 }
 
 .is-style-navigation-button .wp-block-navigation-link__content:hover,
-.wp-block-search button.wp-block-search__button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -133,39 +146,24 @@ input[type="submit"]:hover {
     color: white;
 }
 
-.wp-block-search button.wp-block-search__button:hover svg {
-    fill: white;
-}
+@media screen and (max-width: 1120px) {
+	.wp-site-blocks {
+		margin-left: 20px;
+		margin-right: 20px;
+    }
 
-.wp-block-search input.wp-block-search__input,
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-    border: 1px solid var(--wp--preset--color--border);
-    border-radius: 4px;
-	color: var(--wp--preset--color--primary);
-	font-family: var(--wp--preset--font-family--system-font);
-	font-size: 18px;
-	padding: 10px;
-}
+	.wp-site-blocks .alignfull {
+		width: calc( 100% + 40px );
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 
-textarea {
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
+	.wp-site-blocks .alignfull.wp-block-template-part,
+	.wp-site-blocks .alignfull.wp-block-group,
+	.wp-site-blocks .alignfull.wp-block-cover {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -177,16 +175,24 @@ textarea {
     padding: 0;
 }
 
-/* Hopefully remove when better responsive controls are availbale */
-@media screen and (max-width: 599.98px) {
+/*--------------------------------------------------------------
+# Main Navigation
+--------------------------------------------------------------*/
 
-    .wp-block-site-logo,
-	.wp-block-site-title,
-	.wp-block-site-tagline {
+.main-navigation.wp-block-columns {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Hopefully remove when better responsive controls are availbale */
+@media screen and (max-width: 780px) {
+    .main-navigation .wp-block-site-logo,
+	.main-navigation .wp-block-site-title,
+	.main-navigation .wp-block-site-tagline {
         text-align: center;
     }
 
-	.items-justified-right>ul.wp-block-navigation__container {
+	.main-navigation .items-justified-right>ul.wp-block-navigation__container {
 		justify-content: center !important;
 		margin-top: 20px !important;
 	}
@@ -196,35 +202,63 @@ textarea {
 # Footer
 --------------------------------------------------------------*/
 
-.site-footer,
-.site-footer.has-background {
-    padding: 0;
-}
-
-/* Hopefully remove when better responsive controls are availbale */
-@media screen and (max-width: 782px) {
-
-    .site-footer {
-        text-align: center;
-    }
+@media screen and (max-width: 780px) {
+	.site-footer {
+		text-align: center;
+	}
 
 	.site-footer .alignright {
-        text-align: center !important;
-        float: none !important;
-        justify-content: center !important;
+		float: none !important;
+		justify-content: center !important;
+		margin: 0 !important;
 	}
 }
 
 /*--------------------------------------------------------------
-# Entry Header (Post, Page, etc.)
+# Site Content
 --------------------------------------------------------------*/
 
-.entry-header.wp-block-group {
-    padding: 50px 0;
+/* Hopefully remove when better responsive controls are available */
+@media screen and (max-width: 1120px) {
+
+    .site-content .entry-content.alignfull {
+        padding-left: 20px;
+		padding-right: 20px;
+    }
 }
 
+/*--------------------------------------------------------------
+# Archive/Entry Headers at top of page, not in query loops
+--------------------------------------------------------------*/
+
+.archive-header.wp-block-group,
+.entry-header.wp-block-group {
+	padding: 50px 0;
+}
+
+/* Needed for feature images */
 .has-post-thumbnail:not(.archive) .entry-header.wp-block-group {
-    padding: 50px 0 100px;
+    padding: 50px 0 110px;
+}
+
+.archive-header.wp-block-group .wp-block-query-title,
+.entry-header.wp-block-group .entry-title {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Hopefully remove when better responsive controls are available */
+@media screen and (max-width: 1120px) {
+
+	.archive-header.wp-block-group,
+	.entry-header.wp-block-group {
+		padding: 50px 20px;
+	}
+
+	/* Needed for feature images */
+	.has-post-thumbnail:not(.archive) .entry-header.wp-block-group {
+	    padding: 50px 20px 110px;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -248,16 +282,30 @@ textarea {
 # Theme specific pattern styles
 --------------------------------------------------------------*/
 
+/* This is for the homepage posts grid */
 .one-three-post-grid .alignright {
 	max-width: 200px;
+}
+
+.article-category-query .wp-block-query-loop li h2 {
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
+}
+
+.article-category-query .wp-block-query-loop li h2:before {
+	content: "\e873";
+	font-family: 'Material Icons Outlined';
+	font-weight: normal;
+	margin-right: 8px;
+	vertical-align: text-bottom;
+	opacity: .4;
 }
 
 /*--------------------------------------------------------------
 # Utility Classes (Hopefully can remove in future)
 --------------------------------------------------------------*/
 
-/* Custom alternatice link styling utility classes */
-
+/* Custom alternative link styling utility classes */
 .link-alt-style-transparent-to-opaque a {
 	background: none;
 	font-weight: inherit;
@@ -279,7 +327,6 @@ textarea {
 }
 
 /* Custom Material UI icon utility classes */
-
 .has-icon-style-circle .material-icons {
 	background: #E6E6E3;
 	padding: 8px;

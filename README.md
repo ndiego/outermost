@@ -45,6 +45,23 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.2.5 - 2021-05-01
+
+##### Added
+
+* Added Article Categories block variation to the navigation link block.
+* Added Material Icons Outlined support.
+
+##### Changed
+
+* Updated all templates to be compatible with Gutenberg 10.3+.
+* Articles are now included in search queries.
+* Changed link styling to be much simpler.
+
+##### Removed
+
+* Removed all template parts except for main-navigation.html and footer.html.
+
 ### 0.2.4 - 2021-03-21
 
 ##### Fixed

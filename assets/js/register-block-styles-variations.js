@@ -78,4 +78,15 @@ wp.domReady( () => {
         },
     );
 
+    wp.blocks.registerBlockVariation(
+        'core/navigation-link',
+        {
+            name: 'knowledge-base-category-link',
+            icon: 'category',
+            title: 'Article Category Link',
+            description: 'A link to an article category',
+            attributes: { type: 'knowledge-base-category', kind: 'taxonomy' },
+        },
+    );
+
 } );
