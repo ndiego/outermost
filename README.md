@@ -45,6 +45,17 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.2.6 - 2021-05-02
+
+##### Changed
+
+* Changed default heading sizes.
+
+##### Fixed
+
+* Link styling and sizing for the site logo.
+* Post title styling for the custom homepage grid layout.
+
 ### 0.2.5 - 2021-05-01
 
 ##### Added

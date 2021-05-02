@@ -212,6 +212,14 @@ div.comment-author .says {
 }
 
 /*--------------------------------------------------------------
+# Featured Image
+--------------------------------------------------------------*/
+.wp-block-post-featured-image a {
+	border: none;
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
 # Group Block
 --------------------------------------------------------------*/
 .entry-content .wp-block-image {
@@ -259,7 +267,7 @@ ul.is-style-condensed-list li {
 	    -ms-grid-row: 1;
 	    grid-row: 1;
 	}
-	
+
 	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
 	    -ms-grid-column: 1;
 	    grid-column: 1;
@@ -286,6 +294,7 @@ ul.is-style-condensed-list li {
 
 .wp-block-navigation a {
 	border: none;
+	text-decoration: none;
 	font-weight: normal;
 	transition: none;
 }
@@ -389,6 +398,12 @@ a.is-style-pill-link:hover {
 .wp-block-post-title a,
 a.wp-block-post-title {
 	border: none;
+	text-decoration: none;
+}
+
+.is-style-posts-grid .wp-block-post-title a,
+.is-style-posts-grid a.wp-block-post-title {
+	display: inline;
 }
 
 /*--------------------------------------------------------------
@@ -483,9 +498,9 @@ a.wp-block-post-title {
 # Site Logo
 --------------------------------------------------------------*/
 
-/* There is a strange error with srcset and limited block controls. So manually fix for now. */
-.wp-block-site-logo img {
-	max-width: 250px;
+.wp-block-site-logo a {
+	border: none;
+	text-decoration: none;
 }
 
 .wp-block-site-logo a:hover {
@@ -498,6 +513,7 @@ a.wp-block-post-title {
 
 .wp-block-site-title a {
 	border: none;
+	text-decoration: none;
 }
 
 .wp-block-site-title a:hover {
@@ -551,6 +567,7 @@ a.wp-block-post-title {
 
 .is-style-outermost-testimonial a {
 	border: none;
+	text-decoration: none;
 }
 
 .is-style-small-quote {

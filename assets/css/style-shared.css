@@ -20,32 +20,6 @@ a:hover {
 	color: var(--wp--preset--color--link);
 }
 
-/*
-a {
-    text-decoration: none;
-    background: 0 0;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(transparent calc(100% - 2px), var(--wp--preset--color--primary) 0), linear-gradient(transparent calc(100% - 2px), var(--wp--preset--color--tertiary) 0);
-    background-size: 0 100%,100% 100%;
-    font-weight: 600;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-a:hover {
-    background-size: 100% 100%,100% 100%;
-}
-
-/* Block specific overrides
-.wp-block-site-title a,
-.wp-block-site-logo a,
-.wp-block-social-links a,
-.wp-block-button__link a,
-.wp-block-navigation a,
-.comment-meta a {
-    background: none;
-}
-*/
 h1, h2, h3, h4, h5, h6, b, strong {
     font-weight: 600;
 }
