@@ -45,6 +45,12 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.2.7 - 2021-05-04
+
+##### Changed
+
+* Changed the layout for the index.html to be consistent with the archive.html template.
+
 ### 0.2.6 - 2021-05-02
 
 ##### Changed

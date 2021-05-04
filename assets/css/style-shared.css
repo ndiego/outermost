@@ -215,8 +215,8 @@ input[type="submit"]:hover {
     padding: 50px 0 110px;
 }
 
-.archive-header.wp-block-group .wp-block-query-title,
-.entry-header.wp-block-group .entry-title {
+.archive-header.wp-block-group h1,
+.entry-header.wp-block-group h1 {
 	margin-top: 0;
 	margin-bottom: 0;
 }
