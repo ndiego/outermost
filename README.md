@@ -45,6 +45,12 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.2.8 - 2021-05-04
+
+##### Fixed
+
+* Fixed layout of footer template part on the index.html template.
+
 ### 0.2.7 - 2021-05-04
 
 ##### Changed
