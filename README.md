@@ -45,6 +45,13 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.2.9 - 2021-05-21
+
+##### Fixed
+
+* Converted post-hierarcical-terms blocks to post-terms blocks due to Gutenberg change.
+* Updated styling the broke due to Gutenberg changes.
+
 ### 0.2.8 - 2021-05-04
 
 ##### Fixed

@@ -329,7 +329,7 @@ ul.is-style-condensed-list li {
 
 .wp-block-navigation li.is-style-navigation-button:last-child {
 	padding-right: 0;
-	padding-left: 1em;
+	padding-left: 0;
 }
 
 .wp-block-navigation.is-vertical li.is-style-navigation-button {
@@ -338,7 +338,7 @@ ul.is-style-condensed-list li {
 }
 
 .wp-block-navigation li.is-style-navigation-button a {
-	padding: .5em 1em;
+	padding: .5em 1em !important;
 }
 
 /*--------------------------------------------------------------
@@ -356,7 +356,7 @@ p.is-style-paragraph-intro {
 --------------------------------------------------------------*/
 
 /* Hack to hide the category seperator since there is currently no way to remove this */
-.wp-block-post-hierarchical-terms.is-style-pill-link {
+.wp-block-post-terms.is-style-pill-link {
 	color: transparent;
 }
 

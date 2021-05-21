@@ -37,7 +37,7 @@ wp.domReady( () => {
         label: 'Intro'
     } );
 
-    wp.blocks.registerBlockStyle( 'core/post-hierarchical-terms', {
+    wp.blocks.registerBlockStyle( 'core/post-terms', {
         name: 'pill-link',
         label: 'Pill Shaped'
     } );
@@ -68,7 +68,7 @@ wp.domReady( () => {
     );
 
     wp.blocks.registerBlockVariation(
-        'core/post-hierarchical-terms',
+        'core/post-terms',
         {
             name: 'knowledge-base-category',
     		title: 'Article Categories',

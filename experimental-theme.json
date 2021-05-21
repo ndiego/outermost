@@ -269,7 +269,7 @@
 				"fontSize": "var(--wp--preset--font-size--small)"
 			}
 		},
-		"core/post-hierarchical-terms": {
+		"core/post-terms": {
 			"typography": {
 				"fontSize": "var(--wp--preset--font-size--extra-small)"
 			}
