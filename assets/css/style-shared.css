@@ -97,7 +97,8 @@ th {
 }
 
 input,
-textarea {
+textarea,
+select {
     border: 1px solid var(--wp--preset--color--border);
     border-radius: 4px;
 	color: var(--wp--preset--color--primary);
