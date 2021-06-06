@@ -284,7 +284,7 @@ fieldset#edd_purchase_submit {
     white-space:nowrap
 }
 
-#edd_user_history td,
+##edd_user_history tr:not(.edd_purchase_row) td,
 #edd_sl_license_keys td {
     font-size: var(--wp--preset--font-size--extra-small);
 }
