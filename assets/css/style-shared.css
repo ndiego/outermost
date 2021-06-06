@@ -151,15 +151,6 @@ form fieldset legend {
 	margin
 }
 
-form label {
-    display: block;
-    float: none;
-    color: var(--wp--preset--color--secondary);
-    font-size: var(--wp--preset--font-size--small);
-    margin-bottom: 5px;
-    width: 100% !important;
-}
-
 @media screen and (max-width: 1120px) {
 	.wp-site-blocks {
 		margin-left: 20px;

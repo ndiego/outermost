@@ -21,6 +21,18 @@
 }
 
 /*--------------------------------------------------------------
+# Jetpack
+--------------------------------------------------------------*/
+.wp-block-jetpack-contact-form label {
+    display: block;
+    float: none;
+    color: var(--wp--preset--color--secondary);
+    font-size: var(--wp--preset--font-size--small);
+    margin-bottom: 5px;
+    width: 100% !important;
+}
+
+/*--------------------------------------------------------------
 # Easy Digital Downloads
 --------------------------------------------------------------*/
 #edd-free-downloads-modal {
@@ -104,14 +116,22 @@
     text-align: center;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 10px;
     margin: 6px;
 }
 
 /* Checkout Form */
 
-#edd_purchase_form_wrap {
+#edd_checkout_form_wrap {
     margin-bottom: 30px;
+}
+
+#edd_checkout_form_wrap form label {
+    display: inline-block;
+    font-size: var(--wp--preset--font-size--normal);
+    color: black;
+    float: inherit;
+    width: auto !important;
 }
 
 #edd_checkout_form_wrap .edd-required-indicator {
@@ -258,6 +278,26 @@ fieldset#edd_purchase_submit {
     background: #fff;
     color: var(--wp--preset--color--primary);
 }
+
+#edd_user_history th,
+#edd_sl_license_keys th {
+    white-space:nowrap
+}
+
+#edd_user_history td,
+#edd_sl_license_keys td {
+    font-size: var(--wp--preset--font-size--extra-small);
+}
+
+#edd_sl_license_add_site_form {
+    margin-top: 30px;
+}
+
+#edd_sl_license_add_site_form span {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
 
 /*--------------------------------------------------------------
 # Termageddon

@@ -45,6 +45,12 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.3.1 - 2021-06-06
+
+##### Added
+
+* Added more EDD styling throughout.
+
 ### 0.3.0 - 2021-06-06
 
 ##### Added
