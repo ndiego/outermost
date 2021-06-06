@@ -72,3 +72,160 @@
     background: transparent;
     color: var(--wp--preset--color--primary);
 }
+
+#edd_login_form {
+    padding: 50px;
+    background: var(--wp--preset--color--background);
+    border-radius: 4px;
+    max-width: 600px;
+}
+
+#edd_login_form fieldset {
+    position: relative;
+}
+
+#edd_login_form fieldset legend {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: var(--wp--preset--font-size--extra-large);
+}
+
+#edd_login_form fieldset input[type="text"],
+#edd_login_form fieldset input[type="password"] {
+    width: 100%;
+}
+
+#edd_login_form .edd-login-submit input {
+    min-width: 150px;
+}
+
+#edd_login_form .edd-lost-password {
+    font-size: var(--wp--preset--font-size--small);
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 6px;
+}
+
+.edd-required-indicator {
+    color: var(--wp--preset--color--link);
+}
+
+#edd_purchase_form fieldset {
+    border: 1px solid var(--wp--preset--color--border);
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 40px
+}
+
+#edd_purchase_form fieldset legend {
+    display: block;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 600;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0;
+    float: left;
+}
+
+#edd_purchase_form .edd-description {
+    display: block;
+    font-size: var(--wp--preset--font-size--small);
+    color: var(--wp--preset--color--secondary);
+    margin: 0 0 15px;
+}
+
+#edd_checkout_form_wrap .edd-payment-icons {
+    margin: 30px 0 10px;
+}
+
+#edd_checkout_form_wrap .edd-payment-icons img.payment-icon {
+    max-height: 32px;
+    width: auto;
+    margin: 0 3px 0 0;
+    background: 0 0;
+    padding: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#edd_secure_site_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: var(--wp--preset--font-size--small);
+
+}
+
+#edd_checkout_user_info,
+#edd_cc_address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#edd_checkout_user_info input,
+#edd_cc_address input,
+#edd_cc_address select {
+    width: 100%
+}
+
+#edd_checkout_user_info legend,
+#edd-email-wrap {
+	flex: 1 0 100%;
+}
+
+#edd_checkout_user_info #edd-first-name-wrap,
+#edd_checkout_user_info #edd-last-name-wrap,
+#edd_cc_address #edd-card-country-wrap,
+#edd_cc_address #edd-card-zip-wrap {
+	flex: 2;
+}
+
+#edd_checkout_user_info #edd-first-name-wrap,
+#edd_cc_address #edd-card-country-wrap {
+	margin-right: 30px;
+}
+
+#edd_secure_site_wrapper span {
+    font-weight: 400;
+}
+
+#edd_secure_site_wrapper .padlock {
+    margin-right: 5px;
+    line-height: 1;
+}
+
+#edd_secure_site_wrapper .padlock svg {
+    fill: #4caf50;
+    height: 20px
+}
+
+
+
+/*--------------------------------------------------------------
+# Termageddon
+--------------------------------------------------------------*/
+#policy .text-uppercase {
+    letter-spacing: 0;
+}
+
+#policy .accordions {
+    border: 1px solid var(--wp--preset--color--border) !important;
+}
+
+#policy .accordion {
+    border-bottom: 1px solid var(--wp--preset--color--border) !important;
+}
+
+#policy .accordion:last-child {
+    border-bottom: 0 !important;
+}
+
+#policy h4.accordion-heading {
+    font-size: var(--wp--preset--font-size--normal);
+}

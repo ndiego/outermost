@@ -79,6 +79,23 @@ pre code {
 	line-height: 1.5em;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 10px 15px;
+    border: 1px solid var(--wp--preset--color--border);
+    font-size: var(--wp--preset--font-size--small);
+	text-align: left;
+}
+
+th {
+	background-color: var(--wp--preset--color--background);
+}
+
 input,
 textarea {
     border: 1px solid var(--wp--preset--color--border);
@@ -118,6 +135,28 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
     background: var(--wp--preset--color--primary);
     color: white;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+form fieldset legend {
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 600;
+	margin
+}
+
+form label {
+    display: block;
+    float: none;
+    color: var(--wp--preset--color--secondary);
+    font-size: var(--wp--preset--font-size--small);
+    margin-bottom: 5px;
+    width: 100% !important;
 }
 
 @media screen and (max-width: 1120px) {

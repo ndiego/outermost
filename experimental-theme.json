@@ -4,19 +4,24 @@
 			"name": "freeform",
 			"title": "Freeform",
 			"postTypes": [
-			  "page",
-			  "post",
-			  "article"
-		  ]
+			  	"page",
+			  	"post",
+			  	"article"
+		  	]
 		},
 		{
 			"name": "landing",
 			"title": "Landing Page",
 			"postTypes": [
-			  "page",
-			  "post",
-			  "article"
-		  ]
+			  	"page",
+			  	"post",
+			  	"article"
+		  	]
+		},
+		{
+			"name": "account",
+			"title": "Acount Template",
+			"postTypes": [ "page" ]
 		}
 	],
 	"settings": {
