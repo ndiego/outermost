@@ -45,19 +45,19 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
-### 0.3.0 - 2021-06-05
+### 0.3.0 - 2021-06-06
 
 ##### Added
 
 * Added the the Account template for improved EDD support.
-* Added styling for tabled and fieldsets.
+* Added EDD email templates.
+* Added EDD styling throughout.
+* Added styling for tables and fieldsets.
 * Added Termageddon styling.
 
 ##### Fixed
 
 * Fixed the missing footer to the Landing Page template.
-
-## Changelog
 
 ### 0.2.9 - 2021-05-21
 
