@@ -121,7 +121,6 @@
 }
 
 /* Checkout Form */
-
 #edd_checkout_form_wrap {
     margin-bottom: 30px;
 }
@@ -139,7 +138,7 @@
 }
 
 #edd_checkout_form_wrap fieldset {
-    border: 1px solid var(--wp--preset--color--border);
+    border: 1px solid var(--wp--preset--color--borders);
     border-radius: 4px;
     padding: 30px;
     margin-bottom: 40px
@@ -307,11 +306,11 @@ fieldset#edd_purchase_submit {
 }
 
 #policy .accordions {
-    border: 1px solid var(--wp--preset--color--border) !important;
+    border: 1px solid var(--wp--preset--color--borders) !important;
 }
 
 #policy .accordion {
-    border-bottom: 1px solid var(--wp--preset--color--border) !important;
+    border-bottom: 1px solid var(--wp--preset--color--borders) !important;
 }
 
 #policy .accordion:last-child {

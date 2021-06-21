@@ -45,6 +45,24 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.4.0 - 2021-06-19
+
+##### Added
+
+*
+
+##### Changed
+
+*
+
+##### Removed
+
+* Remove the Roboto Google font.
+
+##### Fixed
+
+*
+
 ### 0.3.1 - 2021-06-06
 
 ##### Added
