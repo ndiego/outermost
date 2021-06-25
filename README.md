@@ -45,15 +45,15 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
-### 0.4.0 - 2021-06-19
+### 0.4.0 - 2021-06-TBD
 
 ##### Added
 
-*
+* Added styling support for SimpleToc and Outermost EDD Utilities.
 
 ##### Changed
 
-*
+* Changed all query-loop blocks to post-template blocks for Gutenberg 10.9 compatibility.
 
 ##### Removed
 
@@ -61,7 +61,7 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ##### Fixed
 
-*
+* TBD
 
 ### 0.3.1 - 2021-06-06
 

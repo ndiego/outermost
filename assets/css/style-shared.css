@@ -4,7 +4,6 @@
 
 a {
 	text-decoration: none;
-	transition: all ease-in-out 0.1s;
 }
 
 a:hover {
@@ -22,7 +21,8 @@ ol, ul {
 }
 
 li {
-	margin-bottom: .5em;
+	margin-bottom: 0.75em;
+	line-height: 1.4;
 }
 
 li:last-child {
@@ -31,7 +31,8 @@ li:last-child {
 
 li>ol,
 li>ul {
-	margin-top: .5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 code, pre {
@@ -79,31 +80,6 @@ textarea {
 	box-sizing: border-box;
     padding: 20px;
     width: 100%;
-}
-
-.is-style-navigation-button .wp-block-navigation-link__content,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    border: 2px solid var(--wp--preset--color--primary);
-    border-radius: 4px;
-    background: transparent;
-    color: var(--wp--preset--color--primary);
-    cursor: pointer;
-    font-size: var(--wp--preset--font-size--small);
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: .75em 1.25em;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-}
-
-.is-style-navigation-button .wp-block-navigation-link__content:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-    background: var(--wp--preset--color--primary);
-    color: white;
 }
 
 fieldset {
@@ -160,11 +136,6 @@ ol, ul {
 # Main Navigation
 --------------------------------------------------------------*/
 
-.main-navigation.wp-block-columns {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
 /* Hopefully remove when better responsive controls are availbale */
 @media screen and (max-width: 780px) {
     .main-navigation .wp-block-site-logo,
@@ -176,22 +147,6 @@ ol, ul {
 	.main-navigation .items-justified-right>ul.wp-block-navigation__container {
 		justify-content: center !important;
 		margin-top: 20px !important;
-	}
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-
-@media screen and (max-width: 780px) {
-	.site-footer {
-		text-align: center;
-	}
-
-	.site-footer .alignright {
-		float: none !important;
-		justify-content: center !important;
-		margin: 0 !important;
 	}
 }
 
@@ -288,12 +243,13 @@ ol, ul {
 	max-width: 200px;
 }
 
-.article-category-query .wp-block-query-loop li h2 {
+/* Specific styling for the article list on the category archive pages */
+.article-category-query .wp-block-post-template li h2 {
 	margin-top: 1.2em;
 	margin-bottom: 1.2em;
 }
 
-.article-category-query .wp-block-query-loop li h2:before {
+.article-category-query .wp-block-post-template li h2:before {
 	content: "\e873";
 	font-family: 'Material Icons Outlined';
 	font-weight: normal;
@@ -303,10 +259,219 @@ ol, ul {
 }
 
 /*--------------------------------------------------------------
-# Utility Classes (Hopefully can remove in future)
+# Footer
 --------------------------------------------------------------*/
 
-/* Custom alternative link styling utility classes */
+@media screen and (max-width: 780px) {
+	.site-footer {
+		text-align: center;
+	}
+
+	.site-footer .alignright {
+		float: none !important;
+		justify-content: center !important;
+		margin: 0 !important;
+	}
+}
+
+/*--------------------------------------------------------------
+# Mobile styles, hopefully remove when better responsive controls are available
+--------------------------------------------------------------*/
+@media screen and (max-width: 782px) {
+
+    .mobile-text-left {
+        text-align: left;
+    }
+
+	.mobile-text-center {
+		text-align: center;
+	}
+
+	.mobile-text-right {
+		text-align: right;
+	}
+}
+
+/*--------------------------------------------------------------
+# Custom Material UI icon utility classes
+--------------------------------------------------------------*/
+.has-material-icon:before,
+.has-material-icon:after {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	margin-right: 0.25em;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+	margin-bottom: 0.15em;
+	vertical-align: middle;
+}
+
+.has-material-icon:after {
+	margin-right: 0;
+	margin-left: 0.25em;
+}
+
+.has-material-icon.light-green:before,
+.has-material-icon.light-green:after {
+	color: #3fad6b;
+}
+
+.icon-is-circle:before,
+.icon-is-circle:after {
+	background: #E6E6E3;
+	padding: 8px;
+	border-radius: 1000px;
+	color: #222;
+	margin-right: 0.4em;
+	margin-bottom: 0.2em;
+	vertical-align: middle;
+}
+
+.icon-is-circle.black:before,
+.icon-is-circle.black:after {
+	background: #121212;
+	color: #ffffff;
+}
+
+.icon-is-circle.orange:before,
+.icon-is-circle.orange:after {
+	background: #F8390F;
+	color: #ffffff;
+}
+
+.icon-is-circle.purple:before,
+.icon-is-circle.purple:after {
+	background: #F8390F;
+	color: #ffffff;
+}
+
+.icon-is-circle.blue:before,
+.icon-is-circle.blue:after {
+	background: #4778C2;
+	color: #ffffff;
+}
+
+.icon-is-circle.green:before,
+.icon-is-circle.green:after {
+	background: #1B7A6C;
+	color: #ffffff;
+}
+
+.icon-is-circle.yellow:before,
+.icon-is-circle.yellow:after {
+	background: #f9e366;
+}
+
+.has-icon-category:before,
+.has-icon-category:after {
+	content: "category";
+}
+
+.has-icon-shopping_cart:before,
+.has-icon-shopping_cart:after {
+	content: "shopping_cart";
+}
+
+.has-icon-person:before,
+.has-icon-person:after {
+	content: "person";
+}
+
+.has-icon-lock:before,
+.has-icon-lock:after {
+	content: "lock";
+}
+
+.has-icon-cloud_download:before,
+.has-icon-cloud_download:after {
+	content: "cloud_download";
+}
+
+.has-icon-visibility_off:before,
+.has-icon-visibility_off:after {
+	content: "visibility_off";
+}
+
+.has-icon-toggle_on:before,
+.has-icon-toggle_on:after {
+	content: "toggle_on";
+}
+
+.has-icon-alarm:before,
+.has-icon-alarm:after {
+	content: "alarm";
+}
+
+.has-icon-date_range:before,
+.has-icon-date_range:after {
+	content: "date_range";
+}
+
+.has-icon-open_in_full:before,
+.has-icon-open_in_full:after {
+	content: "open_in_full";
+}
+
+.has-icon-tune:before,
+.has-icon-tune:after {
+	content: "tune";
+}
+
+.has-icon-group:before,
+.has-icon-group:after {
+	content: "group";
+}
+
+.has-icon-person_add:before,
+.has-icon-person_add:after {
+	content: "person_add";
+}
+
+.has-icon-check:before,
+.has-icon-check:after {
+	content: "check";
+}
+
+.has-icon-close:before,
+.has-icon-close:after {
+	content: "close";
+}
+
+.has-icon-rule:before,
+.has-icon-rule:after {
+	content: "rule";
+}
+
+.icon-is-outlined:before,
+.icon-is-outlined:after {
+	font-family: 'Material Icons Outlined';
+}
+
+.icon-is-before:after {
+	content: none;
+}
+
+.icon-is-after:before {
+	content: none;
+}
+
+.icon-inherit-font-size:before,
+.icon-inherit-font-size:after {
+	font-size: inherit;
+}
+
+/*--------------------------------------------------------------
+# Custom alternative link styling utility classes
+--------------------------------------------------------------*/
 .link-alt-style-transparent-to-opaque a {
 	background: none;
 	font-weight: inherit;
@@ -327,29 +492,9 @@ ol, ul {
 	opacity: .6;
 }
 
-/* Custom Material UI icon utility classes */
-.has-icon-style-circle .material-icons {
-	background: #E6E6E3;
-	padding: 8px;
-    border-radius: 1000px;
-    color: #222;
-    margin-right: 10px;
-	margin-bottom: 4px;
-    vertical-align: middle;
-}
-
-.has-icon-style-circle.orange .material-icons {
-	background: #F8390F;
-	color: #F5F5F2;
-}
-
-.has-icon-style-circle.purple .material-icons {
-	background: #531731;
-	color: #F5F5F2;
-}
-
-/* Text utility classes */
-
+/*--------------------------------------------------------------
+# Text utility classes
+--------------------------------------------------------------*/
 .text-uppercase {
     text-transform: uppercase;
     letter-spacing: .05em;
@@ -371,8 +516,9 @@ ol, ul {
 	font-weight: 700;
 }
 
-/* Horizontal list utility classes */
-
+/*--------------------------------------------------------------
+# Horizontal list utility classes
+--------------------------------------------------------------*/
 .list-horizontal,
 .list-horizontal ul {
     display: flex;
@@ -389,8 +535,9 @@ ol, ul {
     margin-right: 10px;
 }
 
-/* Dropshaow utility classes, plus specific fixes for borders on images. */
-
+/*--------------------------------------------------------------
+# Dropshadow utility classes, plus specific fixes for borders on images.
+--------------------------------------------------------------*/
 .shadow {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
@@ -400,11 +547,10 @@ img.shadow-img,
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-/**
- * Border radius utility classes, plus specific fixes for borders on images.
- * This likely can be removed in Gutenberg 9.9 see: https://github.com/WordPress/gutenberg/pull/27667
- */
-
+/*--------------------------------------------------------------
+# Border radius utility classes, plus specific fixes for borders on images.
+# This likely can be removed in Gutenberg 9.9 see: https://github.com/WordPress/gutenberg/pull/27667
+--------------------------------------------------------------*/
 .rounded-sm {
     border-radius: 0.125rem;
 	overflow: hidden;
@@ -455,26 +601,9 @@ img.rounded-img-full,
     border-radius: 9999px;
 }
 
-/* Mobile styles */
-
-/* Hopefully remove when better responsive controls are availbale */
-@media screen and (max-width: 782px) {
-
-    .mobile-text-left {
-        text-align: left;
-    }
-
-	.mobile-text-center {
-		text-align: center;
-	}
-
-	.mobile-text-right {
-		text-align: right;
-	}
-}
-
-/* Font size utility classes for blocks without typography controls */
-
+/*--------------------------------------------------------------
+# Font size utility classes for blocks without typography controls
+--------------------------------------------------------------*/
 .text-extra-small {
 	font-size: var(--wp--preset--font-size--extra-small);
 }
@@ -503,8 +632,9 @@ img.rounded-img-full,
 	font-size: var(--wp--preset--font-size--gigantic);
 }
 
-/* Opacity utility classes */
-
+/*--------------------------------------------------------------
+# Opacity utility classes
+--------------------------------------------------------------*/
 .o-0 {
 	opacity: 0;
 }
@@ -545,8 +675,9 @@ img.rounded-img-full,
 	opacity: .9;
 }
 
-/* Margin utility classes */
-
+/*--------------------------------------------------------------
+# Margin utility classes
+--------------------------------------------------------------*/
 .m-0 {
     margin: 0 !important;
 }

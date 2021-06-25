@@ -52,6 +52,10 @@
 			},
 			"spacing": {
 				"horizontal": "30px"
+			},
+			"opacity": {
+				"link": 0.7,
+				"button": 0.7
 			}
 		},
 		"layout": {
@@ -294,7 +298,11 @@
 					"fontSize": "var(--wp--preset--font-size--extra-small)"
 				}
 			},
-
+			"core/separator": {
+				"color": {
+					"background": "var(--wp--preset--color--borders)"
+				}
+			},
 			"core/site-title": {
 				"elements": {
 					"link": {

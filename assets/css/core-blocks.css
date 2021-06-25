@@ -5,11 +5,11 @@
 .wp-block-button__link {
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: all 0.1s ease-in-out;
 }
 
 .wp-block-button__link:hover {
-    opacity: .7;
+    opacity: var(--wp--custom--opacity--button);
+    text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -25,8 +25,12 @@
 # Columns (provide support for sidebar layout)
 --------------------------------------------------------------*/
 
+.wp-block-columns {
+    margin-bottom: 0;
+}
+
 @media (min-width: 782px) {
-	.sidebar-content .wp-block-column:not(:first-child) {
+	.sidebar-content > .wp-block-column:not(:first-child) {
 		margin-left: 4em;
 	}
 }
@@ -48,6 +52,7 @@
 		margin-right: 0;
 	}
 }
+
 /*--------------------------------------------------------------
 # Comments (Ultimately all needs to be controlled in FSE)
 --------------------------------------------------------------*/
@@ -66,36 +71,33 @@
 
 .comment {
 	border: 1px solid var(--wp--preset--color--borders);
-    border-bottom-width: 4px;
     border-radius: 4px;
     margin-top: 30px;
     padding: 30px;
 }
 
-.comment-author {
-	display: flex;
+.wp-block-post-comments .comment-author {
+    display: flex;
     align-items: center;
+    margin: 0;
 }
 
-/* Need to add 'div' to override some default styles, need to fix in future */
-div.comment-author cite {
-	font-style: normal;
-	margin-left: 0;
-	margin-right: 0;
-}
-
-div.comment-author img {
+.wp-block-post-comments .comment-author .avatar {
     border-radius: 50%;
-	margin-left: 0;
     margin-right: 10px;
 }
 
-div.comment-author .says {
+ .wp-block-post-comments .comment-author .says {
     margin-left: 10px;
 	margin-right: 0;
 }
 
-.comment-meta a {
+.wp-block-post-comments .comment-meta {
+    margin-left: 55px;
+    margin-top: -5px;
+}
+
+.wp-block-post-comments .comment-meta a {
     font-size: var(--wp--preset--font-size--extra-small);
 	font-weight: 600;
     letter-spacing: 1px;
@@ -103,31 +105,37 @@ div.comment-author .says {
     color: var(--wp--preset--color--primary);
 }
 
-.comment-meta a:hover {
-    color: var(--wp--preset--color--secondary);
-}
-
 .comment-reply-title {
     font-size: var(--wp--preset--font-size--extra-large);
 }
 
-.comment-respond .comment-form-author,
-.comment-respond .comment-form-email,
-.comment-respond .comment-form-url {
+.wp-block-post-comments input:not(.submit),
+.wp-block-post-comments textarea {
+    border-color: var(--wp--preset--color--borders);
+}
+
+/* Fix an erroneous base theme style */
+.wp-block-post-comments input.submit {
+    border-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-post-comments .comment-form-author,
+.wp-block-post-comments .comment-form-email,
+.wp-block-post-comments .comment-form-url {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.comment-respond .comment-form-author label,
-.comment-respond .comment-form-email label,
-.comment-respond .comment-form-url label {
+.wp-block-post-comments .comment-form-author label,
+.wp-block-post-comments .comment-form-email label,
+.wp-block-post-comments .comment-form-url label {
     min-width: 100px;
 }
 
-.comment-respond .comment-form-author input,
-.comment-respond .comment-form-email input,
-.comment-respond .comment-form-url input {
+.wp-block-post-comments .comment-form-author input,
+.wp-block-post-comments .comment-form-email input,
+.wp-block-post-comments .comment-form-url input {
     display: inline-block;
     width: 100%;
 }
@@ -136,20 +144,10 @@ div.comment-author .says {
 # Editor Post Title
 --------------------------------------------------------------*/
 
+/* Makes the post title in the editor more consistent with the theme */
 .editor-post-title .editor-post-title__input {
 	font-weight: 600;
 }
-
-/*--------------------------------------------------------------
-# List block
---------------------------------------------------------------*/
-
-/* Condensed list block variation */
-ol.is-style-condensed-list li,
-ul.is-style-condensed-list li {
-	margin: 0 auto .2em;
-}
-
 
 /*--------------------------------------------------------------
 # Media & Text
@@ -212,7 +210,7 @@ ul.is-style-condensed-list li {
 }
 
 .wp-block-navigation a:hover {
-	opacity: .7;
+	opacity: var(--wp--custom--opacity--link);
 }
 
 .wp-block-navigation .current-menu-item a {
@@ -249,8 +247,29 @@ ul.is-style-condensed-list li {
 	padding-bottom: .5em;
 }
 
-.wp-block-navigation li.is-style-navigation-button a {
+.wp-block-navigation .is-style-navigation-button {
 	padding: .5em 1em !important;
+    border: 2px solid var(--wp--preset--color--primary);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--wp--preset--color--primary);
+    cursor: pointer;
+    font-size: var(--wp--preset--font-size--small);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.wp-block-navigation .is-style-navigation-button a {
+    font-weight: 600;
+    transition: none;
+}
+
+.wp-block-navigation .is-style-navigation-button a:hover {
+    opacity: 1;
+}
+
+.wp-block-navigation .is-style-navigation-button:hover {
+    opacity: var(--wp--custom--opacity--button);
 }
 
 /*--------------------------------------------------------------
@@ -307,45 +326,6 @@ a.is-style-pill-link:hover {
 }
 
 /*--------------------------------------------------------------
-# Post Title
---------------------------------------------------------------*/
-
-.wp-block-post-title a,
-a.wp-block-post-title {
-	border: none;
-	text-decoration: none;
-}
-
-.is-style-posts-grid .wp-block-post-title a,
-.is-style-posts-grid a.wp-block-post-title {
-	display: inline;
-}
-
-/*--------------------------------------------------------------
-# Query block
---------------------------------------------------------------*/
-
-.wp-site-blocks .wp-block-query-loop .alignright,
-.wp-site-blocks .wp-block-query-loop .alignleft,
-.wp-block-query-loop .wp-block[data-align="right"],
-.wp-block-query-loop .wp-block[data-align="left"] {
-	float: none;
-	margin-left: 0;
-}
-
-/* !important needed temporarily until the Block Editor is rendered in an iframe */
-@media (min-width: 600px) {
-	.wp-site-blocks .wp-block-query-loop .alignright,
-	.wp-site-blocks .wp-block-query-loop .alignleft,
-	.wp-block-query-loop .wp-block[data-align="right"],
-	.wp-block-query-loop .wp-block[data-align="left"] {
-		float: right;
-    	margin-left: 2em;
-		max-width: 45% !important;
-	}
-}
-
-/*--------------------------------------------------------------
 # Query Pagination
 --------------------------------------------------------------*/
 
@@ -364,7 +344,6 @@ a.wp-block-post-title {
 	transition: all 0.2s ease-in-out;
 	padding: 10px 15px;
 	display: inline-block;
-	min-width: 42px;
 	line-height: 1;
 }
 
@@ -372,6 +351,7 @@ a.wp-block-post-title {
 .wp-block-query-pagination a:hover {
     background: var(--wp--preset--color--primary);
     color: white;
+    text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -411,13 +391,6 @@ a.wp-block-post-title {
 /*--------------------------------------------------------------
 # Social Links
 --------------------------------------------------------------*/
-
-@media (max-width: 599px) {
-	.wp-block-social-links.alignright {
-		float: none !important;
-		justify-content: flex-start !important;
-	}
-}
 
 .wp-block-social-links.is-style-logos-only a,
 .wp-block-social-links.is-style-logos-only .wp-social-link button {

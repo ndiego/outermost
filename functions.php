@@ -124,3 +124,41 @@ include_once dirname( __FILE__ ) . '/inc/register-article.php';
 
 // Block Patterns.
 require get_template_directory() . '/inc/block-patterns.php';
+
+
+
+function article_search_shortcode() {
+	ob_start();
+	?><form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>/">
+	<input type="text" placeholder="Search" name="s" id="s" />
+	<input type="hidden" name="post_type" value="article" />
+	<input type="hidden" id="searchsubmit" />
+	</form><?php
+	return ob_get_clean();
+}
+
+add_shortcode( 'article_search', 'article_search_shortcode' );
+
+function oeu_user_info_shortcode() {
+	$current_user = wp_get_current_user();
+
+	if ( ! ( $current_user instanceof WP_User ) || ! $current_user ) {
+		return;
+	}
+
+	ob_start();
+	?>
+	<div class="oeu-user-info">
+		<div class="user-avatar">
+			<?php echo get_avatar( $current_user->ID, 90 ); ?>
+		</div>
+		<div class="user-details">
+			<span class="welcome-message">Welcome</span>
+			<h2 class="user-name"><?php echo esc_html( $current_user->display_name );?></h2>
+			<span class="logout-message">Not you? <a rel="nofollow" href="<?php echo esc_url( wp_logout_url() );?>">Log out.</a></span>
+		</div>
+	</div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode( 'oeu_user_info', 'oeu_user_info_shortcode' );

@@ -45,7 +45,7 @@ img {
 	box-sizing: border-box;
 }
 
-/* Stack floated elements on mobile screen sizes */
+/* Stack floated elements on mobile screen sizes
 @media (min-width: 600px) {
 	.wp-site-blocks .alignleft {
 		float: left;
@@ -59,10 +59,12 @@ img {
 		max-width: 100%;
 	}
 }
+*/
 
-/* Left align content on mobile screen sizes */
+/* Left align content on mobile screen sizes
 @media (max-width: 599.98px) {
 	.items-justified-right>ul {
 		justify-content: flex-start !important;
 	}
 }
+*/

@@ -297,7 +297,6 @@ fieldset#edd_purchase_submit {
     display: inline-block;
 }
 
-
 /*--------------------------------------------------------------
 # Termageddon
 --------------------------------------------------------------*/
@@ -319,4 +318,77 @@ fieldset#edd_purchase_submit {
 
 #policy h4.accordion-heading {
     font-size: var(--wp--preset--font-size--normal);
+}
+
+/*--------------------------------------------------------------
+# Simple TOC
+--------------------------------------------------------------*/
+.simpletoc {
+    padding-left: 0;
+}
+
+.simpletoc > li {
+    padding-left: 0;
+    list-style: none;
+    font-weight: 600;
+}
+
+.simpletoc > li > ul > li,
+.simpletoc > li > ol > li {
+    font-weight: normal;
+    list-style: circle;
+}
+
+/*--------------------------------------------------------------
+# Outermost EDD Utilities
+--------------------------------------------------------------*/
+.wp-block-oeu-user-info {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.wp-block-oeu-user-info .user-avatar {
+    margin-right: 1.5em;
+}
+
+.wp-block-oeu-user-info .user-avatar img {
+    border-radius: 100px;
+    margin-top: 5px;
+}
+
+.wp-block-oeu-user-info .welcome-message {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--wp--preset--color--secondary);
+    font-size: var(--wp--preset--font-size--small);
+}
+
+.wp-block-oeu-user-info .user-name {
+    margin: 10px 0 0;
+}
+
+.wp-block-oeu-user-info .user-name a {
+    color: var(--wp--preset--color--primary);
+}
+
+.wp-block-oeu-user-info .user-name a:hover {
+    text-decoration: none;
+}
+.wp-block-oeu-user-info .user-name a:hover:after {
+    content: 'edit';
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-size: .6em;
+    font-weight: normal;
+    margin-left: 6px;
+    margin-bottom: 4px;
+    opacity: .2;
+    vertical-align: middle;
+}
+
+.wp-block-oeu-user-info .logout-message {
+    color: var(--wp--preset--color--secondary);
+    font-size: 14px;
+    margin: 0;
 }
