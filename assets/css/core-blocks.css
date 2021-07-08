@@ -25,31 +25,69 @@
 # Columns (provide support for sidebar layout)
 --------------------------------------------------------------*/
 
+/* Remove the bottom margin that is automatically applied to columns */
 .wp-block-columns {
-    margin-bottom: 0;
+    margin-bottom: unset;
 }
 
-@media (min-width: 782px) {
-	.sidebar-content > .wp-block-column:not(:first-child) {
-		margin-left: 4em;
-	}
-}
-
+/* Extend responsive column styling to 782px (Default is 600px) */
 @media (max-width: 782px) {
 
-    /* Make the sidebar appear below the content on mobile */
-    .wp-block-columns.sidebar-content {
-        flex-direction: column-reverse;
+    .wp-block-columns .wp-block-column {
+        flex-basis: 100% !important;
     }
-
-	.wp-block-column {
-		flex-basis: 100% !important;
-		min-width: 100% !important;
-	}
 
 	.wp-block-column:nth-child(2n) {
 		margin-left: 0;
-		margin-right: 0;
+	}
+}
+
+/* Reset any manually added padding on mobile/tablets */
+@media (max-width: 782px) {
+    .wp-block-column {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* Disable responsive columns on mobile */
+@media (max-width: 782px) {
+
+    .wp-block-columns.is-not-stacked-on-mobile {
+		flex-wrap: nowrap;
+    }
+
+    /* Available space should be divided equally amongst columns. */
+	.wp-block-columns.is-not-stacked-on-mobile > .wp-block-column {
+		flex-basis: 0 !important;
+		flex-grow: 1;
+    }
+
+    /* When columns are in a single row, add space before all except the first. */
+    .wp-block-columns.is-not-stacked-on-mobile > .wp-block-column:not(:first-child) {
+        margin-left: 2em;
+    }
+
+    /* Columns with an explicitly-assigned width should maintain their`flex-basis` width and not grow. */
+    .wp-block-columns.is-not-stacked-on-mobile > .wp-block-column[style*="flex-basis"] {
+        flex-basis: auto !important;
+        flex-grow: 0;
+    }
+}
+
+/* Make the sidebar appear below the content on mobile */
+@media (max-width: 782px) {
+    .wp-block-columns.column-reverse-on-mobile {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Make a sidebar optionally stick on desktops */
+@media (min-width: 782px) {
+	.wp-block-column.is-sticky-column {
+		position: sticky;
+		position: -webkit-sticky;
+		top: 30px;
 	}
 }
 
@@ -292,11 +330,14 @@ p.is-style-paragraph-intro {
 	color: transparent;
 }
 
+/* First selector needed for the Block Editor. */
+.is-style-pill-link ul,
 ul.is-style-pill-link {
 	padding-left: 0;
 	list-style-type: none;
 }
 
+.is-style-pill-link ul li:not(:last-child),
 ul.is-style-pill-link li:not(:last-child) {
 	margin-bottom: 10px;
 }
@@ -419,6 +460,7 @@ a.is-style-pill-link:hover {
 	text-decoration: none;
 }
 
+/* Small quote block style */
 .is-style-small-quote {
 	position: relative;
 	font-size: 16px;

@@ -336,7 +336,7 @@ fieldset#edd_purchase_submit {
 .simpletoc > li > ul > li,
 .simpletoc > li > ol > li {
     font-weight: normal;
-    list-style: circle;
+    list-style: disc;
 }
 
 /*--------------------------------------------------------------

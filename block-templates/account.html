@@ -1,4 +1,10 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+<!-- wp:group {"backgroundColor":"backgrounds","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"layout":{"inherit":true}} -->
+<div class="wp-block-group alignfull has-background has-backgrounds-background-color" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+
+    <!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header","align":"full","style":{"spacing":{"padding":{"top":"40px","right":"20px","bottom":"40px","left":"20px"}}},"layout":{"inherit":true}} /-->
+
+</div>
+<!-- /wp:group -->
 
 <!-- wp:group {"tagName":"main","className":"site-content","layout":{"inherit":true}} -->
 <main class="wp-block-group site-content">
@@ -17,8 +23,8 @@
         <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
         <!-- /wp:spacer -->
 
-        <!-- wp:separator {"align":"wide","color":"border","className":"is-style-wide"} -->
-        <hr class="wp-block-separator alignwide has-text-color has-background has-border-background-color has-border-color is-style-wide"/>
+        <!-- wp:separator {"className":"is-style-wide"} -->
+        <hr class="wp-block-separator has-background is-style-wide"/>
         <!-- /wp:separator -->
 
         <!-- wp:spacer {"height":20} -->
@@ -39,8 +45,8 @@
     </div>
     <!-- /wp:column -->
 
-    <!-- wp:column {"verticalAlignment":"top","width":"75%"} -->
-    <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:75%">
+    <!-- wp:column {"verticalAlignment":"top","width":"75%","style":{"spacing":{"padding":{"right":"2em"}}}} -->
+    <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:75%;padding-right:2em">
 
         <!-- wp:post-title {"level":1,"fontSize":"extra-large"} /-->
 
@@ -56,8 +62,8 @@
     <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
     <!-- /wp:spacer -->
 
-    <!-- wp:separator {"align":"wide","color":"border","className":"is-style-wide"} -->
-    <hr class="wp-block-separator alignwide has-text-color has-background has-border-background-color has-border-color is-style-wide"/>
+    <!-- wp:separator {"align":"wide","className":"is-style-wide"} -->
+    <hr class="wp-block-separator alignwide has-background is-style-wide"/>
     <!-- /wp:separator -->
 
 </main>

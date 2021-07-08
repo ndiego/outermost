@@ -24,27 +24,35 @@ Primary Branch: main
 @import "assets/css/style-shared.css";
 
 /*--------------------------------------------------------------
-# Defaults
+# Normalize
 --------------------------------------------------------------*/
 
 body {
-	margin: 0;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth out the fonts */
+body {
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 img {
 	height: auto;
+	max-width: 100%;
 }
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
 
 * {
 	box-sizing: border-box;
 }
 
+
+
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
 /* Stack floated elements on mobile screen sizes
 @media (min-width: 600px) {
 	.wp-site-blocks .alignleft {

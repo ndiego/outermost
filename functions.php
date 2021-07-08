@@ -162,3 +162,6 @@ function oeu_user_info_shortcode() {
 	return ob_get_clean();
 }
 add_shortcode( 'oeu_user_info', 'oeu_user_info_shortcode' );
+
+/* Add custom image size for the site logo. Needed to combat blurry logos */
+add_image_size( 'outermost_site_logo', 250, 0, false );

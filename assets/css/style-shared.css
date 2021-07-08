@@ -3,6 +3,8 @@
 --------------------------------------------------------------*/
 
 a {
+	cursor: pointer;
+	text-underline-offset: 0.15em;
 	text-decoration: none;
 }
 
@@ -18,11 +20,14 @@ ol, ul {
 	margin-top: 0;
 	margin-bottom: 0;
     padding-left: 1.5em;
+
+	/* The width is not correct in the editor */
+	box-sizing: border-box;
 }
 
-li {
+ol li,
+ul li {
 	margin-bottom: 0.75em;
-	line-height: 1.4;
 }
 
 li:last-child {
@@ -89,36 +94,32 @@ fieldset {
     border: 0;
 }
 
-/*
-form fieldset legend {
-	font-size: var(--wp--preset--font-size--large);
-	font-weight: 600;
-	margin
-}
-*/
-
-@media screen and (max-width: 1120px) {
-	.wp-site-blocks {
-		margin-left: 20px;
-		margin-right: 20px;
-    }
-
-	.wp-site-blocks .alignfull {
-		width: calc( 100% + 40px );
-		margin-left: -20px;
-		margin-right: -20px;
-	}
-
-	.wp-site-blocks .alignfull.wp-block-template-part,
-	.wp-site-blocks .alignfull.wp-block-group,
-	.wp-site-blocks .alignfull.wp-block-cover {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+figure {
+	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
-# Fixes
+# General Spacing
+--------------------------------------------------------------*/
+
+.wp-site-blocks {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.wp-site-blocks .alignfull {
+	margin-left: -20px;
+	margin-right: -20px;
+	width: auto;
+}
+
+.wp-site-blocks .entry-content .alignfull {
+	margin-left: -20px !important;
+	margin-right: -20px !important;
+}
+
+/*--------------------------------------------------------------
+# Random Fixes
 --------------------------------------------------------------*/
 
 /* When a link is added to an image, the border radius is not respected */
@@ -127,52 +128,25 @@ form fieldset legend {
 	border-radius: inherit;
 }
 
-/* The width is not correct in the editor */
-ol, ul {
-    box-sizing: border-box;
-}
-
-/*--------------------------------------------------------------
-# Main Navigation
---------------------------------------------------------------*/
-
-/* Hopefully remove when better responsive controls are availbale */
-@media screen and (max-width: 780px) {
-    .main-navigation .wp-block-site-logo,
-	.main-navigation .wp-block-site-title,
-	.main-navigation .wp-block-site-tagline {
-        text-align: center;
-    }
-
-	.main-navigation .items-justified-right>ul.wp-block-navigation__container {
-		justify-content: center !important;
-		margin-top: 20px !important;
+/* Fix logo column flex-basis. Can be removed when native functionality for disabling mobile columns is released */
+@media screen and (max-width: 782px) {
+	.site-header .wp-block-columns .wp-block-column:first-child {
+		flex-basis: 250px !important;
 	}
 }
 
-/*--------------------------------------------------------------
-# Site Content
---------------------------------------------------------------*/
-
-/* Hopefully remove when better responsive controls are available */
-@media screen and (max-width: 1120px) {
-
-    .site-content .entry-content.alignfull {
-        padding-left: 20px;
-		padding-right: 20px;
-    }
-}
 
 /*--------------------------------------------------------------
 # Archive/Entry Headers at top of page, not in query loops
 --------------------------------------------------------------*/
 
+/*
 .archive-header.wp-block-group,
 .entry-header.wp-block-group {
 	padding: 50px 0;
 }
 
-/* Needed for feature images */
+/* Needed for feature images
 .has-post-thumbnail:not(.archive) .entry-header.wp-block-group {
     padding: 50px 0 110px;
 }
@@ -183,7 +157,7 @@ ol, ul {
 	margin-bottom: 0;
 }
 
-/* Hopefully remove when better responsive controls are available */
+/* Hopefully remove when better responsive controls are available
 @media screen and (max-width: 1120px) {
 
 	.archive-header.wp-block-group,
@@ -191,47 +165,46 @@ ol, ul {
 		padding: 50px 20px;
 	}
 
-	/* Needed for feature images */
+	/* Needed for feature images
 	.has-post-thumbnail:not(.archive) .entry-header.wp-block-group {
 	    padding: 50px 20px 110px;
 	}
 }
-
+ */
 /*--------------------------------------------------------------
 # Entry Content (Post, Page, etc.)
+#
+# Note that this styling is not reflected in the Editor.
 --------------------------------------------------------------*/
 
-.entry-content > :first-child {
-    margin-top: 0;
-}
-
-.content-sidebar .entry-content,
-.sidebar-content .entry-content {
-    padding: 0;
-}
-
-.has-post-thumbnail .entry-content {
-    padding-top: 0;
-}
-
-.entry-content .wp-block-image,
-.entry-content .wp-block-code {
-	margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.entry-content p {
-	margin-bottom: 1.5em;
+.entry-content > * {
 	margin-top: 0;
+    margin-bottom: 32px;
 }
 
-.entry-content p:last-child {
+/* Temporary fix to override base styles */
+.entry-content .wp-block-group.has-background {
+	margin-top: 0;
+	margin-bottom: 32px;
+}
+
+.entry-content h2 {
+	margin-bottom: 24px;
+}
+
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+	margin-bottom: 16px;
+}
+
+.entry-content > *:last-child {
 	margin-bottom: 0;
 }
 
-.entry-content ul,
-.entry-content ol {
-    margin-bottom: 1.5em;
+.entry-content > .wp-block-spacer {
+	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -262,7 +235,7 @@ ol, ul {
 # Footer
 --------------------------------------------------------------*/
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 782px) {
 	.site-footer {
 		text-align: center;
 	}

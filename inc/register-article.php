@@ -2,18 +2,18 @@
 
 function outermost_register_article_post_type() {
 	$labels = array(
-		'name'               => __( 'Knowledge Base', 'blox' ),
-		'singular_name'      => __( 'Article', 'blox' ),
-		'add_new'            => __( 'Add New', 'blox' ),
-		'add_new_item'       => __( 'Add New Article', 'blox' ),
-		'edit_item'          => __( 'Edit Article', 'blox' ),
-		'new_item'           => __( 'New Article', 'blox' ),
-		'view_item'          => __( 'View Article', 'blox' ),
-		'search_items'       => __( 'Search Knowledge Base', 'blox' ),
-		'not_found'          => __( 'No articles found.', 'blox' ),
-		'not_found_in_trash' => __( 'No articles found in trash.', 'blox' ),
+		'name'               => __( 'Knowledge Base' ),
+		'singular_name'      => __( 'Article' ),
+		'add_new'            => __( 'Add New' ),
+		'add_new_item'       => __( 'Add New Article' ),
+		'edit_item'          => __( 'Edit Article' ),
+		'new_item'           => __( 'New Article' ),
+		'view_item'          => __( 'View Article' ),
+		'search_items'       => __( 'Search Knowledge Base' ),
+		'not_found'          => __( 'No articles found.' ),
+		'not_found_in_trash' => __( 'No articles found in trash.' ),
 		'parent_item_colon'  => '',
-		'menu_name'          => __( 'Knowledge Base', 'blox' )
+		'menu_name'          => __( 'Articles', 'blox' )
 	);
 
 	$args = array(
@@ -31,7 +31,7 @@ function outermost_register_article_post_type() {
 		'hierarchical'		  => true,
 		'show_in_rest'	      => true,
 		'supports'     		  => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes' ),
-		//'taxonomies'		  => array( 'blox_category' )
+		'taxonomies'		  => array( 'knowledge-base-category' )
 	);
 
 	// Register the easy_docs post type
