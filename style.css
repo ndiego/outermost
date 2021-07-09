@@ -7,7 +7,7 @@ Description: Outermost is an experimental block-based theme for WordPress.
 Requires at least: 5.3
 Tested up to: 5.5
 Requires PHP: 5.6
-Version: 0.4.0
+Version: 0.4.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: outermost
@@ -46,33 +46,3 @@ img {
 * {
 	box-sizing: border-box;
 }
-
-
-
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-/* Stack floated elements on mobile screen sizes
-@media (min-width: 600px) {
-	.wp-site-blocks .alignleft {
-		float: left;
-		margin-right: 2em;
-		max-width: 100%;
-	}
-
-	.wp-site-blocks .alignright {
-		float: right;
-		margin-left: 2em;
-		max-width: 100%;
-	}
-}
-*/
-
-/* Left align content on mobile screen sizes
-@media (max-width: 599.98px) {
-	.items-justified-right>ul {
-		justify-content: flex-start !important;
-	}
-}
-*/

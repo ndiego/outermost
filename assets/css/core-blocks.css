@@ -310,6 +310,12 @@
     opacity: var(--wp--custom--opacity--button);
 }
 
+/* Manual fix so theme link styling is not applied */
+.wp-block-navigation .wp-block-navigation-link__container {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 # Paragraph
 --------------------------------------------------------------*/

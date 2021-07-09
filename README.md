@@ -44,6 +44,16 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.4.1 - 2021-07-09
+
+##### Added
+
+* Added additional styling for SimpleToc to make it look a little better.
+
+##### Fixed
+
+* Fixed navigation menu margin which caused it to be non-functional.
+
 ### 0.4.0 - 2021-07-09
 
 ##### Added

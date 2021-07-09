@@ -327,10 +327,20 @@ fieldset#edd_purchase_submit {
     padding-left: 0;
 }
 
+.simpletoc li {
+    margin-bottom: .25em;
+}
+
 .simpletoc > li {
     padding-left: 0;
     list-style: none;
     font-weight: 600;
+}
+
+.simpletoc > li > ul,
+.simpletoc > li > ol {
+    margin-top: .5em;
+    margin-bottom: .75em;
 }
 
 .simpletoc > li > ul > li,
