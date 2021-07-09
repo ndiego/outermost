@@ -12,11 +12,10 @@ Feel free to test the theme out yourself, but remember, this is all experimental
 
 ## Features
 
-* Support for a Documentation custom post type and corresponding templates.
+* Support for an Articles custom post type and corresponding templates.
 * Custom page/post templates. Currently there are two, Freeform and Landing.
 * [Trailwind](https://tailwindcss.com/)-like utility classes to easily manage top and bottom margin until this functionality is added to all Core blocks in Gutenberg.
 * A handful of block patterns and styles (more to come).
-* Includes the Roboto Google font.
 
 ## Issues
 
@@ -45,7 +44,7 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
-### 0.4.0 - 2021-06-TBD
+### 0.4.0 - 2021-07-09
 
 ##### Added
 
@@ -53,15 +52,14 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ##### Changed
 
-* Changed all query-loop blocks to post-template blocks for Gutenberg 10.9 compatibility.
+* Updated theme.json to be compatible with all the new features in Gutenberg 11.0+.
+* Substantial overhaul of all templates to be more dynamic and enhance reliance on theme.json.
+* Changed all query-loop blocks to post-template blocks for Gutenberg 11.0+ compatibility.
+* Changed all post-tags block to post-terms blocks.
 
 ##### Removed
 
 * Remove the Roboto Google font.
-
-##### Fixed
-
-* TBD
 
 ### 0.3.1 - 2021-06-06
 

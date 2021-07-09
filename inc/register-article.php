@@ -1,5 +1,4 @@
 <?php
-
 function outermost_register_article_post_type() {
 	$labels = array(
 		'name'               => __( 'Knowledge Base' ),
@@ -68,7 +67,6 @@ function outermost_register_article_categories() {
 		'show_admin_column'     => true,
 		'show_in_rest'	        => true,
 		'update_count_callback' => '_update_post_term_count',
-		//'rewrite'               => array( 'slug' => 'knowledge-base/category' ),
 	);
 
 	// Register category taxonomy

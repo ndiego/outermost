@@ -135,42 +135,6 @@ figure {
 	}
 }
 
-
-/*--------------------------------------------------------------
-# Archive/Entry Headers at top of page, not in query loops
---------------------------------------------------------------*/
-
-/*
-.archive-header.wp-block-group,
-.entry-header.wp-block-group {
-	padding: 50px 0;
-}
-
-/* Needed for feature images
-.has-post-thumbnail:not(.archive) .entry-header.wp-block-group {
-    padding: 50px 0 110px;
-}
-
-.archive-header.wp-block-group h1,
-.entry-header.wp-block-group h1 {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-/* Hopefully remove when better responsive controls are available
-@media screen and (max-width: 1120px) {
-
-	.archive-header.wp-block-group,
-	.entry-header.wp-block-group {
-		padding: 50px 20px;
-	}
-
-	/* Needed for feature images
-	.has-post-thumbnail:not(.archive) .entry-header.wp-block-group {
-	    padding: 50px 20px 110px;
-	}
-}
- */
 /*--------------------------------------------------------------
 # Entry Content (Post, Page, etc.)
 #
