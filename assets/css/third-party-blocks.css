@@ -28,8 +28,22 @@
     float: none;
     color: var(--wp--preset--color--secondary);
     font-size: var(--wp--preset--font-size--small);
+    font-weight: normal;
     margin-bottom: 5px;
     width: 100% !important;
+}
+
+.wp-block-jetpack-contact-form.contact-form input[type=email],
+.wp-block-jetpack-contact-form.contact-form input[type=tel],
+.wp-block-jetpack-contact-form.contact-form input[type=text],
+.wp-block-jetpack-contact-form.contact-form input[type=url] {
+    margin-bottom: 1em;
+}
+
+.wp-block-jetpack-button button {
+    padding: calc(.667em + 2px) calc(1.333em + 2px);
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 600;
 }
 
 /*--------------------------------------------------------------
@@ -87,7 +101,7 @@
 
 #edd_login_form {
     padding: 50px;
-    background: var(--wp--preset--color--background);
+    background: var(--wp--preset--color--backgrounds);
     border-radius: 4px;
     max-width: 600px;
 }
@@ -163,9 +177,9 @@
 }
 
 #edd_checkout_form_wrap fieldset#edd_sl_renewal_fields {
-    background-color: var(--wp--preset--color--background);
+    background-color: var(--wp--preset--color--backgrounds);
     border: 0;
-    padding: 5px 30px;
+    padding: 5px 0;
     margin-top: 30px;
 }
 
@@ -258,7 +272,7 @@ fieldset#edd_purchase_submit {
 }
 
 #edd_final_total_wrap {
-	background-color: var(--wp--preset--color--background);
+	background-color: var(--wp--preset--color--backgrounds);
     padding: 10px 30px;
     margin: 20px 0 40px;
     text-align: center;
@@ -295,6 +309,60 @@ fieldset#edd_purchase_submit {
 #edd_sl_license_add_site_form span {
     margin-bottom: 20px;
     display: inline-block;
+}
+
+/* Button styling for EDD shortcode buttons */
+.edd-submit,
+[type=submit].edd-submit {
+	background-color: var(--wp--preset--color--primary);
+    border-color: var(--wp--preset--color--primary);
+	border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 600;
+    letter-spacing: 1px;
+    padding: calc(.667em + 2px) calc(1.333em + 2px);
+    text-transform: uppercase;
+}
+
+.edd-submit:hover {
+    opacity: var(--wp--custom--opacity--button);
+    text-decoration: none;
+}
+
+
+/* Custom styling for EDD forms */
+.edd_form p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.edd_form fieldset {
+    margin-bottom: 1em;
+}
+
+.edd_form legend {
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+
+.edd_form label {
+    display: block;
+    float: none;
+    color:  var(--wp--preset--color--secondary);
+    font-size: var(--wp--preset--font-size--small);
+    margin-bottom: .25em;
+    width: 100% !important;
+}
+
+.edd_form input:not([type=radio]):not([type=checkbox]):not([type=number]):not([type=submit]),
+.edd_form select,
+.edd_form textarea {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
 }
 
 /*--------------------------------------------------------------

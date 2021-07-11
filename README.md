@@ -44,11 +44,21 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.4.2 - 2021-07-11
+
+##### Added
+
+* Added additional styling for Easy Digital Downloads to make it look a little better.
+
 ### 0.4.1 - 2021-07-09
 
 ##### Added
 
 * Added additional styling for SimpleToc to make it look a little better.
+
+##### Fixed
+
+* Fixed subnav styling. 
 
 ##### Fixed
 

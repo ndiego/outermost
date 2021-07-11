@@ -311,8 +311,12 @@
 }
 
 /* Manual fix so theme link styling is not applied */
-.wp-block-navigation .wp-block-navigation-link__container {
+.wp-block-navigation ul.wp-block-navigation-link__container {
     margin-top: 0;
+    margin-bottom: 0;
+}
+
+.wp-block-navigation ul.wp-block-navigation-link__container li {
     margin-bottom: 0;
 }
 
