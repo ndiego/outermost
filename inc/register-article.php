@@ -1,4 +1,7 @@
 <?php
+/**
+ * Register the Article post type.
+ */
 function outermost_register_article_post_type() {
 	$labels = array(
 		'name'               => __( 'Knowledge Base' ),
@@ -38,7 +41,9 @@ function outermost_register_article_post_type() {
 }
 add_action( 'init', 'outermost_register_article_post_type' );
 
-
+/**
+ * Register the "categories" term for the Article post type.
+ */
 function outermost_register_article_categories() {
 
 	$labels = array(
@@ -73,3 +78,41 @@ function outermost_register_article_categories() {
 	register_taxonomy( 'knowledge-base-category', 'article', $args );
 }
 add_action( 'init', 'outermost_register_article_categories' );
+
+/**
+ * Register the "tags" term for the Article post type.
+ */
+function outermost_register_article_tags() {
+
+	$labels = array(
+		'name'                       => __( 'Tags' ),
+		'singular_name'              => __( 'Tag' ),
+		'search_items'               => __( 'Search Tags' ),
+		'popular_items'              => __( 'Popular Tags' ),
+		'all_items'                  => __( 'All Tags' ),
+		'parent_item'                => null,
+		'parent_item_colon'          => null,
+		'edit_item'                  => __( 'Edit Tag' ),
+		'update_item'                => __( 'Update Tag' ),
+		'add_new_item'               => __( 'Add New Tag' ),
+		'new_item_name'              => __( 'New Tag Name' ),
+		'separate_items_with_commas' => __( 'Separate Tags with commas' ),
+		'add_or_remove_items'        => __( 'Add or remove Tags' ),
+		'choose_from_most_used'      => __( 'Choose from the most used Tags' ),
+		'not_found'                  => __( 'No Tags found.' ),
+		'menu_name'                  => __( 'Tags' ),
+	);
+
+	$args = array(
+		'hierarchical'          => true,
+		'labels'                => $labels,
+		'show_ui'               => true,
+		'show_admin_column'     => true,
+		'show_in_rest'	        => true,
+		'update_count_callback' => '_update_post_term_count',
+	);
+
+	// Register category taxonomy
+	register_taxonomy( 'knowledge-base-tag', 'article', $args );
+}
+add_action( 'init', 'outermost_register_article_tags' );
