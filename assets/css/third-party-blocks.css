@@ -291,6 +291,33 @@
     vertical-align: middle;
 }
 
+/* Styling for money back gaurantee message below cart table */
+.edd_cart_container .money_back_guarantee {
+    display: flex;
+    align-items: center;
+    margin: 30px 50px 40px;
+    font-size: var(--wp--preset--font-size--small);
+}
+
+.edd_cart_container .money_back_guarantee img {
+    width: 75px;
+    margin-right: 20px;
+}
+
+/* Styling for secure payments Stripe message below cart table */
+.edd_cart_container .secure_payments {
+    text-align: center;
+    color: var(--wp--preset--color--secondary);
+}
+
+.edd_cart_container .secure_payments p {
+    font-size: var(--wp--preset--font-size--extra-small);
+}
+
+.edd_cart_container .secure_payments svg {
+    width: 155px;
+}
+
 /* Custom wrapper, not actually part of EDD */
 .edd_checkout_form_wrap_main {
 
@@ -312,7 +339,6 @@
     font-size: 24px;
     line-height: 1;
     font-weight: 600;
-    width: 100%;
     margin: 0 0 20px;
     padding: 0;
     float: left;
@@ -544,19 +570,19 @@
     margin-right: 10px;
 }
 
-#edd_secure_site_wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    font-size: var(--wp--preset--font-size--small);
-    clear: both;
-}
-
 #edd_checkout_user_info,
 #edd_cc_address {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 782px) {
+
+    #edd_checkout_user_info,
+    #edd_cc_address {
+        display: block;
+    }
 }
 
 #edd_checkout_user_info input,
@@ -585,6 +611,25 @@
 #edd_cc_address #edd-card-city-wrap,
 #edd_cc_address #edd-card-country-wrap {
 	margin-right: 30px;
+}
+
+@media screen and (max-width: 782px) {
+
+    #edd_checkout_user_info #edd-first-name-wrap,
+    #edd_cc_address #edd-card-city-wrap,
+    #edd_cc_address #edd-card-country-wrap {
+    	margin-right: 0;
+    }
+}
+
+#edd_secure_site_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: var(--wp--preset--font-size--small);
+    clear: both;
+    margin-bottom: 10px;
+    display: none; /* We really don't need this */
 }
 
 #edd_secure_site_wrapper span {

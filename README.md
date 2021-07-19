@@ -44,6 +44,13 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.5.0 - 2021-07-19
+
+##### Added
+
+* Added styling for the EDD checkout shortcode.
+* Add the "tag" term for the Article post type.
+
 ### 0.4.2 - 2021-07-11
 
 ##### Added
@@ -58,7 +65,7 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ##### Fixed
 
-* Fixed subnav styling. 
+* Fixed subnav styling.
 
 ##### Fixed
 
