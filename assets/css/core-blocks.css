@@ -517,3 +517,37 @@ a.is-style-pill-link:hover {
 		left: 40%;
 	}
 }
+
+/* Pricing table for the columns block */
+.is-style-pricing-table ul {
+	font-size: 14px;
+    text-align: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.is-style-pricing-table ul li {
+	margin-bottom: .5em;
+}
+
+.is-style-pricing-table .price {
+	line-height: 1;
+}
+
+.is-style-pricing-table .price sup {
+	font-size: .3em;
+	font-weight: normal;
+    margin-top: 12px;
+	margin-right: 6px;
+    display: inline-block;
+    vertical-align: top;
+    color: var(--wp--preset--color--secondary);
+}
+
+.is-style-pricing-table .price sub {
+	font-size: .2em;
+	font-weight: normal;
+    display: inline-block;
+    vertical-align: baseline;
+    color: var(--wp--preset--color--secondary);
+}

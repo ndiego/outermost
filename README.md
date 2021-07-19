@@ -44,6 +44,13 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.6.0 - 2021-07-19
+
+##### Added
+
+* Added CSS for pricing table Columns block styling.
+* Added CSS for newsletter signup in EDD checkout shortcode.
+
 ### 0.5.0 - 2021-07-19
 
 ##### Added

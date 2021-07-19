@@ -667,7 +667,6 @@
 
 #edd_purchase_submit #edd_terms_agreement {
     border-top: 1px solid var(--wp--preset--color--borders);
-    border-bottom: 1px solid var(--wp--preset--color--borders);
     padding: 10px 0;
 }
 
@@ -693,6 +692,21 @@
 }
 
 #edd_purchase_submit #edd_terms_agreement .edd-terms-agreement label {
+    font-size: var(--wp--preset--font-size--extra-small);
+    margin-left: 5px;
+}
+
+#edd_purchase_submit #edd_mailchimp {
+    border-bottom: 1px solid var(--wp--preset--color--borders);
+    padding-bottom: 10px;
+}
+
+#edd_purchase_submit #edd_mailchimp p {
+    display: flex;
+    margin: 0;
+}
+
+#edd_purchase_submit #edd_mailchimp label {
     font-size: var(--wp--preset--font-size--extra-small);
     margin-left: 5px;
 }
