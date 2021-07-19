@@ -226,6 +226,7 @@
 					"radius": "4px"
 				},
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--monospace-code)",
 					"fontSize": "var(--wp--preset--font-size--small)"
 				}
 			},

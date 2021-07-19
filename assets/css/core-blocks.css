@@ -16,9 +16,15 @@
 # Code
 --------------------------------------------------------------*/
 
+/* Hopefully we can remove most of this and rely on global styles in the future */
 .wp-block-code {
 	border: none;
     padding: 1.2em 1.5em;
+    background-color: var(--wp--preset--color--backgrounds);
+    border-radius: 4px;
+    color: var(--wp--preset--color--primary);
+    font-size: var(--wp--preset--font-size--small);
+    font-family: var(--wp--preset--font-family--monospace-code);
 }
 
 /*--------------------------------------------------------------
@@ -449,6 +455,16 @@ a.is-style-pill-link:hover {
 }
 
 /*--------------------------------------------------------------
+# Social Links
+--------------------------------------------------------------*/
+
+.wp-block-table td,
+.wp-block-table th {
+    padding: .8em 1em;
+    border: 1px solid var(--wp--preset--color--borders);
+}
+
+/*--------------------------------------------------------------
 # Block Patterns
 --------------------------------------------------------------*/
 
@@ -479,7 +495,7 @@ a.is-style-pill-link:hover {
 }
 
 .is-style-small-quote:before {
-	color: #F5F5F2;
+	color: inherit;
     content: "“";
     font-size: 150px;
     position: absolute;
@@ -487,8 +503,7 @@ a.is-style-pill-link:hover {
 	top: -100px;
 	left: -37px;
     font-family: Times, serif;
-    z-index: -1;
-    opacity: .2;
+    opacity: .1;
 }
 
 @media screen and (max-width: 782px) {

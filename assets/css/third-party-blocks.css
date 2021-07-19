@@ -23,7 +23,7 @@
 /*--------------------------------------------------------------
 # Jetpack
 --------------------------------------------------------------*/
-.wp-block-jetpack-contact-form label {
+.wp-block-jetpack-contact-form.contact-form label {
     display: block;
     float: none;
     color: var(--wp--preset--color--secondary);
@@ -135,27 +135,176 @@
 }
 
 /* Checkout Form */
-#edd_checkout_form_wrap {
-    margin-bottom: 30px;
+#edd_checkout_wrap {
+    display: flex;
+    max-width: 1120px;
+    flex-direction: row-reverse;
+    align-items: stretch;
+}
+
+@media screen and (max-width: 1120px) {
+    #edd_checkout_wrap {
+        flex-direction: column;
+    }
+}
+
+#edd_checkout_wrap h3 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px !important;
+}
+
+/* Cart table styles */
+#edd_checkout_cart_form {
+    margin-left: 45px;
+    min-width: 48%;
+    width: 48%;
+}
+
+@media screen and (max-width: 1120px) {
+    #edd_checkout_cart_form {
+        margin-left: 0;
+        min-width: 100%;
+    }
+}
+
+#edd_checkout_cart_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.edd_cart_container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 50px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1120px) {
+    .edd_cart_container {
+        position: relative;
+        top: 0;
+    }
+}
+
+#edd_checkout_cart {
+    border-collapse: separate;
+}
+
+#edd_checkout_cart td,
+#edd_checkout_cart th {
+    border: none;
+    padding: 16px 20px;
+}
+
+#edd_checkout_cart th {
+    font-weight: 600;
+}
+
+#edd_checkout_cart td:first-child {
+    border-left: 1px solid var(--wp--preset--color--borders);
+}
+
+#edd_checkout_cart td:last-child {
+    border-right: 1px solid var(--wp--preset--color--borders);
+}
+
+/* Cart table misc styles */
+#edd_checkout_cart .edd_cart_item_image {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+#edd_checkout_cart .edd_cart_item_price {
+    text-align: center;
+}
+
+#edd_checkout_cart .edd_cart_actions {
+    text-align: right;
+}
+
+/* Cart table header row */
+#edd_checkout_cart .edd_cart_header_row {
+    background-color: var(--wp--preset--color--backgrounds);
+    border-bottom: 1px solid var(--wp--preset--color--borders);
+}
+
+#edd_checkout_cart .edd_cart_header_row th,
+#edd_checkout_cart .edd_cart_footer_row th {
+    background: none;
+    border-top: 1px solid var(--wp--preset--color--borders);
+    border-bottom: 1px solid var(--wp--preset--color--borders);
+}
+
+#edd_checkout_cart .edd_cart_header_row th:first-child {
+    border-left: 1px solid var(--wp--preset--color--borders);
+    border-top-left-radius: 4px;
+}
+
+#edd_checkout_cart .edd_cart_header_row th:last-child {
+    border-right: 1px solid var(--wp--preset--color--borders);
+    border-top-right-radius: 4px;
+}
+
+/* Cart table footer row */
+#edd_checkout_cart .edd_cart_footer_row {
+    border-top: 1px solid var(--wp--preset--color--borders);
+    border-bottom: 1px solid var(--wp--preset--color--borders);
+}
+
+#edd_checkout_cart .edd_cart_footer_row th {
+    background: none;
+    text-align: right;
+}
+
+#edd_checkout_cart .edd_cart_footer_row:not(.edd_cart_discount_row) th:first-child {
+    border-left: 1px solid var(--wp--preset--color--borders);
+    border-bottom-left-radius: 4px;
+}
+
+#edd_checkout_cart .edd_cart_footer_row:not(.edd_cart_discount_row) th:last-child {
+    border-right: 1px solid var(--wp--preset--color--borders);
+    border-bottom-right-radius: 4px;
+}
+
+#edd_checkout_cart .edd_cart_footer_row.edd_cart_discount_row th {
+    border-left: 1px solid var(--wp--preset--color--borders);
+    border-right: 1px solid var(--wp--preset--color--borders);
+    border-bottom: none;
+}
+
+/* Disocunt styling in the cart table */
+#edd_checkout_cart .edd_discount {
+    font-weight: normal;
+}
+
+#edd_checkout_cart .edd_discount_remove:before {
+    content: "clear";
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+/* Custom wrapper, not actually part of EDD */
+.edd_checkout_form_wrap_main {
+
 }
 
 #edd_checkout_form_wrap form label {
     display: inline-block;
     font-size: var(--wp--preset--font-size--normal);
-    color: black;
+    color: var(--wp--preset--color--primary);
     float: inherit;
-    width: auto !important;
 }
 
 #edd_checkout_form_wrap .edd-required-indicator {
-    color: var(--wp--preset--color--link);
-}
-
-#edd_checkout_form_wrap fieldset {
-    border: 1px solid var(--wp--preset--color--borders);
-    border-radius: 4px;
-    padding: 30px;
-    margin-bottom: 40px
+    color: var(--wp--preset--color--links);
 }
 
 #edd_checkout_form_wrap fieldset legend {
@@ -171,16 +320,208 @@
 
 #edd_checkout_form_wrap .edd-description {
     display: block;
-    font-size: var(--wp--preset--font-size--small);
+    font-size: var(--wp--preset--font-size--extra-small);
     color: var(--wp--preset--color--secondary);
     margin: 0 0 15px;
 }
 
-#edd_checkout_form_wrap fieldset#edd_sl_renewal_fields {
+/* For when a user is already logged in */
+.logged-in #edd_checkout_user_info {
+    border: 1px solid var(--wp--preset--color--borders);
+    border-radius: 4px;
+    padding: 28px 20px 16px;
+    margin-bottom: 40px;
+}
+
+#edd_checkout_login_register input {
+    font-size: var(--wp--preset--font-size--small);
+}
+
+#edd_checkout_login_register fieldset {
+    margin-bottom: 0;
+}
+
+/* The login form on the checkout page */
+#edd_checkout_login_register #edd_login_fields p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#edd_checkout_login_register #edd_login_fields p:first-child {
+    margin-bottom: 30px;
+}
+
+#edd_checkout_login_register #edd_login_fields {
+    padding-bottom: 20px;
+}
+
+/* The header links that let the user switch between register and login */
+#edd-login-account-wrap,
+#edd-new-account-wrap {
     background-color: var(--wp--preset--color--backgrounds);
-    border: 0;
-    padding: 5px 0;
-    margin-top: 30px;
+    border-bottom: 1px solid var(--wp--preset--color--borders);
+    font-size: var(--wp--preset--font-size--small);
+    padding: 16px 20px;
+}
+
+/* Styling specific to the account registration form */
+#edd_register_fields #edd_checkout_user_info,
+#edd_register_fields #edd_register_account_fields {
+    padding: 16px 20px;
+}
+
+#edd_register_fields #edd_checkout_user_info {
+    border-bottom: 1px solid var(--wp--preset--color--borders);
+    margin-bottom: 1em !important;
+}
+
+#edd-payment-mode-wrap {
+    display: flex;
+    width: 100%
+}
+
+
+#edd_payment_mode_select {
+    margin-bottom: 40px;
+}
+
+#edd-payment-mode-wrap label {
+    border-radius: 4px;
+    padding: .2em;
+    cursor: pointer;
+    opacity: .3;
+    width: 200px !important;
+}
+
+#edd-payment-mode-wrap label.edd-gateway-option-selected,
+#edd-payment-mode-wrap label:hover {
+    opacity: 1;
+}
+
+#edd-payment-mode-wrap input[type=radio] {
+    display: none;
+}
+
+#edd-gateway-option-paypal {
+    /*border: 2px solid #253B80;*/
+    border: 2px solid var(--wp--preset--color--primary);
+    color: transparent !important;
+    position: relative;
+}
+
+#edd-gateway-option-paypal:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    /*background-color: #253B80;*/
+    background-color: var(--wp--preset--color--primary);
+    mask-image: url("data:image/svg+xml;utf8,<svg width='90px' height='25px' viewBox='0 0 90 25' version='1.1' xmlns='http://www.w3.org/2000/svg'><path d='M12.211,0.749 L5.372,0.749 C4.904,0.749 4.506,1.089 4.433,1.551 L1.667,19.088 C1.612,19.434 1.88,19.746 2.231,19.746 L5.496,19.746 C5.964,19.746 6.362,19.406 6.435,18.943 L7.181,14.213 C7.253,13.75 7.652,13.41 8.119,13.41 L10.284,13.41 C14.789,13.41 17.389,11.23 18.068,6.91 C18.374,5.02 18.081,3.535 17.196,2.495 C16.224,1.353 14.5,0.749 12.211,0.749 Z M13,7.154 C12.626,9.608 10.751,9.608 8.938,9.608 L7.906,9.608 L8.63,5.025 C8.673,4.748 8.913,4.544 9.193,4.544 L9.666,4.544 C10.901,4.544 12.066,4.544 12.668,5.248 C13.027,5.668 13.137,6.292 13,7.154 Z'></path><path d='M32.654,7.075 L29.379,7.075 C29.1,7.075 28.859,7.279 28.816,7.556 L28.671,8.472 L28.442,8.14 C27.733,7.111 26.152,6.767 24.574,6.767 C20.955,6.767 17.864,9.508 17.262,13.353 C16.949,15.271 17.394,17.105 18.482,18.384 C19.48,19.56 20.908,20.05 22.607,20.05 C25.523,20.05 27.14,18.175 27.14,18.175 L26.994,19.085 C26.939,19.433 27.207,19.745 27.556,19.745 L30.506,19.745 C30.975,19.745 31.371,19.405 31.445,18.942 L33.215,7.733 C33.271,7.388 33.004,7.075 32.654,7.075 Z M28.089,13.449 C27.773,15.32 26.288,16.576 24.394,16.576 C23.443,16.576 22.683,16.271 22.195,15.693 C21.711,15.119 21.527,14.302 21.681,13.392 C21.976,11.537 23.486,10.24 25.351,10.24 C26.281,10.24 27.037,10.549 27.535,11.132 C28.034,11.721 28.232,12.543 28.089,13.449 Z'></path><path d='M50.096,7.075 L46.805,7.075 C46.491,7.075 46.196,7.231 46.018,7.492 L41.479,14.178 L39.555,7.753 C39.434,7.351 39.063,7.075 38.643,7.075 L35.409,7.075 C35.016,7.075 34.743,7.459 34.868,7.829 L38.493,18.467 L35.085,23.278 C34.817,23.657 35.087,24.178 35.55,24.178 L38.837,24.178 C39.149,24.178 39.441,24.026 39.618,23.77 L50.564,7.97 C50.826,7.592 50.557,7.075 50.096,7.075 Z'></path><path d='M60.992,0.749 L54.152,0.749 C53.685,0.749 53.287,1.089 53.214,1.551 L50.448,19.088 C50.393,19.434 50.661,19.746 51.01,19.746 L54.52,19.746 C54.846,19.746 55.125,19.508 55.176,19.184 L55.961,14.213 C56.033,13.75 56.432,13.41 56.899,13.41 L59.063,13.41 C63.569,13.41 66.168,11.23 66.848,6.91 C67.155,5.02 66.86,3.535 65.975,2.495 C65.004,1.353 63.281,0.749 60.992,0.749 Z M61.781,7.154 C61.408,9.608 59.533,9.608 57.719,9.608 L56.688,9.608 L57.413,5.025 C57.456,4.748 57.694,4.544 57.975,4.544 L58.448,4.544 C59.682,4.544 60.848,4.544 61.45,5.248 C61.809,5.668 61.918,6.292 61.781,7.154 Z'></path><path d='M81.434,7.075 L78.161,7.075 C77.88,7.075 77.641,7.279 77.599,7.556 L77.454,8.472 L77.224,8.14 C76.515,7.111 74.935,6.767 73.357,6.767 C69.738,6.767 66.648,9.508 66.046,13.353 C65.734,15.271 66.177,17.105 67.265,18.384 C68.265,19.56 69.691,20.05 71.39,20.05 C74.306,20.05 75.923,18.175 75.923,18.175 L75.777,19.085 C75.722,19.433 75.99,19.745 76.341,19.745 L79.29,19.745 C79.757,19.745 80.155,19.405 80.228,18.942 L81.999,7.733 C82.053,7.388 81.785,7.075 81.434,7.075 Z M76.869,13.449 C76.555,15.32 75.068,16.576 73.174,16.576 C72.225,16.576 71.463,16.271 70.975,15.693 C70.491,15.119 70.309,14.302 70.461,13.392 C70.758,11.537 72.266,10.24 74.131,10.24 C75.061,10.24 75.817,10.549 76.315,11.132 C76.816,11.721 77.014,12.543 76.869,13.449 Z'></path><path d='M85.295,1.23 L82.488,19.088 C82.433,19.434 82.701,19.746 83.05,19.746 L85.872,19.746 C86.341,19.746 86.739,19.406 86.811,18.943 L89.579,1.407 C89.634,1.061 89.366,0.748 89.017,0.748 L85.857,0.748 C85.578,0.749 85.338,0.953 85.295,1.23 Z'></path></svg>");
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg width='90px' height='25px' viewBox='0 0 90 25' version='1.1' xmlns='http://www.w3.org/2000/svg'><path d='M12.211,0.749 L5.372,0.749 C4.904,0.749 4.506,1.089 4.433,1.551 L1.667,19.088 C1.612,19.434 1.88,19.746 2.231,19.746 L5.496,19.746 C5.964,19.746 6.362,19.406 6.435,18.943 L7.181,14.213 C7.253,13.75 7.652,13.41 8.119,13.41 L10.284,13.41 C14.789,13.41 17.389,11.23 18.068,6.91 C18.374,5.02 18.081,3.535 17.196,2.495 C16.224,1.353 14.5,0.749 12.211,0.749 Z M13,7.154 C12.626,9.608 10.751,9.608 8.938,9.608 L7.906,9.608 L8.63,5.025 C8.673,4.748 8.913,4.544 9.193,4.544 L9.666,4.544 C10.901,4.544 12.066,4.544 12.668,5.248 C13.027,5.668 13.137,6.292 13,7.154 Z'></path><path d='M32.654,7.075 L29.379,7.075 C29.1,7.075 28.859,7.279 28.816,7.556 L28.671,8.472 L28.442,8.14 C27.733,7.111 26.152,6.767 24.574,6.767 C20.955,6.767 17.864,9.508 17.262,13.353 C16.949,15.271 17.394,17.105 18.482,18.384 C19.48,19.56 20.908,20.05 22.607,20.05 C25.523,20.05 27.14,18.175 27.14,18.175 L26.994,19.085 C26.939,19.433 27.207,19.745 27.556,19.745 L30.506,19.745 C30.975,19.745 31.371,19.405 31.445,18.942 L33.215,7.733 C33.271,7.388 33.004,7.075 32.654,7.075 Z M28.089,13.449 C27.773,15.32 26.288,16.576 24.394,16.576 C23.443,16.576 22.683,16.271 22.195,15.693 C21.711,15.119 21.527,14.302 21.681,13.392 C21.976,11.537 23.486,10.24 25.351,10.24 C26.281,10.24 27.037,10.549 27.535,11.132 C28.034,11.721 28.232,12.543 28.089,13.449 Z'></path><path d='M50.096,7.075 L46.805,7.075 C46.491,7.075 46.196,7.231 46.018,7.492 L41.479,14.178 L39.555,7.753 C39.434,7.351 39.063,7.075 38.643,7.075 L35.409,7.075 C35.016,7.075 34.743,7.459 34.868,7.829 L38.493,18.467 L35.085,23.278 C34.817,23.657 35.087,24.178 35.55,24.178 L38.837,24.178 C39.149,24.178 39.441,24.026 39.618,23.77 L50.564,7.97 C50.826,7.592 50.557,7.075 50.096,7.075 Z'></path><path d='M60.992,0.749 L54.152,0.749 C53.685,0.749 53.287,1.089 53.214,1.551 L50.448,19.088 C50.393,19.434 50.661,19.746 51.01,19.746 L54.52,19.746 C54.846,19.746 55.125,19.508 55.176,19.184 L55.961,14.213 C56.033,13.75 56.432,13.41 56.899,13.41 L59.063,13.41 C63.569,13.41 66.168,11.23 66.848,6.91 C67.155,5.02 66.86,3.535 65.975,2.495 C65.004,1.353 63.281,0.749 60.992,0.749 Z M61.781,7.154 C61.408,9.608 59.533,9.608 57.719,9.608 L56.688,9.608 L57.413,5.025 C57.456,4.748 57.694,4.544 57.975,4.544 L58.448,4.544 C59.682,4.544 60.848,4.544 61.45,5.248 C61.809,5.668 61.918,6.292 61.781,7.154 Z'></path><path d='M81.434,7.075 L78.161,7.075 C77.88,7.075 77.641,7.279 77.599,7.556 L77.454,8.472 L77.224,8.14 C76.515,7.111 74.935,6.767 73.357,6.767 C69.738,6.767 66.648,9.508 66.046,13.353 C65.734,15.271 66.177,17.105 67.265,18.384 C68.265,19.56 69.691,20.05 71.39,20.05 C74.306,20.05 75.923,18.175 75.923,18.175 L75.777,19.085 C75.722,19.433 75.99,19.745 76.341,19.745 L79.29,19.745 C79.757,19.745 80.155,19.405 80.228,18.942 L81.999,7.733 C82.053,7.388 81.785,7.075 81.434,7.075 Z M76.869,13.449 C76.555,15.32 75.068,16.576 73.174,16.576 C72.225,16.576 71.463,16.271 70.975,15.693 C70.491,15.119 70.309,14.302 70.461,13.392 C70.758,11.537 72.266,10.24 74.131,10.24 C75.061,10.24 75.817,10.549 76.315,11.132 C76.816,11.721 77.014,12.543 76.869,13.449 Z'></path><path d='M85.295,1.23 L82.488,19.088 C82.433,19.434 82.701,19.746 83.05,19.746 L85.872,19.746 C86.341,19.746 86.739,19.406 86.811,18.943 L89.579,1.407 C89.634,1.061 89.366,0.748 89.017,0.748 L85.857,0.748 C85.578,0.749 85.338,0.953 85.295,1.23 Z'></path></svg>");
+    mask-size: 90px;
+    -webkit-mask-size: 90px;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+}
+
+#edd-gateway-option-stripe {
+    /*border: 2px solid var(--wp--preset--color--links);*/
+    border: 2px solid var(--wp--preset--color--primary);
+    text-align: center;
+    /*color: var(--wp--preset--color--links) !important;*/
+    font-weight: 600;
+    padding-top: .4em !important;
+}
+#edd-gateway-option-stripe:before {
+    content: "payment";
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    margin-right: 6px;
+    display: inline-block;
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+#edd_checkout_login_register,
+#edd_cc_fields,
+#edd_cc_address {
+    border: 1px solid var(--wp--preset--color--borders);
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+#edd_cc_fields,
+#edd_cc_address {
+    padding: 28px 20px 16px;
+}
+
+
+#edd_checkout_form_wrap fieldset#edd_sl_renewal_fields {
+    margin-bottom: 0;
+    border: 1px solid var(--wp--preset--color--borders);
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: none;
+    padding: 20px 20px 0;
+}
+
+#edd_sl_renewal_fields #edd_sl_show_renewal_form {
+    background: none;
+    color: var(--wp--preset--color--links);
+    padding: 0px;
+    border: none;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: unset;
+    font-weight: unset;
+}
+
+#edd_sl_renewal_fields .edd-sl-renewal-form-fields {
+    margin-bottom: 20px
+}
+
+#edd_sl_renewal_fields .edd-sl-renewal-form-fields input[type="text"] {
+    width: 100%;
+}
+
+#edd_sl_renewal_fields #edd-cancel-license-renewal {
+    color: var(--wp--preset--color--links);
+    cursor: pointer;
+}
+
+#edd_sl_renewal_fields #edd-cancel-license-renewal:hover {
+    text-decoration: underline;
+}
+
+#edd_discount_code {
+    border: 1px solid var(--wp--preset--color--borders);
+    border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 20px 20px 20px;
+    margin-bottom: 40px;
+}
+
+#edd_discount_code p {
+    margin-bottom: 0;
+}
+
+#edd_discount_code .edd-discount-code-field-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#edd_discount_code .edd-discount-code-field-wrap input:first-child {
+    margin-right: 10px;
+    margin-bottom: 0;
 }
 
 #edd_checkout_form_wrap .edd-payment-icons {
@@ -260,9 +601,17 @@
     height: 20px
 }
 
-fieldset#edd_purchase_submit {
-	border: 0;
-	padding: 0;
+#edd_purchase_submit {
+    background-color: var(--wp--preset--color--backgrounds);
+    border: 1px solid var(--wp--preset--color--borders);
+    border-radius: 4px;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+}
+
+#edd_purchase_submit h3 {
+    text-align: center;
+    margin-bottom: 30px !important;
 }
 
 #edd_purchase_submit fieldset {
@@ -271,27 +620,57 @@ fieldset#edd_purchase_submit {
 	margin-bottom: 0px;
 }
 
+#edd_purchase_submit #edd_terms_agreement {
+    border-top: 1px solid var(--wp--preset--color--borders);
+    border-bottom: 1px solid var(--wp--preset--color--borders);
+    padding: 10px 0;
+}
+
+#edd_purchase_submit #edd_terms_agreement .edd-terms {
+    margin: 10px 0px 20px;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--wp--preset--color--borders);
+    border-radius: 4px;
+    max-height: 400px;
+    overflow: scroll;
+    font-size: var(--wp--preset--font-size--extra-small);
+}
+
+#edd_purchase_submit #edd_terms_agreement .edd-show-terms {
+    float: right;
+    font-size: var(--wp--preset--font-size--extra-small);
+}
+
+#edd_purchase_submit #edd_terms_agreement .edd-terms-agreement {
+    display: flex;
+    align-items: center;
+}
+
+#edd_purchase_submit #edd_terms_agreement .edd-terms-agreement label {
+    font-size: var(--wp--preset--font-size--extra-small);
+    margin-left: 5px;
+}
+
 #edd_final_total_wrap {
-	background-color: var(--wp--preset--color--backgrounds);
-    padding: 10px 30px;
-    margin: 20px 0 40px;
+    margin: 30px 0 20px;
     text-align: center;
 }
 
 #edd-purchase-button {
     margin: 0 auto;
     display: block;
-    min-width: 200px;
+    min-width: 100%;
     border-color: var(--wp--preset--color--primary);
     background: var(--wp--preset--color--primary);
     color: #fff;
 }
 
 #edd-purchase-button:hover {
-    background: #fff;
-    color: var(--wp--preset--color--primary);
+    opacity: var(--wp--custom--opacity--button);;
 }
 
+/* Account Styles */
 #edd_user_history th,
 #edd_sl_license_keys th {
     white-space: nowrap
@@ -402,7 +781,6 @@ fieldset#edd_purchase_submit {
 .simpletoc > li {
     padding-left: 0;
     list-style: none;
-    font-weight: 600;
 }
 
 .simpletoc > li > ul,
@@ -415,6 +793,15 @@ fieldset#edd_purchase_submit {
 .simpletoc > li > ol > li {
     font-weight: normal;
     list-style: disc;
+}
+
+.simpletoc a {
+    color: var(--wp--preset--color--primary);
+}
+
+.simpletoc a:hover {
+    opacity: var(--wp--custom--opacity--link);
+    text-decoration: none;
 }
 
 /*--------------------------------------------------------------

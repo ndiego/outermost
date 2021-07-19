@@ -60,7 +60,7 @@ table {
 }
 
 td, th {
-    padding: 10px 15px;
+    padding: .8em 1em;
     border: 1px solid var(--wp--preset--color--borders);
     font-size: var(--wp--preset--font-size--small);
 	text-align: left;
@@ -200,20 +200,31 @@ figure {
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 782px) {
-	.site-footer {
-		text-align: center;
-	}
 
-	.site-footer .alignright {
+	.site-footer .brand .alignright {
 		float: none !important;
 		justify-content: center !important;
 		margin: 0 !important;
+		text-align: center;
 	}
 }
 
 /*--------------------------------------------------------------
-# Mobile styles, hopefully remove when better responsive controls are available
+# Alignment styles, hopefully remove when better responsive controls are available
 --------------------------------------------------------------*/
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
 @media screen and (max-width: 782px) {
 
     .mobile-text-left {
@@ -232,6 +243,13 @@ figure {
 /*--------------------------------------------------------------
 # Custom Material UI icon utility classes
 --------------------------------------------------------------*/
+.material-icons-outlined,
+.material-icons {
+	vertical-align: middle;
+    font-size: 1.2em;
+    margin-bottom: 4px;
+}
+
 .has-material-icon:before,
 .has-material-icon:after {
 	font-family: 'Material Icons';
@@ -386,6 +404,16 @@ figure {
 .has-icon-rule:before,
 .has-icon-rule:after {
 	content: "rule";
+}
+
+.has-icon-notifications_off:before,
+.has-icon-notifications_off:after {
+	content: "notifications_off";
+}
+
+.has-icon-trending_up:before,
+.has-icon-trending_up:after {
+	content: "trending_up";
 }
 
 .icon-is-outlined:before,
