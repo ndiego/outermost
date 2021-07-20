@@ -43,7 +43,7 @@
 .wp-block-jetpack-button button {
     padding: calc(.667em + 2px) calc(1.333em + 2px);
     font-size: var(--wp--preset--font-size--small);
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 /*--------------------------------------------------------------

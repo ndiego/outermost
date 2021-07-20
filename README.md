@@ -44,6 +44,12 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ## Changelog
 
+### 0.6.1 - 2021-07-TBD
+
+##### Fixed
+
+* Fixed font-weight issue with Jetpack.
+
 ### 0.6.0 - 2021-07-19
 
 ##### Added
