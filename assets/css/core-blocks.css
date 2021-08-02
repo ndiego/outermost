@@ -257,7 +257,7 @@
 	opacity: var(--wp--custom--opacity--link);
 }
 
-.wp-block-navigation .current-menu-item a {
+.wp-block-navigation .current-menu-item > a {
 	font-weight: 600;
 }
 
@@ -324,6 +324,7 @@
 
 .wp-block-navigation ul.wp-block-navigation-link__container li {
     margin-bottom: 0;
+	font-size: 16px;
 }
 
 /*--------------------------------------------------------------
@@ -550,4 +551,44 @@ a.is-style-pill-link:hover {
     display: inline-block;
     vertical-align: baseline;
     color: var(--wp--preset--color--secondary);
+}
+
+/* Badge styles */
+.is-badge-list span,
+.is-badge-list a {
+	text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    display: inline-block;
+    border: 1px solid var(--wp--preset--color--secondary);
+    border-radius: 50px;
+    padding: 2px 10px;
+    margin-right: 5px;
+}
+
+.is-badge-list a {
+    border: 1px solid var(--wp--preset--color--links);
+}
+
+.is-badge-list a:hover {
+    background-color: var(--wp--preset--color--links);
+	color: #ffffff !important;
+	text-decoration: none;
+}
+
+/* Icon styles */
+.is-icon-container {
+    padding: 15px;
+    background: #fff;
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 0;
+    margin: 40px 0 25px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 8%);
+}
+
+.is-icon-container svg {
+	width: 36px;
+    height: 36px;
 }

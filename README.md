@@ -46,9 +46,15 @@ This theme currently integrates with the [GitHub Updater](https://github.com/afr
 
 ### 0.6.1 - 2021-07-TBD
 
+##### Added
+
+* Added styling for badges.
+* Added styling for icon containers.
+
 ##### Fixed
 
 * Fixed font-weight issue with Jetpack.
+* Fixed styling issues with the navigation block.
 
 ### 0.6.0 - 2021-07-19
 
