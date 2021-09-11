@@ -6,8 +6,6 @@
 
 Outermost is an experimental Full-Site Editing (FSE) WordPress theme. It is being developed by me, Nick Diego, as the base theme for all of my projects. This gives me the opportunity to continually test all of the exciting changes and new features that are coming with FSE in a live environment.
 
-**To view the theme live, check out my [personal blog](https://nickdiego.com/).**
-
 Feel free to test the theme out yourself, but remember, this is all experimental. Things will likely break with new versions of WordPress/Gutenberg. I will be continually updating the theme to keep up with all the changes, but use with caution.
 
 ## Features
