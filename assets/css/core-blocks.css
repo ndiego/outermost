@@ -469,24 +469,6 @@ a.is-style-pill-link:hover {
 # Block Patterns
 --------------------------------------------------------------*/
 
-.is-style-outermost-testimonial {
-	display: grid;
-    grid-template-columns: fit-content(200px) auto;
-    align-items: center;
-}
-
-.is-style-outermost-testimonial .wp-block-image {
-	grid-column: 1;
-	grid-row: 1/3;
-	line-height: 0;
-	margin: 0 20px 0 0 !important;
-}
-
-.is-style-outermost-testimonial a {
-	border: none;
-	text-decoration: none;
-}
-
 /* Small quote block style */
 .is-style-small-quote {
 	position: relative;
@@ -553,6 +535,7 @@ a.is-style-pill-link:hover {
     color: var(--wp--preset--color--secondary);
 }
 
+<<<<<<< Updated upstream
 /* Badge styles */
 .is-badge-list span,
 .is-badge-list a {
@@ -592,3 +575,19 @@ a.is-style-pill-link:hover {
 	width: 36px;
     height: 36px;
 }
+=======
+/*--------------------------------------------------------------
+# Block Styles
+--------------------------------------------------------------*/
+
+.is-style-no-margin {
+    margin: 0 !important;
+}
+
+.is-style-dropshadow,
+img.is-style-dropshadow,
+.is-style-dropshadow > img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06)
+}
+>>>>>>> Stashed changes

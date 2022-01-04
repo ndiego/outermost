@@ -40,7 +40,7 @@ add_action( 'after_setup_theme', 'outermost_setup' );
  */
 function outermost_editor_assets() {
 
-	wp_enqueue_script( 'outermost-editor-assets', get_theme_file_uri( '/assets/js/register-block-styles-variations.js' ), array( 'wp-blocks', 'wp-dom', 'wp-edit-post' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'outermost-editor-assets', get_theme_file_uri( '/assets/js/register-block-variations.js' ), array( 'wp-blocks', 'wp-dom', 'wp-edit-post' ), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'outermost_editor_assets' );
 
@@ -100,10 +100,13 @@ function outermost_include_articles_in_search_results( $query ) {
 add_action( 'pre_get_posts', 'outermost_include_articles_in_search_results' );
 
 // Register the Article post type.
-include_once dirname( __FILE__ ) . '/inc/register-article.php';
+require get_template_directory() . '/inc/register-article.php';
 
-// Block Patterns.
+// Add Block Patterns.
 require get_template_directory() . '/inc/block-patterns.php';
 
-/* Add custom image size for the site logo. Needed to combat blurry logos */
+// Add Block Styles.
+require get_template_directory() . '/inc/block-styles.php';
+
+// Add custom image size for the site logo. Needed to combat blurry logos.
 add_image_size( 'outermost_site_logo', 250, 0, false );

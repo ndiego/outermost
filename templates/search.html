@@ -3,10 +3,21 @@
 
     <!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header","align":"full","style":{"spacing":{"padding":{"top":"40px","right":"20px","bottom":"40px","left":"20px"}}},"layout":{"inherit":true}} /-->
 
-    <!-- wp:group {"align":"full","className":"archive-header","style":{"spacing":{"padding":{"top":"50px","right":"20px","bottom":"50px","left":"20px"}}},"layout":{"inherit":true}} -->
-    <div class="wp-block-group archive-header alignfull" style="padding-top:50px;padding-right:20px;padding-bottom:50px;padding-left:20px">
-        <!-- wp:query-title {"type":"archive","textAlign":"center"} /-->
-        <!-- wp:term-description {"textAlign":"center","textColor":"secondary"} /-->
+    <!-- wp:group {"align":"full","className":"entry-header","layout":{"inherit":true}} -->
+    <div class="wp-block-group archive-header alignfull">
+        <!-- wp:heading {"level":1,"className":"entry-title","textAlign":"center"} -->
+        <h1 class="entry-title has-text-align-center">Search Results</h1>
+        <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":20} -->
+        <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:search {"showLabel":false,"placeholder":"Search...","buttonUseIcon":true} /-->
+
+        <!-- wp:spacer {"height":30} -->
+        <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
     </div>
     <!-- /wp:group -->
 
@@ -72,8 +83,8 @@
             <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
             <!-- /wp:spacer -->
 
-            <!-- wp:separator {"className":"is-style-wide"} -->
-            <hr class="wp-block-separator has-background is-style-wide"/>
+            <!-- wp:separator {"align":"wide","className":"is-style-wide"} -->
+            <hr class="wp-block-separator alignwide has-background is-style-wide"/>
             <!-- /wp:separator -->
 
             <!-- wp:paragraph -->
@@ -86,8 +97,8 @@
             <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
             <!-- /wp:spacer -->
 
-            <!-- wp:separator {"className":"is-style-wide"} -->
-            <hr class="wp-block-separator has-background is-style-wide"/>
+            <!-- wp:separator {"align":"wide","className":"is-style-wide"} -->
+            <hr class="wp-block-separator alignwide has-background is-style-wide"/>
             <!-- /wp:separator -->
 
             <!-- wp:spacer {"height":50} -->
@@ -113,4 +124,4 @@
 </main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer","layout":{"inherit":true}} /-->
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
