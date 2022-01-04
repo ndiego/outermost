@@ -17,6 +17,14 @@ register_block_style(
 );
 
 register_block_style(
+	'core/image',
+	array(
+		'name'  => 'no-margin',
+		'label' => __( 'No Margin', 'outermost' ),
+	)
+);
+
+register_block_style(
 	'core/navigation-link',
 	array(
 		'name'  => 'navigation-button',

@@ -1,5 +1,30 @@
 {
 	"version": 2,
+	"customTemplates": [
+		{
+			"name": "blank",
+			"title": "Blank",
+			"postTypes": [
+				"page",
+				"post",
+				"article"
+			]
+		},
+		{
+			"name": "landing",
+			"title": "Landing Page",
+			"postTypes": [
+				"page",
+				"post",
+				"article"
+			]
+		},
+		{
+			"name": "account",
+			"title": "Account Template",
+			"postTypes": [ "page" ]
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -123,7 +148,7 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "30px"
+			"blockGap": "2.5rem"
 		},
 		"color": {
 			"background": "#ffffff",
@@ -214,11 +239,6 @@
 					"radius": "4px"
 				}
 			},
-			"core/image": {
-				"border": {
-					"radius": "4px"
-				}
-			},
 			"core/search": {
 				"border": {
 					"radius": "4px"
@@ -283,6 +303,11 @@
 					"background": "var(--wp--preset--color--borders)"
 				}
 			},
+			"core/social-links": {
+				"spacing": {
+					"blockGap": "1rem"
+				}
+			},
 			"core/site-title": {
 				"elements": {
 					"link": {
@@ -305,30 +330,5 @@
 				}
 			}
 		}
-	},
-	"customTemplates": [
-		{
-			"name": "freeform",
-			"title": "Freeform",
-			"postTypes": [
-				"page",
-				"post",
-				"article"
-			]
-		},
-		{
-			"name": "landing",
-			"title": "Landing Page",
-			"postTypes": [
-				"page",
-				"post",
-				"article"
-			]
-		},
-		{
-			"name": "account",
-			"title": "Acount Template",
-			"postTypes": [ "page" ]
-		}
-	]
+	}
 }
