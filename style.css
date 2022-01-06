@@ -23,26 +23,41 @@ Primary Branch: main
 @import "assets/css/third-party-blocks.css";
 @import "assets/css/style-shared.css";
 
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
+/*
+ * Font smoothing.
+ */
 
 body {
-  margin: 0;
-  padding: 0;
-}
-
-/* Smooth out the fonts */
-body {
+    -moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
-img {
-	height: auto;
-	max-width: 100%;
+/*
+ * Alignment styles.
+ * These rules are temporary, and should not be relied on or
+ * modified too heavily by themes or plugins that build on
+ * Twenty Twenty-Two. These are meant to be a precursor to
+ * a global solution provided by the Block Editor.
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+ */
+
+.wp-site-blocks,
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-group.alignfull,
+.wp-block-cover.alignfull,
+.is-root-container .wp-block[data-align="full"] > .wp-block-group,
+.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
+	padding-left: var(--wp--custom--spacing--outer);
+	padding-right: var(--wp--custom--spacing--outer);
 }
 
-* {
-	box-sizing: border-box;
+.wp-site-blocks .alignfull,
+.is-root-container .wp-block[data-align="full"] {
+	margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	width: unset;
 }

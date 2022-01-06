@@ -95,26 +95,6 @@ fieldset {
 }
 
 /*--------------------------------------------------------------
-# General Spacing
---------------------------------------------------------------*/
-
-.wp-site-blocks {
-	margin-left: 20px;
-	margin-right: 20px;
-}
-
-.wp-site-blocks .alignfull {
-	margin-left: -20px;
-	margin-right: -20px;
-	width: auto;
-}
-
-.wp-site-blocks .entry-content .alignfull {
-	margin-left: -20px !important;
-	margin-right: -20px !important;
-}
-
-/*--------------------------------------------------------------
 # Random Fixes
 --------------------------------------------------------------*/
 

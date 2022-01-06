@@ -68,7 +68,7 @@
 				"page-title": 1.1
 			},
 			"spacing": {
-				"horizontal": "30px"
+				"outer": "2rem"
 			},
 			"opacity": {
 				"link": 0.7,
@@ -148,7 +148,7 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "2.5rem"
+			"blockGap": "1.5rem"
 		},
 		"color": {
 			"background": "#ffffff",
@@ -330,5 +330,17 @@
 				}
 			}
 		}
-	}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	]
 }
