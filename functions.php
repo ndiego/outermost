@@ -12,14 +12,11 @@ function outermost_setup() {
 	// Add support for core block visual styles.
  	add_theme_support( 'wp-block-styles' );
 
-	// Add support for alignwide and alignfull classes in the block editor.
-	add_theme_support( 'align-wide' );
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
 
 	// Add support for responsive embedded content.
 	add_theme_support( 'responsive-embeds' );
-
-	// Add support for editor styles.
-	add_theme_support( 'editor-styles' );
 
 	// Enqueue editor styles.
 	add_editor_style( array(
@@ -43,20 +40,6 @@ function outermost_editor_assets() {
 	wp_enqueue_script( 'outermost-editor-assets', get_theme_file_uri( '/assets/js/register-block-variations.js' ), array( 'wp-blocks', 'wp-dom', 'wp-edit-post' ), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'outermost_editor_assets' );
-
-/**
- * Enqueue custom fonts.
- *
- * @since 0.1.0
- */
-function outermost_fonts() {
-
-	// Enqueue Google fonts
-	wp_enqueue_style( 'outermost-material-icons', '//fonts.googleapis.com/icon?family=Material+Icons', array(), null );
-	wp_enqueue_style( 'outermost-material-icons-outlined', '//fonts.googleapis.com/icon?family=Material+Icons+Outlined', array(), null );
-}
-add_action( 'wp_enqueue_scripts', 'outermost_fonts' );
-add_action( 'enqueue_block_editor_assets', 'outermost_fonts' );
 
 /**
  * Enqueue scripts and styles.

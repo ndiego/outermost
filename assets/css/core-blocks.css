@@ -22,7 +22,7 @@
     padding: 1.2em 1.5em;
     background-color: var(--wp--preset--color--backgrounds);
     border-radius: 4px;
-    color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--foreground);
     font-size: var(--wp--preset--font-size--small);
     font-family: var(--wp--preset--font-family--monospace-code);
 }
@@ -77,7 +77,7 @@
 }
 
 .comment {
-	border: 1px solid var(--wp--preset--color--borders);
+	border: 1px solid var(--wp--preset--color--tertiary);
     border-radius: 4px;
     margin-top: 30px;
     padding: 30px;
@@ -109,7 +109,7 @@
 	font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--foreground);
 }
 
 .comment-reply-title {
@@ -118,12 +118,12 @@
 
 .wp-block-post-comments input:not(.submit),
 .wp-block-post-comments textarea {
-    border-color: var(--wp--preset--color--borders);
+    border-color: var(--wp--preset--color--tertiary);
 }
 
 /* Fix an erroneous base theme style */
 .wp-block-post-comments input.submit {
-    border-color: var(--wp--preset--color--primary);
+    border-color: var(--wp--preset--color--foreground);
 }
 
 .wp-block-post-comments .comment-form-author,
@@ -200,7 +200,7 @@
 --------------------------------------------------------------*/
 
 /* Temp fix for when navigation items are in a column, should be fixed in future */
-.wp-block-columns .wp-block-navigation__container>.wp-block-navigation-link,
+/* .wp-block-columns .wp-block-navigation__container>.wp-block-navigation-link,
 .wp-block-columns .wp-block-page-list,
 .wp-block-columns .wp-block-page-list>.wp-block-pages-list__item {
     margin-right: 2em;
@@ -236,7 +236,7 @@
 
 .wp-block-navigation .wp-block-navigation-link__label {
 	white-space: nowrap !important;
-}
+} */
 
 /* Specific styling for the navigation button block style */
 .wp-block-navigation li.is-style-navigation-button {
@@ -256,10 +256,10 @@
 
 .wp-block-navigation .is-style-navigation-button {
 	padding: .5em 1em !important;
-    border: 2px solid var(--wp--preset--color--primary);
+    border: 2px solid var(--wp--preset--color--foreground);
     border-radius: 4px;
     background: transparent;
-    color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--foreground);
     cursor: pointer;
     font-size: var(--wp--preset--font-size--small);
     letter-spacing: 1px;
@@ -280,7 +280,7 @@
 }
 
 /* Manual fix so theme link styling is not applied */
-.wp-block-navigation ul.wp-block-navigation-link__container {
+/* .wp-block-navigation ul.wp-block-navigation-link__container {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -288,7 +288,7 @@
 .wp-block-navigation ul.wp-block-navigation-link__container li {
     margin-bottom: 0;
 	font-size: 16px;
-}
+} */
 
 /*--------------------------------------------------------------
 # Paragraph
@@ -329,7 +329,7 @@ a.is-style-pill-link {
 	border-bottom: 0;
 	border-radius: 4px;
 	box-shadow: none;
-	color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--foreground);
 	display: inline-block;
     font-weight: 600;
 	letter-spacing: .1em;
@@ -342,7 +342,7 @@ a.is-style-pill-link {
 .is-style-pill-link a:hover,
 a.is-style-pill-link:hover {
 	color: #fff;
-	background-color: var(--wp--preset--color--primary);
+	background-color: var(--wp--preset--color--foreground);
     text-decoration: none;
 }
 
@@ -358,9 +358,9 @@ a.is-style-pill-link:hover {
 .wp-block-query-pagination a,
 .wp-block-query-pagination span {
 	background: transparent;
-	border: 2px solid var(--wp--preset--color--primary);
+	border: 2px solid var(--wp--preset--color--foreground);
 	border-radius: 4px;
-	color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--foreground);
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 	padding: 10px 15px;
@@ -370,7 +370,7 @@ a.is-style-pill-link:hover {
 
 .wp-block-query-pagination span,
 .wp-block-query-pagination a:hover {
-    background: var(--wp--preset--color--primary);
+    background: var(--wp--preset--color--foreground);
     color: white;
     text-decoration: none;
 }
@@ -380,20 +380,20 @@ a.is-style-pill-link:hover {
 --------------------------------------------------------------*/
 
 .wp-block-search .wp-block-search__input {
-	border: 1px solid var(--wp--preset--color--borders);
+	border: 1px solid var(--wp--preset--color--tertiary);
 }
 
 .wp-block-search button.wp-block-search__button {
 	background: transparent;
-	border: 2px solid var(--wp--preset--color--primary);
+	border: 2px solid var(--wp--preset--color--foreground);
 	border-radius: 4px;
-	color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--foreground);
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 }
 
 .wp-block-search button.wp-block-search__button:hover {
-    background: var(--wp--preset--color--primary);
+    background: var(--wp--preset--color--foreground);
     color: white;
 }
 
@@ -419,13 +419,13 @@ a.is-style-pill-link:hover {
 }
 
 /*--------------------------------------------------------------
-# Social Links
+# Table
 --------------------------------------------------------------*/
 
 .wp-block-table td,
 .wp-block-table th {
     padding: .8em 1em;
-    border: 1px solid var(--wp--preset--color--borders);
+    border: 1px solid var(--wp--preset--color--tertiary);
 }
 
 /*--------------------------------------------------------------
@@ -513,11 +513,11 @@ a.is-style-pill-link:hover {
 }
 
 .is-badge-list a {
-    border: 1px solid var(--wp--preset--color--links);
+    border: 1px solid var(--wp--preset--color--primary);
 }
 
 .is-badge-list a:hover {
-    background-color: var(--wp--preset--color--links);
+    background-color: var(--wp--preset--color--primary);
 	color: #ffffff !important;
 	text-decoration: none;
 }
